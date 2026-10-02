@@ -36,7 +36,8 @@ The Microsoft Fabric end-to-end architecture provides the underlying platform vi
 
 **Source:** Microsoft Learn, [Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end)
 
-The platform view establishes the foundation for locating each Esri integration within the Fabric data lifecycle. For GeoAnalytics, the relevant area is the Fabric Spark processing environment.---
+The platform view establishes the foundation for locating each Esri integration within the Fabric data lifecycle. For GeoAnalytics, the relevant area is the Fabric Spark processing environment.
+---
 
 ## Where GeoAnalytics Fits
 
