@@ -8,15 +8,14 @@ This register tracks authoritative sources used to support architecture, capabil
 
 ## Source Inventory
 
-| Source | Publisher | Category | Status |
-|----------|----------|----------|----------|
-| ArcGIS GeoAnalytics for Microsoft Fabric | Esri | Product Documentation | Active |
-| ArcGIS GeoAnalytics Tools Documentation | Esri | Technical Documentation | Active |
-| ArcGIS GeoAnalytics Get Started Guide | Esri | Product Documentation | Active |
-| Apache Spark Runtime in Fabric | Microsoft | Platform Architecture | Active |
-| Fabric Spark Compute Architecture | Microsoft | Platform Architecture | Active |
-| Analytics End-to-End with Fabric | Microsoft | Reference Architecture | Active |
-
+| Source ID | Source | Publisher | Category | URL | Status |
+|------------|----------|----------|----------|----------|----------|
+| SRC-GEO-001 | ArcGIS GeoAnalytics for Microsoft Fabric | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/ | Active |
+| SRC-GEO-002 | ArcGIS GeoAnalytics for Microsoft Fabric - Tools | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/tools/ | Active |
+| SRC-GEO-003 | ArcGIS GeoAnalytics for Microsoft Fabric - Get Started | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/get-started/ | Active |
+| SRC-MSFT-001 | Apache Spark Runtime in Fabric | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/runtime | Active |
+| SRC-MSFT-002 | Apache Spark Compute for Data Engineering and Data Science | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-compute | Active |
+| SRC-MSFT-003 | Analytics End-to-End with Microsoft Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end | Active |
 ---
 
 ## Source Validation Rules
