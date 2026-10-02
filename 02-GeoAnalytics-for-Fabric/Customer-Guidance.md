@@ -39,7 +39,7 @@ Within that architecture, ArcGIS GeoAnalytics participates in the **Process** la
 
 **Source:** Analytics End-to-End with Microsoft Fabric, Microsoft Learn. See the authoritative architecture guidance here:
 
-[Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end) 【1-eb1424】
+[Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end)
 
 The relevant path for ArcGIS GeoAnalytics is:
 
