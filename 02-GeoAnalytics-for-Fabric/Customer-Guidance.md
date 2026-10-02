@@ -35,7 +35,7 @@ The Microsoft Fabric end-to-end analytics architecture provides the underlying p
 
 Within that architecture, ArcGIS GeoAnalytics participates in the **Process** layer of the data lifecycle. GeoAnalytics operates through documented Fabric Spark notebooks and Spark job definitions, allowing spatial analytics to execute directly within the Fabric analytics environment.
 
-![Analytics End-to-End Architecture]
+![Analytics End-to-End Architecture](images/microsoft-fabric-end-to-end-architecture.png)
 
 **Source:** Analytics End-to-End with Microsoft Fabric, Microsoft Learn. See the authoritative architecture guidance here:
 
