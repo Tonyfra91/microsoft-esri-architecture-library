@@ -29,11 +29,35 @@ This is the strategic view. It explains why the Microsoft and Esri integrations 
 
 ## Where GeoAnalytics Fits in Microsoft Fabric
 
-The Microsoft Fabric end\-to\-end analytics architecture provides the authoritative platform view. It shows how Fabric connects data sources, stores data, processes and enriches data, serves governed data products, and supports analytics experiences.
+The Microsoft + Esri Integration Landscape provides a simplified solution view of how Microsoft and Esri capabilities work together.
 
-Within that architecture, ArcGIS GeoAnalytics belongs in the **Process** portion of the Fabric data flow because the documented capability operates through Fabric Spark notebooks and Spark job definitions.
+The Microsoft Fabric end-to-end analytics architecture provides the underlying platform view. It shows how Fabric ingests, stores, processes, enriches, governs, and serves enterprise data products.
 
-![Microsoft Fabric end-to-end analytics architecture](UnableToLoadUrl)
+Within that architecture, ArcGIS GeoAnalytics participates in the **Process** layer of the data lifecycle. GeoAnalytics operates through documented Fabric Spark notebooks and Spark job definitions, allowing spatial analytics to execute directly within the Fabric analytics environment.
+
+![Analytics End-to-End Architecture]
+
+**Source:** Analytics End-to-End with Microsoft Fabric, Microsoft Learn. See the authoritative architecture guidance here:
+
+[Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end) 【1-eb1424】
+
+The relevant path for ArcGIS GeoAnalytics is:
+
+```text
+Customer Data Sources
+        ↓
+OneLake
+        ↓
+Fabric Runtime
+        ↓
+Apache Spark
+        ↓
+ArcGIS GeoAnalytics
+        ↓
+Spatially Enriched Data Products
+        ↓
+Maps, Analytics, Reporting, and AI Experiences
+```
 
 The relevant path is:
 
