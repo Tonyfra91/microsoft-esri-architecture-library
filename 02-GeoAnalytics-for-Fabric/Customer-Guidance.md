@@ -32,7 +32,9 @@ The Microsoft + Esri Integration Landscape provides a solution-level view of how
 
 The Microsoft Fabric end-to-end architecture provides the underlying platform view that explains how data is ingested, governed, stored, processed, and served across the analytics lifecycle.
 
-![Analytics End to End with Microsoft Fabric](images/microsoft-fabric-end-to-end-architecture.png)
+</p><img src="images/microsoft-fabric-end-to-end-architecture.svg"
+</p>
+<br>
 
 **Source:** Microsoft Learn, [Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end)
 
