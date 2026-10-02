@@ -86,7 +86,7 @@ The Microsoft Fabric platform architecture establishes the underlying data and a
 
 The following solution pattern simplifies those technical views into a customer-oriented representation of how enterprise data, Microsoft Fabric, and Esri capabilities can work together.
 
-images/microsoft-esri-simplified-solution-pattern.png
+![Microsoft Esri Simplified Solution Pattern](images/microsoft-esri-simplified-solution-pattern)
 
 In this pattern:
 
