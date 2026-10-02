@@ -78,6 +78,30 @@ This placement allows geospatial processing to participate in the same broader a
 
 ---
 
+---
+
+## Simplified Microsoft + Esri Solution Pattern
+
+The Microsoft Fabric platform architecture establishes the underlying data and analytics foundation, while the GeoAnalytics component view identifies where distributed spatial processing occurs.
+
+The following solution pattern simplifies those technical views into a customer-oriented representation of how enterprise data, Microsoft Fabric, and Esri capabilities can work together.
+
+images/microsoft-esri-simplified-solution-pattern.png
+
+In this pattern:
+
+- Microsoft Fabric and OneLake provide the shared data and analytics foundation.
+- Fabric Spark provides the distributed processing environment.
+- ArcGIS GeoAnalytics adds spatial processing and enrichment.
+- ArcGIS Maps for Microsoft Fabric and ArcGIS for Power BI provide distinct visualization and consumption experiences.
+- Spatially enriched data products can support downstream analytics and separately validated AI scenarios.
+
+This pattern is intended to support architecture discovery and proof-of-concept planning. It is not a prescriptive deployment design. Customer-specific decisions regarding data sources, identity, networking, security, workspace topology, capacity, operations, and consumption experiences require separate validation.
+
+**Architecture type:** Simplified solution pattern  
+**Contributor:** Nick Snapp  
+**Usage:** Customer architecture discussions and initial proof-of-concept framing
+
 ## Current Integration Capabilities
 
 ### ArcGIS GeoAnalytics for Microsoft Fabric
