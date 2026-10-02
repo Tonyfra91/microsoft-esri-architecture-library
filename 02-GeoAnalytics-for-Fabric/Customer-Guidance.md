@@ -22,8 +22,7 @@ The Microsoft \+ Esri architecture illustrates that progression:
 
 This is the strategic view. It explains why the Microsoft and Esri integrations matter together.
 
-![Microsoft + Esri strategic reference architecture](02-GeoAnalytics-for-Fabric/images/microsoft-esri-reference-architecture.png)
-
+![Microsoft Esri Fabric Integration Landscape](images/microsoft-esri-reference-architecture.png)
 **Narrative guidance:** Microsoft Fabric provides the enterprise data and analytics foundation. Esri adds spatial analytics, mapping, and location intelligence to that foundation. The current integration story is anchored in three available capabilities: ArcGIS GeoAnalytics for Microsoft Fabric, ArcGIS Maps for Microsoft Fabric, and ArcGIS for Power BI.
 
 ---
