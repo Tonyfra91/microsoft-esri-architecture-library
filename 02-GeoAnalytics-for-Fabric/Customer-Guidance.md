@@ -1,237 +1,169 @@
-# Customer Guidance: ArcGIS GeoAnalytics for Microsoft Fabric
+# ArcGIS GeoAnalytics for Microsoft Fabric: Architecture Guide
 
-## Purpose
+## Executive Summary
 
-This guide explains where ArcGIS GeoAnalytics for Microsoft Fabric fits within the broader Microsoft \+ Esri architecture and how the component can inform discovery, architecture discussions, and an initial proof of concept.
+ArcGIS GeoAnalytics for Microsoft Fabric enables organizations to apply distributed geospatial analytics within Microsoft Fabric Spark environments. Together with ArcGIS Maps for Microsoft Fabric and ArcGIS for Power BI, it supports an integrated approach to combining business data and geospatial data within a common analytics foundation.
 
-The intent is to move from the strategic Microsoft \+ Esri story into the documented Fabric and GeoAnalytics components without presenting roadmap concepts as currently available product integrations.
-
----
-
-## The Strategic Story
-
-The starting point is not a standalone GIS workload. The opportunity is to bring enterprise business data and geospatial data into a shared analytics foundation so that location becomes part of the customer’s broader data, analytics, and AI strategy.
-
-The Microsoft \+ Esri architecture illustrates that progression:
-
-1. Connect business, operational, and geospatial data.
-2. Govern and prepare data within Microsoft Fabric and OneLake.
-3. Apply ArcGIS GeoAnalytics within Fabric Spark for distributed spatial processing.
-4. deliver mapping and location\-aware analytics through ArcGIS Maps for Microsoft Fabric, ArcGIS for Power BI, and other validated consumption experiences.
-5. Establish curated, spatially enriched data products that can support future analytics and AI scenarios.
-
-This is the strategic view. It explains why the Microsoft and Esri integrations matter together.
-
-![Microsoft Esri Fabric Integration Landscape](images/microsoft-esri-reference-architecture.png)
-**Narrative guidance:** Microsoft Fabric provides the enterprise data and analytics foundation. Esri adds spatial analytics, mapping, and location intelligence to that foundation. The current integration story is anchored in three available capabilities: ArcGIS GeoAnalytics for Microsoft Fabric, ArcGIS Maps for Microsoft Fabric, and ArcGIS for Power BI.
+This guide describes the current Microsoft and Esri integration landscape, shows where GeoAnalytics participates within the Microsoft Fabric platform architecture, and introduces a practical framework for customer discovery and proof-of-concept planning.
 
 ---
 
-## Where GeoAnalytics Fits in Microsoft Fabric
+## Microsoft + Esri Integration Landscape
 
-The Microsoft + Esri Integration Landscape provides a simplified solution view of how Microsoft and Esri capabilities work together.
+Organizations increasingly need to combine operational business data with location intelligence to improve planning, operations, asset management, customer engagement, and decision-making.
 
-The Microsoft Fabric end-to-end analytics architecture provides the underlying platform view. It shows how Fabric ingests, stores, processes, enriches, governs, and serves enterprise data products.
+Microsoft Fabric provides the enterprise data and analytics foundation. Esri contributes geospatial analytics, mapping, and location intelligence capabilities that allow organizations to enrich business data with geographic context.
 
-Within that architecture, ArcGIS GeoAnalytics participates in the **Process** layer of the data lifecycle. GeoAnalytics operates through documented Fabric Spark notebooks and Spark job definitions, allowing spatial analytics to execute directly within the Fabric analytics environment.
+The current Microsoft + Esri Fabric integration landscape is anchored by three capabilities:
 
-![Analytics End-to-End Architecture](images/microsoft-fabric-end-to-end-architecture.png)
+- ArcGIS GeoAnalytics for Microsoft Fabric
+- ArcGIS Maps for Microsoft Fabric
+- ArcGIS for Power BI
 
-**Source:** Analytics End-to-End with Microsoft Fabric, Microsoft Learn. See the authoritative architecture guidance here:
+![Microsoft + Esri Fabric Landscape](images/microsoft-esri-reference-architecture.png)
 
-[Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end)
+This solution-level view illustrates how Microsoft and Esri capabilities can participate in a shared analytics workflow. It provides the strategic context for the platform and component architecture views that follow.
 
-The relevant path for ArcGIS GeoAnalytics is:
+---
+
+## Microsoft Fabric Platform Foundation
+
+The Microsoft + Esri Integration Landscape provides a solution-level view of how Microsoft Fabric and Esri capabilities work together to support geospatial analytics, mapping, and location intelligence.
+
+The Microsoft Fabric end-to-end architecture provides the underlying platform view that explains how data is ingested, governed, stored, processed, and served across the analytics lifecycle.
+
+![Analytics End to End with Microsoft Fabric](images/microsoft-fabric-end-to-end-architecture.png)
+
+**Source:** Microsoft Learn, [Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end)
+
+The platform view establishes the foundation for locating each Esri integration within the Fabric data lifecycle. For GeoAnalytics, the relevant area is the Fabric Spark processing environment.---
+
+## Where GeoAnalytics Fits
+
+ArcGIS GeoAnalytics participates in the processing portion of the Microsoft Fabric data lifecycle.
+
+The documented capability operates through Fabric Spark notebooks and Spark job definitions, enabling spatial SQL functions, track functions, and analysis tools to run within Fabric Spark workflows.
+
+The architectural relationship is:
 
 ```text
 Customer Data Sources
         ↓
-OneLake
+Fabric ingestion or supported connection
         ↓
-Fabric Runtime
+OneLake and Fabric data items
         ↓
-Apache Spark
+Fabric Spark notebook or Spark job definition
         ↓
 ArcGIS GeoAnalytics
         ↓
-Spatially Enriched Data Products
+Spatially enriched Spark DataFrame
         ↓
-Maps, Analytics, Reporting, and AI Experiences
+Customer-approved Fabric or ArcGIS output
 ```
 
-The relevant path is:
+GeoAnalytics should be understood as a capability operating within the Fabric Spark environment rather than as a separate Microsoft Fabric service or independent compute platform.
 
-Customer data sources
+A simplified component relationship is:
 
-        ↓
-
-Fabric ingestion or supported connection
-
-        ↓
-
-OneLake and Fabric data items
-
-        ↓
-
-Fabric Spark notebook or Spark job definition
-
-        ↓
-
-ArcGIS GeoAnalytics
-
-        ↓
-
-Spatially enriched Spark DataFrame
-
-        ↓
-
-Customer\-approved Fabric or ArcGIS output
-
-GeoAnalytics should not be represented as a separate Microsoft Fabric service or an independent compute platform. The documented architectural relationship is:
-
+```text
 Microsoft Fabric
+    └── Fabric Runtime
+          └── Apache Spark
+                └── ArcGIS GeoAnalytics
+```
 
-    └── Fabric Runtime
-
-          └── Apache Spark
-
-                └── ArcGIS GeoAnalytics
-
-ArcGIS GeoAnalytics adds documented spatial SQL functions, track functions, and analysis tools to the Fabric Spark workflow.
+This placement allows geospatial processing to participate in the same broader analytics lifecycle used for enterprise business data.
 
 ---
 
-## How to Explain the Two Architecture Views
+## Current Integration Capabilities
 
-The two diagrams answer different customer questions.
+### ArcGIS GeoAnalytics for Microsoft Fabric
 
-### Microsoft \+ Esri strategic architecture
+**Role:** Distributed spatial processing within Fabric Spark environments.
 
-Use this view when the customer asks:
+**Primary outcomes:**
 
-- Why should Microsoft Fabric and Esri be considered together?
-- Where do geospatial analytics and mapping fit in the enterprise data strategy?
-- What Microsoft \+ Esri capabilities are available today?
-- How could the current data foundation support future analytics and AI scenarios?
+- Spatial data enrichment
+- Large-scale geospatial processing
+- Location-aware analysis
 
-This is the strategic and solution\-level conversation.
+### ArcGIS Maps for Microsoft Fabric
 
-### Microsoft Fabric end\-to\-end architecture
+**Role:** Mapping and geospatial visualization within Microsoft Fabric experiences.
 
-Use this view when the customer asks:
+**Primary outcomes:**
 
-- How does Microsoft Fabric work?
-- Where is data stored and processed?
-- Where does GeoAnalytics execute?
-- Which Fabric workload is involved?
-- How do spatially enriched results re\-enter the governed analytics workflow?
+- Map-based exploration
+- Spatial visualization
+- Location-aware data discovery
 
-This is the platform and technical architecture conversation.
+### ArcGIS for Power BI
 
-The Microsoft \+ Esri view should lead into the Microsoft Fabric view. The Fabric view provides the technical depth underneath the strategic story.
+**Role:** Location-aware visualization and analysis within Power BI reports.
 
----
+**Primary outcomes:**
 
-## Current Integration Baseline
+- Location-aware reporting
+- Business intelligence
+- Spatially informed dashboards
 
-The current Microsoft \+ Esri Fabric story should be anchored in three distinct capabilities.
-
-### 1\. ArcGIS GeoAnalytics for Microsoft Fabric
-
-**Role:** Distributed spatial processing within Fabric Spark.
-
-**Customer question answered:** How can the customer apply geospatial analysis to data being processed in Fabric?
-
-### 2\. ArcGIS Maps for Microsoft Fabric
-
-**Role:** Mapping and spatial visualization within the Microsoft Fabric experience.
-
-**Customer question answered:** How can Fabric users explore and visualize data using location?
-
-### 3\. ArcGIS for Power BI
-
-**Role:** Location\-aware visualization and analysis within Power BI reports.
-
-**Customer question answered:** How can business users consume location intelligence through existing reporting experiences?
-
-These capabilities are related, but they should not be presented as interchangeable. Each capability answers a different architecture and user\-experience question.
+These capabilities are related, but they are not interchangeable. GeoAnalytics supports spatial processing, Maps for Fabric supports mapping within Fabric experiences, and ArcGIS for Power BI supports location-aware analysis within Power BI.
 
 ---
 
-## POC Guidance
+## Proof-of-Concept Framework
 
-A customer POC should begin with a specific business decision or analytical question that requires spatial context. The architecture should then be reduced to the minimum components required to test that question.
+A proof of concept should begin with a clearly defined business decision or analytical question that requires location context. The architecture should then be reduced to the minimum components required to test that question.
 
-A bounded GeoAnalytics POC should identify:
+A bounded GeoAnalytics proof of concept should identify:
 
-1. **Business question**
+1. **Business question**  
+   The operational, analytical, or planning decision that requires location intelligence.
 
-What operational, analytical, or planning decision requires location intelligence?
+2. **Authoritative business data**  
+   The customer dataset representing the relevant asset, event, customer, transaction, or operational condition.
 
-1. **Authoritative business data**
+3. **Authoritative geospatial data**  
+   The layers, features, boundaries, files, services, or other spatial sources required to provide location context.
 
-Which customer dataset represents the business event, asset, customer, transaction, or operational condition?
+4. **Fabric landing or access point**  
+   The approved Fabric location or supported connection through which the required data will be accessed.
 
-1. **Authoritative geospatial data**
+5. **Spatial operation**  
+   The documented GeoAnalytics function or analysis tool required to answer the business question.
 
-Which layers, features, boundaries, networks, imagery, or other spatial sources provide the required location context?
+6. **Validated output**  
+   The spatially enriched dataset, analytical result, or measurable finding the proof of concept is expected to produce.
 
-1. **Fabric landing point**
+7. **Consumption experience**  
+   The validated experience through which the output will be reviewed, such as Power BI, an ArcGIS application, ArcGIS Maps for Microsoft Fabric, or an approved Fabric data product.
 
-Where will the required data be accessed or stored within the customer’s approved Fabric design?
+8. **Success criteria**  
+   The measurable result that would demonstrate business value, architectural fit, and technical feasibility.
 
-1. **Spatial operation**
-
-Which documented GeoAnalytics function or analysis tool is required to answer the business question?
-
-1. **Validated output**
-
-What spatially enriched dataset or measurable result should the POC produce?
-
-1. **Consumption experience**
-
-Will the result be reviewed through Power BI, ArcGIS, ArcGIS Maps for Microsoft Fabric, a Fabric data product, or another separately validated experience?
-
-1. **Success criteria**
-
-What result would demonstrate that the pattern is useful, technically feasible, and worth advancing?
+The objective is not to demonstrate every Microsoft and Esri integration in a single exercise. The objective is to validate a focused and repeatable pattern that can inform a production design.
 
 ---
 
-## Recommended Customer Dialogue
+## Scope and Boundaries
 
-### Executive opening
+This guide describes the documented current-state relationship between Microsoft Fabric and ArcGIS GeoAnalytics for Microsoft Fabric. It does not claim that:
 
-The current Microsoft \+ Esri Fabric integrations create a path for customers to bring business and geospatial data into a shared analytics strategy. Fabric provides the governed data and analytics foundation, while Esri adds spatial processing, mapping, and location\-aware visualization. The immediate opportunity is to identify one decision or workflow where adding location context produces a measurable improvement.
-
-### Architecture transition
-
-The simplified Microsoft \+ Esri architecture explains how the capabilities fit together. If we go one level deeper, the Microsoft Fabric architecture shows where each capability participates in the data lifecycle. GeoAnalytics operates through Fabric Spark in the processing layer, while Maps for Fabric and ArcGIS for Power BI provide distinct visualization and consumption experiences.
-
-### POC transition
-
-Rather than beginning with every possible integration, we should select one business question, one business dataset, one geospatial dataset, and one documented spatial operation. That gives us a bounded POC that can validate the architecture, data readiness, authorization requirements, and customer value without overcommitting to a larger solution design.
-
----
-
-## Boundaries
-
-This guide does not claim that:
-
-- Every ArcGIS product or data model runs within Microsoft Fabric.
+- Every ArcGIS product, service, or data model runs within Microsoft Fabric.
 - ArcGIS GeoAnalytics replaces ArcGIS applications or operational GIS systems.
 - ArcGIS Online or ArcGIS Enterprise data automatically synchronizes with OneLake.
 - ArcGIS Maps for Microsoft Fabric and ArcGIS for Power BI are interchangeable.
 - A spatially enriched Fabric dataset is automatically available to copilots or agents.
 - GeoIQ, ArcGIS MCP, Microsoft Foundry, or agentic integrations are included in the current GeoAnalytics product architecture.
 
-Agentic and GeoIQ concepts should be maintained as separately labeled reference patterns until the required integrations, security model, and supported product behavior are validated.
+Agentic, GeoIQ, and MCP integration concepts should be documented separately as reference patterns until their product behavior, identity model, security boundaries, and supported integration paths are validated.
 
 ---
 
 ## Supporting Technical Records
 
-- [Component architecture](https://cr.m365copilotapp.svc.cloud.microsoft/hwav2/chat/conversation/Architecture.md)
-- [Evidence register](https://cr.m365copilotapp.svc.cloud.microsoft/hwav2/chat/conversation/Evidence.md)
-- [Source register](https://cr.m365copilotapp.svc.cloud.microsoft/hwav2/chat/conversation/Source-Register.md)
-
+- [Component architecture](Architecture.md)
+- [Evidence register](Evidence.md)
+- [Source register](Source-Register.md)
