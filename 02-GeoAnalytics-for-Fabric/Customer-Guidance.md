@@ -20,7 +20,7 @@ The current Microsoft + Esri Fabric integration landscape is anchored by three c
 - ArcGIS Maps for Microsoft Fabric
 - ArcGIS for Power BI
 
-![Microsoft + Esri Fabric Landscape](images/fabri-esri-landscape-v2)
+![Microsoft + Esri Fabric Landscape](images/Fabric Esri landscape v2.png)
 
 This solution-level view illustrates how Microsoft and Esri capabilities can participate in a shared analytics workflow. It provides the strategic context for the platform and component architecture views that follow.
 
