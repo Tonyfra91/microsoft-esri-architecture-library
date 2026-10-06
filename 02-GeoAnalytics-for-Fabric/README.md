@@ -1,5 +1,7 @@
 # ArcGIS GeoAnalytics for Microsoft Fabric
 
+> **Library:** [Microsoft + Esri Architecture Library](../README.md) · Previous: [01 · Microsoft + Esri Foundation](../01-Microsoft-Esri-Foundation/)
+
 ## Purpose
 
 ArcGIS GeoAnalytics for Microsoft Fabric provides distributed geospatial analytics within Microsoft Fabric Spark environments. This component is part of the Microsoft + Esri Architecture Library.
