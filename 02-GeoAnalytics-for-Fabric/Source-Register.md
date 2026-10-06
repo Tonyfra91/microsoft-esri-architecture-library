@@ -19,6 +19,8 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-GEO-004 | ArcGIS GeoAnalytics for Microsoft Fabric - Data Sources | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/ | Active |
 | SRC-GEO-005 | ArcGIS GeoAnalytics for Microsoft Fabric - Feature Service | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/feature-service/ | Active |
 | SRC-GEO-006 | ArcGIS GeoAnalytics for Microsoft Fabric - Coordinate Systems | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/core-concepts/coordinate-systems/ | Active |
+| SRC-GEO-007 | ArcGIS GeoAnalytics for Microsoft Fabric - SQL Functions | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/sql-functions/ | Active |
+| SRC-GEO-008 | ArcGIS GeoAnalytics for Microsoft Fabric - Track Functions | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/trk-functions/ | Active |
 | SRC-MSFT-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Generally Available) | Microsoft | Product Documentation | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics | Active |
 | SRC-MSFT-005 | Options to Get Data into the Lakehouse | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse | Active |
 | SRC-MSFT-006 | Choose a Data Movement Strategy | Microsoft | Decision Guide | https://learn.microsoft.com/en-us/fabric/data-factory/decision-guide-data-movement | Active |
