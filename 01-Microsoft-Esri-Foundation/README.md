@@ -44,6 +44,10 @@ Approvers, leaders, analysts, and field operators each get the experience their 
 
 The same five steps with named components, for audiences who want the next level of detail. It shows the three IQ layers this scenario uses directly: Fabric IQ, Foundry IQ, and Work IQ.
 
+Bubbles 1 to 5 follow the five steps above. The detailed view adds one more:
+
+- **6. Microsoft 365: meet people where they work.** Work IQ draws context from SharePoint, Teams, and people, and returns answers there.
+
 ![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
 
 [How to read this diagram](Appendix-Reading-the-Diagrams.md#the-detailed-view)
