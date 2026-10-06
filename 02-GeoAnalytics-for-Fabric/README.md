@@ -15,9 +15,11 @@ This component answers:
 
 ## Supporting Documents 
 
-- Architecture.md
-- Evidence.md
-- Source-Register.md
+- [Customer Guidance](Customer-Guidance.md)
+- [End-to-End Scenario](End-to-End-Scenario.md)
+- [Architecture](Architecture.md)
+- [Evidence](Evidence.md)
+- [Source Register](Source-Register.md)
   
 ## Related Components
 

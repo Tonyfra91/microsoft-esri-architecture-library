@@ -8,8 +8,6 @@ This guide describes the current Microsoft and Esri integration landscape, shows
 
 ---
 
-## Microsoft + Esri Integration Landscape
-
 ## Microsoft + Esri Fabric Integration Landscape
 
 Organizations increasingly need to combine enterprise business data with location intelligence to improve planning, operations, asset management, customer engagement, and decision-making.
@@ -30,7 +28,7 @@ The current Microsoft + Esri Fabric landscape is anchored by three capabilities 
 
 Together, these capabilities enable customers to move from storing and governing data in Microsoft Fabric to performing geospatial analysis, visualizing results geographically, and delivering location-aware insights through existing analytics workflows.
 
-</p><img src="images/Fabric Esri landscape v2.png"
+![Microsoft + Esri Fabric Integration Landscape](images/Fabric%20Esri%20landscape%20v2.png)
 
 ## Understanding the Landscape
 
@@ -99,9 +97,7 @@ The Microsoft + Esri Integration Landscape provides a solution-level view of how
 
 The Microsoft Fabric end-to-end architecture provides the underlying platform view that explains how data is ingested, governed, stored, processed, and served across the analytics lifecycle.
 
-</p><img src="images/microsoft-fabric-end-to-end-architecture.svg"
-</p>
-<br>
+![Microsoft Fabric end-to-end architecture](images/microsoft-fabric-end-to-end-architecture.svg)
 
 **Source:** Microsoft Learn, [Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end)
 
@@ -147,15 +143,13 @@ This placement allows geospatial processing to participate in the same broader a
 
 ---
 
----
-
 ## Simplified Microsoft + Esri Solution Pattern
 
 The Microsoft Fabric platform architecture establishes the underlying data and analytics foundation, while the GeoAnalytics component view identifies where distributed spatial processing occurs.
 
 The following solution pattern simplifies those technical views into a customer-oriented representation of how enterprise data, Microsoft Fabric, and Esri capabilities can work together.
 
-![Microsoft Esri Simplified Solution Pattern](images/microsoft-esri-simplified-solution-pattern)
+![Microsoft Esri Simplified Solution Pattern](images/microsoft-esri-simplified-solution-pattern.png)
 
 In this pattern:
 
@@ -258,6 +252,7 @@ Agentic, GeoIQ, and MCP integration concepts should be documented separately as 
 
 ## Supporting Technical Records
 
+- [End-to-end scenario walkthrough](End-to-End-Scenario.md)
 - [Component architecture](Architecture.md)
 - [Evidence register](Evidence.md)
 - [Source register](Source-Register.md)
