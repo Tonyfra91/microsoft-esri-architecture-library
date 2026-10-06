@@ -4,96 +4,29 @@
 
 ArcGIS GeoAnalytics for Microsoft Fabric enables organizations to apply distributed geospatial analytics within Microsoft Fabric Spark environments. Together with ArcGIS Maps for Microsoft Fabric and ArcGIS for Power BI, it supports an integrated approach to combining business data and geospatial data within a common analytics foundation.
 
-This guide describes the current Microsoft and Esri integration landscape, shows where GeoAnalytics participates within the Microsoft Fabric platform architecture, and introduces a practical framework for customer discovery and proof-of-concept planning.
+This guide summarizes where GeoAnalytics sits in the Microsoft + Esri landscape, shows where it participates within the Microsoft Fabric platform architecture, and introduces a practical framework for customer discovery and proof-of-concept planning. For the full landscape, see [01 · Microsoft + Esri Foundation](../01-Microsoft-Esri-Foundation/).
 
 ---
 
-## Microsoft + Esri Fabric Integration Landscape
+## Where GeoAnalytics Sits in the Microsoft + Esri Landscape
 
-Organizations increasingly need to combine enterprise business data with location intelligence to improve planning, operations, asset management, customer engagement, and decision-making.
+The Microsoft + Esri Fabric landscape is anchored by three capabilities available today: **ArcGIS GeoAnalytics for Microsoft Fabric**, **ArcGIS Maps for Microsoft Fabric**, and **ArcGIS for Power BI**. The full landscape, including near-term and future horizons, is described in [01 · Microsoft + Esri Foundation](../01-Microsoft-Esri-Foundation/README.md#microsoft--esri-fabric-integration-landscape).
 
-Microsoft Fabric provides the enterprise data and analytics foundation. Esri extends that foundation with geospatial intelligence, enabling organizations to combine business data, operational data, and location data within a shared analytics environment.
+Within that landscape, GeoAnalytics provides the **spatial processing** step:
 
-The opportunity is not simply to visualize data on a map. The opportunity is to help customers unify enterprise and geospatial data so that location becomes part of analytics, decision-making, and AI workflows. By combining organizational data with spatial relationships, proximity, movement, networks, and geographic context, customers can uncover insights that traditional business intelligence alone cannot provide.
+| Capability | Role in the landscape | Covered in |
+|---|---|---|
+| **ArcGIS GeoAnalytics for Microsoft Fabric** | Distributed spatial analysis and enrichment in Fabric Spark | This guide |
+| ArcGIS Maps for Microsoft Fabric | Mapping and spatial visualization within Fabric | Planned component 03 |
+| ArcGIS for Power BI | Location-aware reporting for business users | Planned component 04 |
 
-### Current Microsoft + Esri Integration Portfolio
-
-The current Microsoft + Esri Fabric landscape is anchored by three capabilities that are available today:
-
-| Capability | Purpose |
-|------------|----------|
-| **ArcGIS GeoAnalytics for Microsoft Fabric** | Distributed geospatial analytics running within Fabric Spark environments |
-| **ArcGIS Maps for Microsoft Fabric** | Native mapping and spatial visualization within Fabric |
-| **ArcGIS for Power BI** | Location-aware dashboards and reporting for business users |
-
-Together, these capabilities enable customers to move from storing and governing data in Microsoft Fabric to performing geospatial analysis, visualizing results geographically, and delivering location-aware insights through existing analytics workflows.
-
-![Microsoft + Esri Fabric Integration Landscape](images/fabric-esri-landscape-v2.png)
-
-## Understanding the Landscape
-
-The diagram is organized around three horizons: current capabilities, near-term validation efforts, and future opportunities.
-
-### 🟢 Current (Available Today)
-
-The current Microsoft + Esri portfolio focuses on helping customers incorporate geospatial intelligence directly into Fabric and Power BI workflows.
-
-**Current capabilities include:**
-
-- ArcGIS GeoAnalytics for Microsoft Fabric
-- ArcGIS Maps for Microsoft Fabric
-- ArcGIS for Power BI
-
-These capabilities are available today and represent the foundation of the Microsoft + Esri Fabric integration portfolio.
-
-### 🔵 Near-Term (Validation & Development)
-
-The near-term focus is understanding customer demand, validating technical patterns, and identifying where Microsoft and Esri can create additional value.
-
-**Current workstreams include:**
-
-- GeoIQ
-- Customer Strategy Validation
-- Microsoft + Esri Architectural Reference Pattern
-- Expanded Industry Scenarios
-
-The objective is to validate customer adoption patterns, licensing and deployment considerations, and reusable implementation guidance that can accelerate future customer success.
-
-### 🟣 Future (Roadmap Opportunities)
-
-The future horizon explores how geospatial intelligence may participate in AI-native and agent-based experiences.
-
-**Future areas of exploration include:**
-
-- ArcGIS MCP Server
-- Location-Aware Agents
-- Microsoft Foundry Integration
-- Copilot and Teams Experiences
-- Deeper Microsoft + Esri Interoperability
-
-These opportunities build on the current Fabric foundation and should be informed by customer demand, technical validation, and engineering alignment. They should not be interpreted as committed product roadmap items.
-
-### Reading the Diagram
-
-The landscape follows a simple progression:
-
-**Enterprise Data → Geospatial Intelligence → AI-Powered Outcomes**
-
-1. Microsoft Fabric and OneLake provide the enterprise data foundation.
-2. ArcGIS GeoAnalytics for Microsoft Fabric, ArcGIS Maps for Microsoft Fabric, and ArcGIS for Power BI add geospatial analytics, visualization, and location-aware business intelligence.
-3. GeoIQ represents a near-term opportunity to create a reusable location intelligence layer across analytics and AI experiences.
-4. ArcGIS MCP and location-aware agents represent future opportunities to enable AI systems to reason over and act on geospatial relationships.
-5. Customer outcomes include unifying business and geospatial data, operating spatial analytics at enterprise scale, delivering location-aware insights, and accelerating decision-making across industries.
-
-> **Executive Takeaway**
->
-> Microsoft Fabric provides the enterprise data foundation. Esri contributes geospatial intelligence through analytics, visualization, and business intelligence today, while GeoIQ and future MCP-enabled agent experiences represent opportunities to extend location intelligence into AI-driven workflows.
+GeoAnalytics typically produces the spatially enriched data that the mapping and reporting experiences consume. This guide focuses on GeoAnalytics; near-term and future items (such as GeoIQ, ArcGIS MCP Server, and location-aware agents) are out of scope here.
 
 ---
 
 ## Microsoft Fabric Platform Foundation
 
-The Microsoft + Esri Integration Landscape provides a solution-level view of how Microsoft Fabric and Esri capabilities work together to support geospatial analytics, mapping, and location intelligence.
+The [Microsoft + Esri Integration Landscape](../01-Microsoft-Esri-Foundation/README.md#microsoft--esri-fabric-integration-landscape) provides a solution-level view of how Microsoft Fabric and Esri capabilities work together to support geospatial analytics, mapping, and location intelligence.
 
 The Microsoft Fabric end-to-end architecture provides the underlying platform view that explains how data is ingested, governed, stored, processed, and served across the analytics lifecycle.
 
