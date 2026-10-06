@@ -77,6 +77,8 @@ The near-term focus is understanding customer demand, validating technical patte
 **Current workstreams include:**
 
 - GeoIQ
+
+> **GeoIQ** is this library's working term, not a Microsoft or Esri product name. It describes a reusable location-intelligence layer that brings Esri spatial context into Microsoft IQ (Fabric IQ, Foundry IQ, and Work IQ), so agents and analytics can reason over where things are and how they relate.
 - Customer Strategy Validation
 - Microsoft + Esri Architectural Reference Pattern
 - Expanded Industry Scenarios
