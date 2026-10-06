@@ -66,17 +66,21 @@ The opportunity is not simply to visualize data on a map. The opportunity is to 
 
 ### Current Microsoft + Esri Integration Portfolio
 
-The current Microsoft + Esri Fabric landscape is anchored by three capabilities that are available today:
+The current Microsoft + Esri landscape is anchored by five integrations. Three run in Microsoft Fabric and Power BI; two extend the story to where people work and where ArcGIS runs. Details and sources are in [Top Five Microsoft + Esri Integrations](#top-five-microsoft--esri-integrations).
 
 | Capability | Purpose |
 |------------|----------|
 | **ArcGIS GeoAnalytics for Microsoft Fabric** | Distributed geospatial analytics running within Fabric Spark environments |
-| **ArcGIS Maps for Microsoft Fabric** | Native mapping and spatial visualization within Fabric |
+| **ArcGIS Maps for Microsoft Fabric** | Native mapping and spatial visualization within Fabric (confirm preview or general availability status) |
 | **ArcGIS for Power BI** | Location-aware dashboards and reporting for business users |
+| **ArcGIS for Microsoft 365** | Maps in Teams, SharePoint, and Excel, plus an ArcGIS agent for Microsoft 365 Copilot |
+| **ArcGIS on Microsoft Azure** | ArcGIS Enterprise hosted on Azure compute, databases, and storage |
 
-Together, these capabilities enable customers to move from storing and governing data in Microsoft Fabric to performing geospatial analysis, visualizing results geographically, and delivering location-aware insights through existing analytics workflows.
+Together, these integrations let customers run ArcGIS where they choose, bring Esri and business data into Microsoft Fabric for geospatial analysis, and deliver location-aware insights through Power BI, Fabric, and the Microsoft 365 apps people already use.
 
 ![Microsoft + Esri Fabric Integration Landscape](images/fabric-esri-landscape-v2.png)
+
+> The landscape diagram shows the Fabric and Power BI integrations. ArcGIS for Microsoft 365 and ArcGIS on Microsoft Azure will be added in the next version of the diagram.
 
 ## Understanding the Landscape
 
@@ -84,15 +88,17 @@ The diagram is organized around three horizons: current capabilities, near-term 
 
 ### Current (Available Today)
 
-The current Microsoft + Esri portfolio focuses on helping customers incorporate geospatial intelligence directly into Fabric and Power BI workflows.
+The current Microsoft + Esri portfolio helps customers bring geospatial intelligence into Fabric, Power BI, and Microsoft 365, on infrastructure they choose.
 
 **Current capabilities include:**
 
 - ArcGIS GeoAnalytics for Microsoft Fabric
 - ArcGIS Maps for Microsoft Fabric
 - ArcGIS for Power BI
+- ArcGIS for Microsoft 365
+- ArcGIS on Microsoft Azure
 
-These capabilities are available today and represent the foundation of the Microsoft + Esri Fabric integration portfolio.
+These integrations are available today (confirm ArcGIS Maps for Microsoft Fabric status) and represent the foundation of the Microsoft + Esri integration portfolio.
 
 ### Near-Term (Validation & Development)
 
@@ -101,11 +107,11 @@ The near-term focus is understanding customer demand, validating technical patte
 **Current workstreams include:**
 
 - GeoIQ
-
-> **GeoIQ** is this library's working term, not a Microsoft or Esri product name. It describes a reusable location-intelligence layer that brings Esri spatial context into Microsoft IQ (Fabric IQ, Foundry IQ, and Work IQ), so agents and analytics can reason over where things are and how they relate.
 - Customer Strategy Validation
 - Microsoft + Esri Architectural Reference Pattern
 - Expanded Industry Scenarios
+
+> **GeoIQ** is this library's working term, not a Microsoft or Esri product name. It describes a reusable location-intelligence layer that brings Esri spatial context into Microsoft IQ (Fabric IQ, Foundry IQ, and Work IQ), so agents and analytics can reason over where things are and how they relate.
 
 The objective is to validate customer adoption patterns, licensing and deployment considerations, and reusable implementation guidance that can accelerate future customer success.
 
@@ -118,7 +124,7 @@ The future horizon explores how geospatial intelligence may participate in AI-na
 - ArcGIS MCP Server
 - Location-Aware Agents
 - Microsoft Foundry Integration
-- Copilot and Teams Experiences
+- Deeper Copilot and Teams Agent Experiences (building on the ArcGIS agent for Microsoft 365 Copilot available today)
 - Deeper Microsoft + Esri Interoperability
 
 These opportunities build on the current Fabric foundation and should be informed by customer demand, technical validation, and engineering alignment. They should not be interpreted as committed product roadmap items.
@@ -129,15 +135,15 @@ The landscape follows a simple progression:
 
 **Enterprise Data → Geospatial Intelligence → AI-Powered Outcomes**
 
-1. Microsoft Fabric and OneLake provide the enterprise data foundation.
-2. ArcGIS GeoAnalytics for Microsoft Fabric, ArcGIS Maps for Microsoft Fabric, and ArcGIS for Power BI add geospatial analytics, visualization, and location-aware business intelligence.
+1. Microsoft Fabric and OneLake provide the enterprise data foundation, with ArcGIS Enterprise able to run on Microsoft Azure.
+2. ArcGIS GeoAnalytics for Microsoft Fabric, ArcGIS Maps for Microsoft Fabric, ArcGIS for Power BI, and ArcGIS for Microsoft 365 add geospatial analytics, visualization, location-aware business intelligence, and maps where people work.
 3. GeoIQ represents a near-term opportunity to create a reusable location intelligence layer across analytics and AI experiences.
 4. ArcGIS MCP and location-aware agents represent future opportunities to enable AI systems to reason over and act on geospatial relationships.
 5. Customer outcomes include unifying business and geospatial data, operating spatial analytics at enterprise scale, delivering location-aware insights, and accelerating decision-making across industries.
 
 > **Executive Takeaway**
 >
-> Microsoft Fabric provides the enterprise data foundation. Esri contributes geospatial intelligence through analytics, visualization, and business intelligence today, while GeoIQ and future MCP-enabled agent experiences represent opportunities to extend location intelligence into AI-driven workflows.
+> Microsoft Fabric provides the enterprise data foundation. Esri contributes geospatial intelligence today through analytics in Fabric, visualization in Fabric and Power BI, and maps and agents in Microsoft 365, with ArcGIS able to run on Azure, while GeoIQ and future MCP-enabled agent experiences represent opportunities to extend location intelligence into AI-driven workflows.
 
 ---
 
