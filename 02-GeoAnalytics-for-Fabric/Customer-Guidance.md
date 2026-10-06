@@ -231,6 +231,18 @@ A bounded GeoAnalytics proof of concept should identify:
 8. **Success criteria**  
    The measurable result that would demonstrate business value, architectural fit, and technical feasibility.
 
+### Network Readiness Discovery
+
+Confirm the customer's network posture early. GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently not supported when Outbound Access Protection is enabled ([Evidence SEC-004](Evidence.md)). Specific Esri endpoints and network requirements are not yet published ([Evidence GAP-003](Evidence.md#open-evidence-gaps)).
+
+- [ ] Is Outbound Access Protection enabled, or planned, for the target Fabric workspace?
+- [ ] Is outbound internet access from Fabric Spark restricted by customer firewall or proxy policy?
+- [ ] Does the customer require endpoint or hostname allow-listing for outbound connections? *(Open: endpoints not yet documented, GAP-003)*
+- [ ] Does the target workspace use managed virtual networks or Private Link? *(Open: GeoAnalytics behavior not yet documented, GAP-003)*
+- [ ] Has the customer's network or security team been engaged to review these requirements before the proof of concept?
+
+If any answer indicates restricted outbound access, raise it as a proof-of-concept risk and escalate to Esri and Microsoft for confirmation before committing to a design.
+
 The objective is not to demonstrate every Microsoft and Esri integration in a single exercise. The objective is to validate a focused and repeatable pattern that can inform a production design.
 
 ---
