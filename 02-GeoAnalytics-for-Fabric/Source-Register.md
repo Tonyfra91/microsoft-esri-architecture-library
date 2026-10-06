@@ -21,6 +21,9 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-GEO-006 | ArcGIS GeoAnalytics for Microsoft Fabric - Coordinate Systems | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/core-concepts/coordinate-systems/ | Active |
 | SRC-GEO-007 | ArcGIS GeoAnalytics for Microsoft Fabric - SQL Functions | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/sql-functions/ | Active |
 | SRC-GEO-008 | ArcGIS GeoAnalytics for Microsoft Fabric - Track Functions | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/trk-functions/ | Active |
+| SRC-GEO-009 | ArcGIS GeoAnalytics for Microsoft Fabric - Authorization | Esri | Security Documentation | https://developers.arcgis.com/geoanalytics-fabric/authorization/ | Active |
+| SRC-GEO-010 | ArcGIS GeoAnalytics for Microsoft Fabric - Frequently Asked Questions | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/faq/ | Active |
+| SRC-GEO-011 | ArcGIS Architecture Center - Microsoft and ArcGIS Integrations | Esri | Architecture Guidance | https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html | Active |
 | SRC-MSFT-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Generally Available) | Microsoft | Product Documentation | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics | Active |
 | SRC-MSFT-005 | Options to Get Data into the Lakehouse | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse | Active |
 | SRC-MSFT-006 | Choose a Data Movement Strategy | Microsoft | Decision Guide | https://learn.microsoft.com/en-us/fabric/data-factory/decision-guide-data-movement | Active |
@@ -32,6 +35,7 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-MSFT-012 | What Is a Lakehouse? | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview | Active |
 | SRC-MSFT-013 | Create a Lakehouse | Microsoft | Implementation Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse | Active |
 | SRC-MSFT-014 | Implement Medallion Lakehouse Architecture in Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture | Active |
+| SRC-MSFT-015 | Tenant Settings Index - Microsoft Fabric | Microsoft | Administration | https://learn.microsoft.com/en-us/fabric/admin/tenant-settings-index | Active |
 
 ---
 

@@ -166,13 +166,19 @@ flowchart LR
         DF["Spatially enriched<br/>Spark DataFrame"]
     end
     OUT[("Customer-approved<br/>Fabric or ArcGIS output")]
-    AUTH["Esri authorization<br/>(per Esri documentation)"]
+    AUTH["Esri services outside Fabric<br/>authentication + usage tracking"]
 
     LH --> RD --> GEO --> OP --> DF --> OUT
-    OP -. authorization .-> AUTH
+    OP -. "OAuth 2.0 authorization + usage reporting" .-> AUTH
 ```
 
-> **Validation required before publishing:** Confirm and document each external call made during setup or execution (for example, authorization or optional ArcGIS service access). Draw only the connections recorded in the [Evidence register](Evidence.md).
+> **Validated external calls (see [Evidence register](Evidence.md)):**
+>
+> - GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently **not supported when Outbound Access Protection is enabled** (SEC-004).
+> - Processed data stays in the Fabric environment unless the user explicitly writes to an external destination, such as an Esri-hosted feature service (SEC-005).
+> - Store credentials in Azure Key Vault and retrieve them with `notebookutils.credentials.getSecret` (SEC-003).
+>
+> **Still open:** specific Esri endpoints and network requirements (GAP-003). Draw only the connections recorded in the Evidence register.
 
 ### Guidance
 
