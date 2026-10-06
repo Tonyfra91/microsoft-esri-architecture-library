@@ -36,23 +36,11 @@ Microsoft Fabric
                 └── ArcGIS GeoAnalytics
 ```
 
-**Scenario view:**
+**Minimum deployable POC and trust boundary (v0.1):**
 
-```mermaid
-flowchart LR
-    LH[("OneLake<br/>input data items")]
-    subgraph SPARK["Fabric Spark: notebook or Spark job definition"]
-        RD["Read into<br/>Spark DataFrames"]
-        GEO["Create geometry<br/>and spatial reference"]
-        OP["GeoAnalytics<br/>spatial SQL · track functions · analysis tools"]
-        DF["Spatially enriched<br/>Spark DataFrame"]
-    end
-    OUT[("Customer-approved<br/>Fabric or ArcGIS output")]
-    AUTH["Esri services outside Fabric<br/>authentication + usage tracking"]
+![Minimum Deployable POC: ArcGIS GeoAnalytics for Microsoft Fabric](images/minimum-deployable-poc-trust-boundary.png)
 
-    LH --> RD --> GEO --> OP --> DF --> OUT
-    OP -.->|OAuth 2.0 authorization + usage reporting| AUTH
-```
+Numbers 1 to 7 match [What You Need to Run GeoAnalytics](01-Customer-Guidance.md#what-you-need-to-run-geoanalytics). Solid arrows always occur; dashed arrows occur only when the customer's code requests them. Network configuration, including Private Link and managed virtual networks, is validated during deployment and is not drawn (GAP-003).
 
 > **Validated external calls (see [Evidence register](records/Evidence.md)):**
 >
