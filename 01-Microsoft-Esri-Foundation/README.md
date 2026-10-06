@@ -16,6 +16,19 @@ Each component folder that follows (GeoAnalytics, Maps for Fabric, Power BI) goe
 
 ![Microsoft + Esri in Five Steps](images/microsoft-esri-five-steps.png)
 
+**Reading the diagram**
+
+| Element | Meaning |
+|---|---|
+| Numbered tiles (1 to 5) | The five steps of the story, read left to right. Each matches a section below. |
+| Tile colors | Light blue with an Esri outline: data sources (Esri partner). Green: Microsoft Fabric. Navy: Microsoft IQ. Blue: agents and apps. Purple: people. |
+| Icons | Official Microsoft and Esri product icons identify the products in each step. The Microsoft IQ tile uses the Microsoft IQ visual. The People tile uses a generic figure because no product icon applies. |
+| ArcGIS GeoAnalytics chip | The Esri capability that runs inside Microsoft Fabric to enrich data spatially. |
+| Esri user types chip | Each persona is matched to the Esri user type it typically needs (illustrative). |
+| Gray arrows | Data and context moving forward from one step to the next. |
+| Purple loop | Decisions and edits flowing back to Esri and business systems. |
+| Footnote | Data is processed inside Fabric. GeoAnalytics contacts Esri only for licensing and usage, and ArcGIS services only when the customer's code requests them ([Evidence SEC-007 to SEC-009](../02-GeoAnalytics-for-Fabric/records/Evidence.md)). |
+
 ### 1. Data sources: start where the data lives
 
 Location data lives in Esri: ArcGIS Online, ArcGIS Enterprise, and field apps. Operational data lives in business systems such as ERP, asset management, and IoT. The story starts by bringing both together instead of keeping maps and business records apart.
