@@ -53,11 +53,25 @@ Approvers, leaders, analysts, and field operators each get the experience their 
 
 ### The Detailed View
 
-The same story with named components, for audiences who want the next level of detail. It shows the three IQ layers this scenario uses directly: Fabric IQ, Foundry IQ, and Work IQ.
+The same five steps with named components, for audiences who want the next level of detail. It shows the three IQ layers this scenario uses directly: Fabric IQ, Foundry IQ, and Work IQ.
 
 ![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
 
-The column headings (1 to 5) match the five steps above. The blue bubbles number the flows between columns: 1 to 4 move left to right, 5 is the feedback loop back to Esri and business systems, and 6 is Work IQ exchanging context and answers with Microsoft 365.
+**Reading the diagram**
+
+| Element | Meaning |
+|---|---|
+| Column headings (1 to 5) | The five steps of the story, read left to right. Each matches a step above and a row in the column table below. |
+| Lane colors | Light blue with an Esri outline: Esri (partner). Green: Microsoft Fabric. Navy cards on a green panel: Microsoft IQ layers. Blue: agents and serving. Purple: personas. Gray lanes: business systems and Microsoft 365. |
+| Icons | Official Microsoft and Esri product icons identify the products on each card. Work IQ carries a Microsoft 365 badge because Microsoft has not published a Work IQ icon. |
+| Blue numbered bubbles | The flows between columns: **1** Esri and business data into Fabric. **2** Enriched data grounded by Microsoft IQ. **3** Grounded context to agents and apps. **4** Outcomes to each persona. **5** The feedback loop back to Esri and business systems. **6** Work IQ exchanging context and answers with Microsoft 365. |
+| Gray and blue arrows | Data and context moving forward. The Esri-blue arrow is GeoAnalytics reading ArcGIS feature services in place. |
+| Purple arrows | Outcomes reaching personas, and decisions and edits flowing back. |
+| Dashed Esri licensing service* | The only call GeoAnalytics makes on its own: license authorization and usage reporting over HTTPS to arcgis.com. It is not a data source. Feature-service reads and writes and basemap tiles happen only when the customer's code requests them ([Evidence SEC-007 to SEC-009](../02-GeoAnalytics-for-Fabric/records/Evidence.md)). |
+| Esri user type chips | Each persona is matched to the Esri user type it typically needs (illustrative). User types license people; GeoAnalytics is licensed separately, by compute. |
+| Crawl, Walk, Run band | The adoption path: **Crawl** (unify the data), **Walk** (ground it with IQ), **Run** (act with agents and human approval). |
+
+**What happens in each column**
 
 | Column | What happens |
 |---|---|
@@ -66,10 +80,6 @@ The column headings (1 to 5) match the five steps above. The blue bubbles number
 | 3 · Ground | Microsoft IQ (Fabric IQ, Foundry IQ, Work IQ) gives agents and people shared business context. |
 | 4 · Act and serve | Agents propose actions, a person approves them, and results reach Power BI, ArcGIS Maps for Fabric, Teams, Activator, and ArcGIS apps. |
 | 5 · Personas | Each audience is matched to the Esri user type it typically needs (illustrative). |
-
-The band beneath the diagram is the adoption path: **Crawl** (unify the data), **Walk** (ground it with IQ), **Run** (act with agents and human approval).
-
-**What leaves Fabric.** The dashed Esri licensing service is the only call GeoAnalytics makes on its own: license authorization and usage reporting over HTTPS to arcgis.com. Feature-service reads and writes and basemap tiles happen only when the customer's code asks for them. See [Evidence SEC-007 to SEC-009](../02-GeoAnalytics-for-Fabric/records/Evidence.md).
 
 These views introduce the story. The landscape below shows the wider portfolio and horizons. Implementation detail lives in each component folder.
 
