@@ -16,6 +16,21 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-MSFT-001 | Apache Spark Runtime in Fabric | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/runtime | Active |
 | SRC-MSFT-002 | Apache Spark Compute for Data Engineering and Data Science | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-compute | Active |
 | SRC-MSFT-003 | Analytics End-to-End with Microsoft Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end | Active |
+| SRC-GEO-004 | ArcGIS GeoAnalytics for Microsoft Fabric - Data Sources | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/ | Active |
+| SRC-GEO-005 | ArcGIS GeoAnalytics for Microsoft Fabric - Feature Service | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/feature-service/ | Active |
+| SRC-GEO-006 | ArcGIS GeoAnalytics for Microsoft Fabric - Coordinate Systems | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/core-concepts/coordinate-systems/ | Active |
+| SRC-MSFT-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Generally Available) | Microsoft | Product Documentation | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics | Active |
+| SRC-MSFT-005 | Options to Get Data into the Lakehouse | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse | Active |
+| SRC-MSFT-006 | Choose a Data Movement Strategy | Microsoft | Decision Guide | https://learn.microsoft.com/en-us/fabric/data-factory/decision-guide-data-movement | Active |
+| SRC-MSFT-007 | How to Copy Data Using Copy Activity | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-factory/copy-data-activity | Active |
+| SRC-MSFT-008 | Dataflow Gen2 | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-factory/dataflows-gen2-overview | Active |
+| SRC-MSFT-009 | Mirroring in Microsoft Fabric | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/mirroring/overview | Active |
+| SRC-MSFT-010 | OneLake Shortcuts | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts | Active |
+| SRC-MSFT-011 | Microsoft Fabric Eventstreams Overview | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/overview | Active |
+| SRC-MSFT-012 | What Is a Lakehouse? | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview | Active |
+| SRC-MSFT-013 | Create a Lakehouse | Microsoft | Implementation Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse | Active |
+| SRC-MSFT-014 | Implement Medallion Lakehouse Architecture in Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture | Active |
+
 ---
 
 ## Source Validation Rules
@@ -45,7 +60,7 @@ The following do not qualify as authoritative architecture sources:
 
 ## Last Review Date
 
-TBD
+2026-10-06
 
 ## Component Owner
 

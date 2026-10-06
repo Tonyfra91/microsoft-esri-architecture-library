@@ -16,6 +16,13 @@ This document records architecture statements and links them to authoritative so
 | GEO-004 | GeoAnalytics provides analysis tools operating on Spark DataFrames. | SRC-GEO-003 | ArcGIS GeoAnalytics Documentation | Pending |
 | GEO-005 | GeoAnalytics requires authorization before functions or tools can execute. | SRC-GEO-003 | ArcGIS GeoAnalytics Get Started Guide | Pending |
 | GEO-006 | GeoAnalytics operates within Fabric Spark environments. | SRC-MSFT-001 | Apache Spark Runtime in Fabric | Pending |
+| ING-001 | Data can be loaded into a lakehouse through file upload, shortcuts, Dataflow Gen2, data pipelines, notebook code, and Eventstream. | SRC-MSFT-005 | Options to Get Data into the Lakehouse | Pending |
+| ING-002 | OneLake shortcuts make external data available without copying it. | SRC-MSFT-010 | OneLake Shortcuts | Pending |
+| ING-003 | Mirroring replicates data from supported databases and other sources into OneLake. | SRC-MSFT-009 | Mirroring in Microsoft Fabric | Pending |
+| ING-004 | GeoAnalytics reads CSV, feature service, file geodatabase, GeoJSON, GeoParquet, ORC, Parquet, and shapefile sources; file geodatabase is read-only. | SRC-GEO-004 | GeoAnalytics Data Sources | Pending |
+| ING-005 | GeoAnalytics reads ArcGIS Online and ArcGIS Enterprise feature services into Spark DataFrames; secured services require a registered GIS or a token. | SRC-GEO-005 | GeoAnalytics Feature Service | Pending |
+| ING-006 | When writing to Delta, GeoAnalytics converts geometry to WKB; geometry must be converted back when reading Delta tables. | SRC-MSFT-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Microsoft Learn) | Pending |
+| ING-007 | A spatial reference should be set on geometry columns that lack one, using the spatial reference in which the data was collected. | SRC-GEO-006 | GeoAnalytics Coordinate Systems | Pending |
 
 ---
 

@@ -66,15 +66,16 @@ Make the authoritative business data and authoritative geospatial data identifie
 
 ### Selecting an Ingestion Path
 
-The Microsoft reference architecture describes multiple ingestion patterns. Select the one matching the customer source, rather than documenting every option.
+The Microsoft reference architecture describes multiple ingestion patterns. Select the one matching the customer source, rather than documenting every option. Start with Microsoft's [Options to get data into the lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse) and [Choose a data movement strategy](https://learn.microsoft.com/en-us/fabric/data-factory/decision-guide-data-movement) decision guide.
 
-| Customer source | Candidate Fabric pattern | Validation note |
-|---|---|---|
-| Files or batch extracts | Data pipeline or Dataflow Gen2 into a lakehouse | Confirm file formats required by the scenario |
-| Operational databases | Data pipeline or Mirroring, where supported | Confirm source support |
-| Existing cloud storage | OneLake shortcut | Confirm storage type and access model |
-| Streaming or event data | Eventstream | Treat as a separate scenario variant |
-| ArcGIS-hosted geospatial data | Supported read path documented by Esri | Do not assume automatic synchronization with OneLake |
+| Customer source | Candidate Fabric pattern | Reference | Validation note |
+|---|---|---|---|
+| Files or batch extracts | Data pipeline (Copy activity) or Dataflow Gen2 into a lakehouse | [Copy activity](https://learn.microsoft.com/en-us/fabric/data-factory/copy-data-activity) · [Dataflow Gen2](https://learn.microsoft.com/en-us/fabric/data-factory/dataflows-gen2-overview) | Confirm file formats required by the scenario |
+| Spatial files (shapefile, file geodatabase, GeoJSON, GeoParquet) | Land the files in the lakehouse **Files** area; read them with GeoAnalytics in Stage 2 | [GeoAnalytics data sources](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/) | File geodatabase is read-only in GeoAnalytics |
+| Operational databases | Mirroring, where supported, or a data pipeline | [Mirroring](https://learn.microsoft.com/en-us/fabric/mirroring/overview) | Confirm source support |
+| Existing cloud storage | OneLake shortcut | [OneLake shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts) | Confirm storage type and access model; no data copy |
+| Streaming or event data | Eventstream | [Eventstreams overview](https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/overview) | Treat as a separate scenario variant |
+| ArcGIS Online or ArcGIS Enterprise feature services | Read directly into a Spark DataFrame with GeoAnalytics in Stage 2; optionally persist to the lakehouse | [Feature service data source](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/feature-service/) | Secured services require a registered GIS or a token; do not assume automatic synchronization with OneLake |
 
 ### Architecture
 
@@ -101,11 +102,16 @@ flowchart LR
 
 ### Guidance
 
-- Fabric ingestion options → *add Microsoft Learn link and record in Source register*
-- Lakehouse creation and table conventions → *add link*
+- Lakehouse concepts → [What is a lakehouse?](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview)
+- Lakehouse creation → [Create a lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse)
+- Layering raw, cleansed, and curated data → [Medallion lakehouse architecture in Fabric](https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture)
+- Ingestion options → [Options to get data into the lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse)
+- GeoAnalytics in Fabric (Microsoft) → [ArcGIS GeoAnalytics for Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics)
 - Data readiness checklist:
   - [ ] Location fields identified (coordinates, addresses, or geometry)
-  - [ ] Coordinate system documented
+  - [ ] Coordinate system documented ([coordinate systems guidance](https://developers.arcgis.com/geoanalytics-fabric/core-concepts/coordinate-systems/))
+  - [ ] Spatial file formats confirmed against [GeoAnalytics data sources](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/)
+  - [ ] Geometry stored in Delta tables is expected as WKB and converted back to geometry in Stage 2 ([Microsoft Learn](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics))
   - [ ] Join keys between business and geospatial data identified
   - [ ] Data access approved by the customer
 
