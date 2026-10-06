@@ -73,7 +73,7 @@ The Microsoft reference architecture describes multiple ingestion patterns. Sele
 | Files or batch extracts | Data pipeline (Copy activity) or Dataflow Gen2 into a lakehouse | [Copy activity](https://learn.microsoft.com/en-us/fabric/data-factory/copy-data-activity) · [Dataflow Gen2](https://learn.microsoft.com/en-us/fabric/data-factory/dataflows-gen2-overview) | Confirm file formats required by the scenario |
 | Spatial files (shapefile, file geodatabase, GeoJSON, GeoParquet) | Land the files in the lakehouse **Files** area; read them with GeoAnalytics in Stage 2 | [GeoAnalytics data sources](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/) | File geodatabase is read-only in GeoAnalytics |
 | Operational databases | Mirroring, where supported, or a data pipeline | [Mirroring](https://learn.microsoft.com/en-us/fabric/mirroring/overview) | Confirm source support |
-| Existing cloud storage | OneLake shortcut | [OneLake shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts) | Confirm storage type and access model; no data copy |
+| Existing cloud storage | OneLake shortcut | [OneLake shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts) | Confirm storage type and access model; avoids data copies (optional caching available) |
 | Streaming or event data | Eventstream | [Eventstreams overview](https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/overview) | Treat as a separate scenario variant |
 | ArcGIS Online or ArcGIS Enterprise feature services | Read directly into a Spark DataFrame with GeoAnalytics in Stage 2; optionally persist to the lakehouse | [Feature service data source](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/feature-service/) | Secured services require a registered GIS or a token; do not assume automatic synchronization with OneLake |
 
@@ -111,7 +111,7 @@ flowchart LR
   - [ ] Location fields identified (coordinates, addresses, or geometry)
   - [ ] Coordinate system documented ([coordinate systems guidance](https://developers.arcgis.com/geoanalytics-fabric/core-concepts/coordinate-systems/))
   - [ ] Spatial file formats confirmed against [GeoAnalytics data sources](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/)
-  - [ ] Geometry stored in Delta tables is expected as WKB and converted back to geometry in Stage 2 ([Microsoft Learn](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics))
+  - [ ] Geometry written to Delta tables by GeoAnalytics is stored as WKB; in Stage 2, check the column type and convert back with functions such as `ST_GeomFromBinary` ([Microsoft Learn](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics))
   - [ ] Join keys between business and geospatial data identified
   - [ ] Data access approved by the customer
 
