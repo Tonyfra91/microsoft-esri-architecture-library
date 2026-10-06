@@ -25,9 +25,9 @@ Apply the spatial operation required to answer the business question, using ArcG
 
 ## Architecture
 
-**Esri reference:** *Add the Esri documentation link for ArcGIS GeoAnalytics for Microsoft Fabric and record it in the Source register.*
+**References:** [ArcGIS GeoAnalytics for Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics) on Microsoft Learn (SRC-MSFT-004) and Esri's [Get started](https://developers.arcgis.com/geoanalytics-fabric/get-started/) guide (SRC-GEO-003).
 
-**Component relationship** (from the Customer Guidance):
+**Component relationship** (see [Architecture.md](Architecture.md)):
 
 ```text
 Microsoft Fabric
