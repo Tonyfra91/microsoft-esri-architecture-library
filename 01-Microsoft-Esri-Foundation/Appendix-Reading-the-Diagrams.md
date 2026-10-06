@@ -29,7 +29,6 @@ This appendix explains the visual elements in the two diagrams on the [Microsoft
 |---|---|
 | Column headings (1 to 5) | The five steps of the story, read left to right. Each matches a step on the [Foundation page](README.md#the-story-in-one-view) and a row in the column table below. |
 | Lane colors | Light blue with an Esri outline: Esri (partner). Green: Microsoft Fabric. Navy cards on a green panel: Microsoft IQ layers. Blue: agents and serving. Purple: personas. Gray lanes: business systems and Microsoft 365. |
-| Icons | Official Microsoft and Esri product icons identify the products on each card. Work IQ carries a Microsoft 365 badge because Microsoft has not published a Work IQ icon. |
 | Blue numbered bubbles | The flows between columns: **1** Esri and business data into Fabric. **2** Enriched data grounded by Microsoft IQ. **3** Grounded context to agents and apps. **4** Outcomes to each persona. **5** The feedback loop back to Esri and business systems. **6** Work IQ exchanging context and answers with Microsoft 365. |
 | Gray and blue arrows | Data and context moving forward. The Esri-blue arrow is GeoAnalytics reading ArcGIS feature services in place. |
 | Purple arrows | Outcomes reaching personas, and decisions and edits flowing back. |
