@@ -233,7 +233,7 @@ A bounded GeoAnalytics proof of concept should identify:
 
 ### Network Readiness Discovery
 
-Confirm the customer's network posture early. GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently not supported when Outbound Access Protection is enabled ([Evidence SEC-004](Evidence.md)). Specific Esri endpoints and network requirements are not yet published ([Evidence GAP-003](Evidence.md#open-evidence-gaps)).
+Confirm the customer's network posture early. GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently not supported when Outbound Access Protection is enabled ([Evidence SEC-004](records/Evidence.md)). Specific Esri endpoints and network requirements are not yet published ([Evidence GAP-003](records/Evidence.md#open-evidence-gaps)).
 
 - [ ] Is Outbound Access Protection enabled, or planned, for the target Fabric workspace?
 - [ ] Is outbound internet access from Fabric Spark restricted by customer firewall or proxy policy?
@@ -264,7 +264,7 @@ Agentic, GeoIQ, and MCP integration concepts should be documented separately as 
 
 ## Supporting Technical Records
 
-- [End-to-end scenario walkthrough](End-to-End-Scenario.md)
+- [End-to-end scenario walkthrough](02-End-to-End-Scenario.md)
 - [Component architecture](Architecture.md)
-- [Evidence register](Evidence.md)
-- [Source register](Source-Register.md)
+- [Evidence register](records/Evidence.md)
+- [Source register](records/Source-Register.md)
