@@ -28,7 +28,7 @@ The current Microsoft + Esri Fabric landscape is anchored by three capabilities 
 
 Together, these capabilities enable customers to move from storing and governing data in Microsoft Fabric to performing geospatial analysis, visualizing results geographically, and delivering location-aware insights through existing analytics workflows.
 
-![Microsoft + Esri Fabric Integration Landscape](images/Fabric%20Esri%20landscape%20v2.png)
+![Microsoft + Esri Fabric Integration Landscape](images/fabric-esri-landscape-v2.png)
 
 ## Understanding the Landscape
 
