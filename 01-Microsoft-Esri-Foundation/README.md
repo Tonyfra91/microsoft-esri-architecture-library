@@ -1,6 +1,6 @@
 # Microsoft + Esri Foundation
 
-> **Status:** In progress. The five-step diagram (v0.4) and the detailed view (v0.9) are drafts; the integration landscape is current.
+> **Status:** In progress. The five-step diagram (v0.5) and the detailed view (v0.9) are drafts; the integration landscape is current.
 
 ## Purpose
 
@@ -40,11 +40,11 @@ Approvers, leaders, analysts, and field operators each get the experience their 
 
 ### The Detailed View
 
-The same story with named components, for audiences who want the next level of detail. It shows the three IQ layers this scenario uses directly: Fabric IQ, Foundry IQ, and Work IQ. The numbered bubbles match the steps above, plus step 6: Work IQ exchanges context and answers with Microsoft 365.
+The same story with named components, for audiences who want the next level of detail. It shows the three IQ layers this scenario uses directly: Fabric IQ, Foundry IQ, and Work IQ.
 
 ![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
 
-The column headings (1 to 5) describe each stage. The blue bubbles mark the flows between them.
+The column headings (1 to 5) match the five steps above. The blue bubbles number the flows between columns: 1 to 4 move left to right, 5 is the feedback loop back to Esri and business systems, and 6 is Work IQ exchanging context and answers with Microsoft 365.
 
 | Column | What happens |
 |---|---|
