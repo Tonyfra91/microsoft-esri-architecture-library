@@ -1,6 +1,6 @@
 # Microsoft + Esri Foundation
 
-> **Status:** In progress. The story-in-one-view diagram is a draft (v0.5); the integration landscape is current.
+> **Status:** In progress. The five-step diagram (v0.1) and the detailed view (v0.6) are drafts; the integration landscape is current.
 
 ## Purpose
 
@@ -12,11 +12,23 @@ Each component folder that follows (GeoAnalytics, Maps for Fabric, Power BI) goe
 
 ## The Story in One View
 
+![Microsoft + Esri in Five Steps](images/microsoft-esri-five-steps.png)
+
+1. **Data sources to Fabric.** Esri and business data flow into Microsoft Fabric, copied into OneLake or read in place from ArcGIS.
+2. **Fabric to Microsoft IQ.** After spatial enrichment with ArcGIS GeoAnalytics, Microsoft IQ models and indexes the data so agents understand what it means. The data stays in OneLake.
+3. **Microsoft IQ to agents and apps.** Grounded context powers agents, reports, maps, and conversations, with a person approving before any action.
+4. **Agents and apps to people.** Outcomes reach each persona in the tool, and Esri user type, that fits their role.
+5. **Back to the source.** Decisions and edits flow back to Esri and business systems.
+
+### The Detailed View
+
+The same story with named components. The numbered bubbles match the steps above, plus step 6: Work IQ exchanges context and answers with Microsoft 365.
+
 ![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
 
-Read it left to right:
+The column headings (1 to 5) describe each stage. The blue bubbles mark the flows between them.
 
-| Step | What happens |
+| Column | What happens |
 |---|---|
 | 1 · Data sources | Esri, business, and Microsoft 365 data are where the story starts. |
 | 2 · Ingest and enrich | Data is copied into OneLake or read in place from ArcGIS, then enriched spatially with ArcGIS GeoAnalytics running inside Fabric Spark. |
@@ -28,7 +40,7 @@ The band beneath the diagram is the adoption path: **Crawl** (unify the data), *
 
 **What leaves Fabric.** The dashed Esri licensing service is the only call GeoAnalytics makes on its own: license authorization and usage reporting over HTTPS to arcgis.com. Feature-service reads and writes and basemap tiles happen only when the customer's code asks for them. See [Evidence SEC-007 to SEC-009](../02-GeoAnalytics-for-Fabric/records/Evidence.md).
 
-This view introduces the story. The landscape below shows the wider portfolio and horizons. Implementation detail lives in each component folder.
+These views introduce the story. The landscape below shows the wider portfolio and horizons. Implementation detail lives in each component folder.
 
 ---
 
