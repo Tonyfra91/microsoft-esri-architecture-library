@@ -169,7 +169,7 @@ flowchart LR
     AUTH["Esri services outside Fabric<br/>authentication + usage tracking"]
 
     LH --> RD --> GEO --> OP --> DF --> OUT
-    OP -. "OAuth 2.0 authorization + usage reporting" .-> AUTH
+    OP -.->|OAuth 2.0 authorization + usage reporting| AUTH
 ```
 
 > **Validated external calls (see [Evidence register](Evidence.md)):**
