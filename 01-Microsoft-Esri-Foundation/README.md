@@ -1,6 +1,6 @@
 # Microsoft + Esri Foundation
 
-> **Status:** In progress. The elevator-pitch diagram is a placeholder; the integration landscape is current.
+> **Status:** In progress. The story-in-one-view diagram is a draft (v0.5); the integration landscape is current.
 
 ## Purpose
 
@@ -12,19 +12,23 @@ Each component folder that follows (GeoAnalytics, Maps for Fabric, Power BI) goe
 
 ## The Story in One View
 
-<!-- TODO: Replace with the simplified "elevator pitch" landscape image.
-     Save it as 01-Microsoft-Esri-Foundation/images/microsoft-esri-elevator-pitch.png
-     and replace the diagram below with:
-     ![Microsoft + Esri elevator pitch](images/microsoft-esri-elevator-pitch.png) -->
+![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
 
-*Interim view until the elevator-pitch diagram is added:*
+Read it left to right:
 
-```mermaid
-flowchart LR
-    A["Customer data<br/>business + geospatial"] --> B["Microsoft Fabric + OneLake<br/>data foundation"]
-    B --> C["ArcGIS GeoAnalytics<br/>spatial analysis in Fabric Spark"]
-    C --> D["ArcGIS Maps for Fabric<br/>ArcGIS for Power BI<br/>location-aware insights"]
-```
+| Step | What happens |
+|---|---|
+| 1 · Data sources | Esri, business, and Microsoft 365 data are where the story starts. |
+| 2 · Ingest and enrich | Data is copied into OneLake or read in place from ArcGIS, then enriched spatially with ArcGIS GeoAnalytics running inside Fabric Spark. |
+| 3 · Ground | Microsoft IQ (Fabric IQ, Foundry IQ, Work IQ) gives agents and people shared business context. |
+| 4 · Act and serve | Agents propose actions, a person approves them, and results reach Power BI, ArcGIS Maps for Fabric, Teams, Activator, and ArcGIS apps. |
+| 5 · Personas | Each audience is matched to the Esri user type it typically needs (illustrative). |
+
+The band beneath the diagram is the adoption path: **Crawl** (unify the data), **Walk** (ground it with IQ), **Run** (act with agents and human approval).
+
+**What leaves Fabric.** The dashed Esri licensing service is the only call GeoAnalytics makes on its own: license authorization and usage reporting over HTTPS to arcgis.com. Feature-service reads and writes and basemap tiles happen only when the customer's code asks for them. See [Evidence SEC-007 to SEC-009](../02-GeoAnalytics-for-Fabric/records/Evidence.md).
+
+This view introduces the story. The landscape below shows the wider portfolio and horizons. Implementation detail lives in each component folder.
 
 ---
 
@@ -54,7 +58,7 @@ Together, these capabilities enable customers to move from storing and governing
 
 The diagram is organized around three horizons: current capabilities, near-term validation efforts, and future opportunities.
 
-### 🟢 Current (Available Today)
+### Current (Available Today)
 
 The current Microsoft + Esri portfolio focuses on helping customers incorporate geospatial intelligence directly into Fabric and Power BI workflows.
 
@@ -66,7 +70,7 @@ The current Microsoft + Esri portfolio focuses on helping customers incorporate 
 
 These capabilities are available today and represent the foundation of the Microsoft + Esri Fabric integration portfolio.
 
-### 🔵 Near-Term (Validation & Development)
+### Near-Term (Validation & Development)
 
 The near-term focus is understanding customer demand, validating technical patterns, and identifying where Microsoft and Esri can create additional value.
 
@@ -79,7 +83,7 @@ The near-term focus is understanding customer demand, validating technical patte
 
 The objective is to validate customer adoption patterns, licensing and deployment considerations, and reusable implementation guidance that can accelerate future customer success.
 
-### 🟣 Future (Roadmap Opportunities)
+### Future (Roadmap Opportunities)
 
 The future horizon explores how geospatial intelligence may participate in AI-native and agent-based experiences.
 

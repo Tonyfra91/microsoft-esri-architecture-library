@@ -8,7 +8,7 @@ This map shows every component in the Microsoft + Esri Architecture Library, whe
 
 | # | Horizon | Component | Role | Folder | Status |
 |---|---|---|---|---|---|
-| 01 | Foundation | Microsoft + Esri Foundation | Elevator-pitch story and landscape introduction | [01-Microsoft-Esri-Foundation](01-Microsoft-Esri-Foundation/) | Placeholder |
+| 01 | Foundation | Microsoft + Esri Foundation | Story in one view and landscape introduction | [01-Microsoft-Esri-Foundation](01-Microsoft-Esri-Foundation/) | In progress |
 | 02 | Current | ArcGIS GeoAnalytics for Microsoft Fabric | Spatial processing and enrichment in Fabric Spark | [02-GeoAnalytics-for-Fabric](02-GeoAnalytics-for-Fabric/) | In progress |
 | 03 | Current | ArcGIS Maps for Microsoft Fabric | Mapping and spatial visualization within Fabric | — | Planned |
 | 04 | Current | ArcGIS for Power BI | Location-aware reporting for business users | — | Planned |
