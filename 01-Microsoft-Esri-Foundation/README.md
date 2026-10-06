@@ -1,6 +1,6 @@
 # Microsoft + Esri Foundation
 
-> **Status:** In progress. The five-step diagram (v0.3) and the detailed view (v0.9) are drafts; the integration landscape is current.
+> **Status:** In progress. The five-step diagram (v0.4) and the detailed view (v0.9) are drafts; the integration landscape is current.
 
 ## Purpose
 
@@ -12,17 +12,35 @@ Each component folder that follows (GeoAnalytics, Maps for Fabric, Power BI) goe
 
 ## The Story in One View
 
+**Microsoft + Esri turn location data into location-aware agents, with a person in the loop.** Esri and business data come together in Microsoft Fabric, get enriched with spatial analysis, are grounded by Microsoft IQ, and reach every role through agents and the apps people already use. Decisions flow back to where the data started.
+
 ![Microsoft + Esri in Five Steps](images/microsoft-esri-five-steps.png)
 
-1. **Data sources to Fabric.** Esri and business data flow into Microsoft Fabric, copied into OneLake or read in place from ArcGIS.
-2. **Fabric to Microsoft IQ.** After spatial enrichment with ArcGIS GeoAnalytics, Microsoft IQ models and indexes the data so agents understand what it means. The data stays in OneLake.
-3. **Microsoft IQ to agents and apps.** Grounded context powers agents, reports, maps, and conversations, with a person approving before any action.
-4. **Agents and apps to people.** Outcomes reach each persona in the tool, and Esri user type, that fits their role.
-5. **Back to the source.** Decisions and edits flow back to Esri and business systems.
+### 1. Data sources: start where the data lives
+
+Location data lives in Esri: ArcGIS Online, ArcGIS Enterprise, and field apps. Operational data lives in business systems such as ERP, asset management, and IoT. The story starts by bringing both together instead of keeping maps and business records apart.
+
+### 2. Microsoft Fabric: unify and enrich
+
+Data lands in OneLake, either copied in or read in place from ArcGIS. ArcGIS GeoAnalytics runs inside Fabric Spark to add spatial context such as proximity, tracks, hot spots, and spatial joins. The data is processed inside Fabric.
+
+### 3. Microsoft IQ: ground it in business context
+
+Microsoft IQ models and indexes the enriched data so agents understand what it means. Work IQ, Fabric IQ, Foundry IQ, and Web IQ connect how people work, how the business operates, reusable knowledge, and current information from the web. The data stays in OneLake.
+
+### 4. Agents and apps: act with a person in the loop
+
+Foundry agents and Copilot propose actions, and a person approves before anything changes. Results also surface in Power BI and ArcGIS Maps for Fabric, so insight reaches people through familiar tools.
+
+### 5. People: the right experience for each role
+
+Approvers, leaders, analysts, and field operators each get the experience their role needs, matched to the Esri user type they typically hold (illustrative). Decisions and edits flow back to Esri and business systems, closing the loop.
+
+> **The 30-second version:** Bring Esri and business data into Fabric. Enrich it spatially with GeoAnalytics. Ground it with Microsoft IQ. Let agents act, with a person approving, and deliver the outcome to every role.
 
 ### The Detailed View
 
-The same story with named components. The numbered bubbles match the steps above, plus step 6: Work IQ exchanges context and answers with Microsoft 365.
+The same story with named components, for audiences who want the next level of detail. It shows the three IQ layers this scenario uses directly: Fabric IQ, Foundry IQ, and Work IQ. The numbered bubbles match the steps above, plus step 6: Work IQ exchanges context and answers with Microsoft 365.
 
 ![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
 
