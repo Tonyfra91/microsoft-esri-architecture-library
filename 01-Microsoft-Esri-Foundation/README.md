@@ -141,6 +141,24 @@ The landscape follows a simple progression:
 
 ---
 
+## Top Five Microsoft + Esri Integrations
+
+These five integrations carry the story from where ArcGIS runs, through Fabric, to the tools people use every day.
+
+| # | Integration | What it does | Story step | Source |
+|---|---|---|---|---|
+| 1 | ArcGIS GeoAnalytics for Microsoft Fabric | Adds spatial queries, functions, and tools to Fabric Spark notebooks and Spark job definitions. | 2 · Microsoft Fabric | [Esri Architecture Center](https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html); [Microsoft Learn](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics) |
+| 2 | ArcGIS Maps for Microsoft Fabric | Interactive mapping and spatial visualization as a Fabric workload. | 4 · Agents and apps | [Microsoft Fabric blog](https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Unlocking-Geospatial-Intelligence-in-Microsoft-Fabric-with-Esri/ba-p/5172470); [Microsoft Marketplace](https://marketplace.microsoft.com/en-us/product/saas/esri.arcgis-fabric-maps?tab=Overview) |
+| 3 | ArcGIS for Power BI | A native Power BI visual that shows report data alongside ArcGIS Online or ArcGIS Enterprise layers. | 4 · Agents and apps | [Esri Architecture Center](https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html) |
+| 4 | ArcGIS for Microsoft 365 | Maps in Teams, SharePoint, and Excel, plus a declarative agent for Microsoft 365 Copilot in ArcGIS for Teams. | 4 · Agents and apps; 5 · People | [Esri Architecture Center](https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html); [Esri announcement](https://www.esri.com/about/newsroom/announcements/esri-collaborates-with-microsoft-to-bring-arcgis-users-new-ai-enhancements) |
+| 5 | ArcGIS on Microsoft Azure | Runs ArcGIS Enterprise on Azure compute, databases, and storage. | 1 · Data sources | [Esri](https://www.esriuk.com/en-gb/about/partners/our-partners/strategic-alliances/microsoft/azure-cloud/arcgis-on-azure) |
+
+> **Status note:** ArcGIS Maps for Microsoft Fabric is described as available in a Microsoft Fabric blog post but is still listed as preview on Microsoft Marketplace. Confirm current status before presenting it as generally available.
+
+Related patterns, not separate components: ArcGIS connectors for Power Automate support scheduled data loads, event triggers, and webhooks ([Esri Architecture Center](https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html)), and Microsoft Entra ID provides sign-in across all five.
+
+---
+
 ## Components in This Library
 
 | # | Component | Role in the story | Status |
@@ -148,6 +166,8 @@ The landscape follows a simple progression:
 | 02 | [ArcGIS GeoAnalytics for Microsoft Fabric](../02-GeoAnalytics-for-Fabric/) | Spatial processing and enrichment in Fabric Spark | In progress |
 | 03 | ArcGIS Maps for Microsoft Fabric | Mapping and spatial visualization within Fabric | Planned |
 | 04 | ArcGIS for Power BI | Location-aware reporting for business users | Planned |
+| 05 | ArcGIS for Microsoft 365 | Maps and Copilot agent experiences in Teams, SharePoint, and Excel | Planned |
+| 06 | ArcGIS on Microsoft Azure | Hosting ArcGIS Enterprise on Azure infrastructure | Planned |
 
 See the [Architecture Map](../Architecture-Mapping.md) for the full library, including near-term and future horizons.
 

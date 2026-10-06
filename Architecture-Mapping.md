@@ -12,6 +12,8 @@ This map shows every component in the Microsoft + Esri Architecture Library, whe
 | 02 | Current | ArcGIS GeoAnalytics for Microsoft Fabric | Spatial processing and enrichment in Fabric Spark | [02-GeoAnalytics-for-Fabric](02-GeoAnalytics-for-Fabric/) | In progress |
 | 03 | Current | ArcGIS Maps for Microsoft Fabric | Mapping and spatial visualization within Fabric | — | Planned |
 | 04 | Current | ArcGIS for Power BI | Location-aware reporting for business users | — | Planned |
+| 05 | Current | ArcGIS for Microsoft 365 | Maps and Copilot agent experiences in Teams, SharePoint, and Excel | — | Planned |
+| 06 | Current | ArcGIS on Microsoft Azure | Hosting ArcGIS Enterprise on Azure infrastructure | — | Planned |
 | — | Near-term | GeoIQ | Reusable location intelligence layer | Reference pattern, once validated | Not started |
 | — | Future | ArcGIS MCP Server and location-aware agents | Geospatial reasoning for AI and agents | Reference pattern, once validated | Not started |
 
