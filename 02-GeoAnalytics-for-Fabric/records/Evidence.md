@@ -29,6 +29,9 @@ This document records architecture statements and links them to authoritative so
 | SEC-004 | For authentication and usage tracking, GeoAnalytics calls Esri services outside of Fabric and is currently not supported when Outbound Access Protection is enabled. | SRC-MSFT-004 | Microsoft Learn GeoAnalytics | Supported |
 | SEC-005 | GeoAnalytics functions and tools run entirely within the user's Fabric environment; processed data is not transmitted outside it unless explicitly requested (for example, writing to an Esri-hosted feature service). | SRC-GEO-010 | GeoAnalytics FAQ | Supported |
 | SEC-006 | Anonymized telemetry (usage statistics and function names) may be aggregated and reported, without identifying the Fabric user, workspace, or tenant, and may be stored outside the customer's geographic region. | SRC-GEO-010 | GeoAnalytics FAQ | Supported |
+| SEC-007 | GeoAnalytics outbound calls go over HTTPS on port 443 to the arcgis.com domain, under `/sharing/rest`: OAuth authorization (`/sharing/rest/oauth2`) and periodic usage reporting (`/sharing/rest/portals/self/usage`). | SRC-GEO-012 | Esri direct confirmation | Supported (Esri direct confirmation, 2026-10-06) |
+| SEC-008 | `st.plot()` retrieves basemap tiles from Esri when a basemap is requested (for example `basemap="light"`); this is an outbound call triggered by the user's code. | SRC-GEO-012; SRC-GEO-013 | Esri direct confirmation; Visualize results with st.plot() | Supported |
+| SEC-009 | Analysis functions and tools make no implicit calls to other ArcGIS services; outbound calls are limited to authorization, usage reporting, user-requested feature-service reads and writes, and basemap tiles for plotting. | SRC-GEO-012; SRC-GEO-010 | Esri direct confirmation; GeoAnalytics FAQ | Supported (Esri direct confirmation, 2026-10-06) |
 
 ---
 
@@ -37,8 +40,8 @@ This document records architecture statements and links them to authoritative so
 | ID | Gap | Status | Validation Notes (2026-10-06) |
 |----|-----|--------|-------------------------------|
 | GAP-001 | Published deployment architecture diagram from Microsoft or Esri | Open (confirmed) | No GeoAnalytics-specific deployment diagram found on Microsoft Learn (SRC-MSFT-004), Esri Developer docs (SRC-GEO-001, SRC-GEO-009, SRC-GEO-010), or the ArcGIS Architecture Center (SRC-GEO-011). The Architecture Center describes the integration in text only. Scenario views in this repo remain labeled as adapted. |
-| GAP-002 | Official security architecture documentation specific to GeoAnalytics authorization patterns | Partially closed | Authorization methods, credential storage, tenant control, outbound calls, and data handling are now documented (SEC-001 to SEC-006). No consolidated security architecture document exists; remaining items tracked in GAP-003. |
-| GAP-003 | Network requirements for GeoAnalytics outbound calls: Esri endpoints/hostnames, firewall allow-listing, and behavior with managed virtual networks or Private Link | Open | SRC-MSFT-004 confirms outbound calls to Esri services and lack of support with Outbound Access Protection, but no source lists endpoints or other network requirements. Candidate for an Esri/Microsoft engineering inquiry. |
+| GAP-002 | Official security architecture documentation specific to GeoAnalytics authorization patterns | Partially closed | Authorization methods, credential storage, tenant control, outbound calls, and data handling are now documented (SEC-001 to SEC-006). No consolidated security architecture document exists. Outbound calls and endpoints confirmed by Esri (SEC-007 to SEC-009); remaining items tracked in GAP-003. |
+| GAP-003 | Network requirements for GeoAnalytics outbound calls: Esri endpoints/hostnames, firewall allow-listing, and behavior with managed virtual networks or Private Link | Partially closed | Closed: Esri confirmed outbound calls use HTTPS on port 443 to arcgis.com under `/sharing/rest` (SEC-007 to SEC-009); allow-listing guidance is sufficient for deployment. Esri did not provide a complete endpoint list because several endpoints are called. Still open: behavior with managed virtual networks or Private Link. |
 
 ---
 

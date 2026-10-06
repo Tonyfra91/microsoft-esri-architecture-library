@@ -24,6 +24,8 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-GEO-009 | ArcGIS GeoAnalytics for Microsoft Fabric - Authorization | Esri | Security Documentation | https://developers.arcgis.com/geoanalytics-fabric/authorization/ | Active |
 | SRC-GEO-010 | ArcGIS GeoAnalytics for Microsoft Fabric - Frequently Asked Questions | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/faq/ | Active |
 | SRC-GEO-011 | ArcGIS Architecture Center - Microsoft and ArcGIS Integrations | Esri | Architecture Guidance | https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html | Active |
+| SRC-GEO-012 | Esri direct confirmation to Microsoft partner: GeoAnalytics outbound calls and network requirements (2026-10-06) | Esri | Direct Confirmation | No public URL | Active |
+| SRC-GEO-013 | Visualize results with st.plot() | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/tutorials/visualize/visualize-results-st-plot/ | Active |
 | SRC-MSFT-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Generally Available) | Microsoft | Product Documentation | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics | Active |
 | SRC-MSFT-005 | Options to Get Data into the Lakehouse | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse | Active |
 | SRC-MSFT-006 | Choose a Data Movement Strategy | Microsoft | Decision Guide | https://learn.microsoft.com/en-us/fabric/data-factory/decision-guide-data-movement | Active |

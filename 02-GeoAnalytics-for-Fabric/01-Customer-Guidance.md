@@ -166,11 +166,11 @@ A bounded GeoAnalytics proof of concept should identify:
 
 ### Network Readiness Discovery
 
-Confirm the customer's network posture early. GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently not supported when Outbound Access Protection is enabled ([Evidence SEC-004](records/Evidence.md)). Specific Esri endpoints and network requirements are not yet published ([Evidence GAP-003](records/Evidence.md#open-evidence-gaps)).
+Confirm the customer's network posture early. GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently not supported when Outbound Access Protection is enabled ([Evidence SEC-004](records/Evidence.md)). Esri confirms these calls use HTTPS on port 443 to the arcgis.com domain, and that notebook plotting with a basemap also retrieves tiles from Esri ([Evidence SEC-007 to SEC-009](records/Evidence.md)). Behavior with managed virtual networks or Private Link is not yet documented ([Evidence GAP-003](records/Evidence.md#open-evidence-gaps)).
 
 - [ ] Is Outbound Access Protection enabled, or planned, for the target Fabric workspace?
 - [ ] Is outbound internet access from Fabric Spark restricted by customer firewall or proxy policy?
-- [ ] Does the customer require endpoint or hostname allow-listing for outbound connections? *(Open: endpoints not yet documented, GAP-003)*
+- [ ] Does the customer require endpoint or hostname allow-listing for outbound connections? If so, allow outbound HTTPS on port 443 to arcgis.com. *(SEC-007)*
 - [ ] Does the target workspace use managed virtual networks or Private Link? *(Open: GeoAnalytics behavior not yet documented, GAP-003)*
 - [ ] Has the customer's network or security team been engaged to review these requirements before the proof of concept?
 

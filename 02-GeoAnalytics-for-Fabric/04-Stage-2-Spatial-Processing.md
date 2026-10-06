@@ -60,7 +60,9 @@ flowchart LR
 > - Processed data stays in the Fabric environment unless the user explicitly writes to an external destination, such as an Esri-hosted feature service (SEC-005).
 > - Store credentials in Azure Key Vault and retrieve them with `notebookutils.credentials.getSecret` (SEC-003).
 >
-> **Still open:** specific Esri endpoints and network requirements (GAP-003). Draw only the connections recorded in the Evidence register.
+> - Outbound calls use HTTPS on port 443 to arcgis.com under `/sharing/rest` for authorization and periodic usage reporting; `st.plot()` with a basemap also retrieves tiles (SEC-007, SEC-008).
+>
+> **Still open:** behavior with managed virtual networks or Private Link (GAP-003). Draw only the connections recorded in the Evidence register.
 
 ## Guidance
 
