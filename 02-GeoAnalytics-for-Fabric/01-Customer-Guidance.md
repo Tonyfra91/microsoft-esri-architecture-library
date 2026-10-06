@@ -10,7 +10,7 @@ This guide summarizes where GeoAnalytics sits in the Microsoft + Esri landscape,
 
 ## Where GeoAnalytics Sits in the Microsoft + Esri Landscape
 
-The Microsoft + Esri Fabric landscape is anchored by three capabilities available today: **ArcGIS GeoAnalytics for Microsoft Fabric**, **ArcGIS Maps for Microsoft Fabric**, and **ArcGIS for Power BI**. The full landscape, including near-term and future horizons, is described in [01 · Microsoft + Esri Foundation](../01-Microsoft-Esri-Foundation/README.md#microsoft--esri-fabric-integration-landscape).
+The Microsoft + Esri landscape is anchored by five integrations. Three run in Microsoft Fabric and Power BI: **ArcGIS GeoAnalytics for Microsoft Fabric**, **ArcGIS Maps for Microsoft Fabric**, and **ArcGIS for Power BI**. Two extend the story: **ArcGIS for Microsoft 365** and **ArcGIS on Microsoft Azure**. The full landscape, including near-term and future horizons, is described in [01 · Microsoft + Esri Foundation](../01-Microsoft-Esri-Foundation/README.md#microsoft--esri-fabric-integration-landscape).
 
 Within that landscape, GeoAnalytics provides the **spatial processing** step:
 
