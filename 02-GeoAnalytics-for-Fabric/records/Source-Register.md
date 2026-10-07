@@ -38,6 +38,7 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-MSFT-013 | Create a Lakehouse | Microsoft | Implementation Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse | Active |
 | SRC-MSFT-014 | Implement Medallion Lakehouse Architecture in Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture | Active |
 | SRC-MSFT-015 | Tenant Settings Index - Microsoft Fabric | Microsoft | Administration | https://learn.microsoft.com/en-us/fabric/admin/tenant-settings-index | Active |
+| SRC-MSFT-016 | Microsoft Fabric workloads - Azure Well-Architected Framework (architecture diagram and pillar guidance) | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview | Active |
 
 ---
 

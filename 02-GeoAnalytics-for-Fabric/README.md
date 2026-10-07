@@ -12,7 +12,7 @@ Read the documents in this order:
 
 | Step | Document | What it covers |
 |---|---|---|
-| 1 | [Customer Guidance](01-Customer-Guidance.md) | Reference pattern, what you need to run GeoAnalytics, the three stages, proof-of-concept framework, network readiness discovery |
+| 1 | [Customer Guidance](01-Customer-Guidance.md) | Fabric foundation (Well-Architected), what you need to run GeoAnalytics, the three stages, proof-of-concept framework, network readiness discovery |
 | 2 | [End-to-End Scenario](02-End-to-End-Scenario.md) | Overview of the customer journey from data to results |
 | 3 | [Stage 1: Bring Data into Fabric](03-Stage-1-Bring-Data-into-Fabric.md) | Discovery questions, ingestion paths, data readiness |
 | 4 | [Stage 2: Spatial Processing](04-Stage-2-Spatial-Processing.md) | GeoAnalytics execution, authorization, external calls |

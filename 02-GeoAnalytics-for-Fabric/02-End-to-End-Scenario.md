@@ -75,7 +75,7 @@ The primary path in Stages 1–3 uses batch data in a lakehouse. Variants should
 - [Stage 1: Bring Data into Fabric](03-Stage-1-Bring-Data-into-Fabric.md)
 - [Stage 2: Spatial Processing](04-Stage-2-Spatial-Processing.md)
 - [Stage 3: Use the Results](05-Stage-3-Use-the-Results.md)
-- [Customer Guidance](01-Customer-Guidance.md) — reference pattern, requirements, the three stages, and proof-of-concept framework
+- [Customer Guidance](01-Customer-Guidance.md) — Fabric foundation, requirements, the three stages, and proof-of-concept framework
 - [Component architecture](Architecture.md)
 - [Evidence register](records/Evidence.md)
 - [Source register](records/Source-Register.md)
