@@ -32,6 +32,10 @@ This document records architecture statements and links them to authoritative so
 | SEC-007 | GeoAnalytics outbound calls go over HTTPS on port 443 to the arcgis.com domain, under `/sharing/rest`: OAuth authorization (`/sharing/rest/oauth2`) and periodic usage reporting (`/sharing/rest/portals/self/usage`). | SRC-GEO-012 | Esri direct confirmation | Supported (Esri direct confirmation, 2026-10-06) |
 | SEC-008 | `st.plot()` retrieves basemap tiles from Esri when a basemap is requested (for example `basemap="light"`); this is an outbound call triggered by the user's code. | SRC-GEO-012; SRC-GEO-013 | Esri direct confirmation; Visualize results with st.plot() | Supported |
 | SEC-009 | Analysis functions and tools make no implicit calls to other ArcGIS services; outbound calls are limited to authorization, usage reporting, user-requested feature-service reads and writes, and basemap tiles for plotting. | SRC-GEO-012; SRC-GEO-010 | Esri direct confirmation; GeoAnalytics FAQ | Supported (Esri direct confirmation, 2026-10-06) |
+| OUT-001 | A spatially enriched Spark DataFrame can be persisted to supported Fabric data items, including Delta tables in a lakehouse. | SRC-MSFT-004; SRC-GEO-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Microsoft Learn); GeoAnalytics Data Sources | Supported |
+| OUT-002 | Fabric output exposed through a Power BI semantic model or report can be visualized with ArcGIS for Power BI. | SRC-MSFT-018; SRC-GEO-017; SRC-GEO-018 | Create ArcGIS Maps for Power BI; Introduction to ArcGIS for Power BI; Configure ArcGIS for Power BI | Supported |
+| OUT-003 | ArcGIS Maps for Microsoft Fabric can visualize supported Fabric and OneLake data through its documented data-loading workflow. | SRC-GEO-015; SRC-GEO-016; SRC-MSFT-017 | ArcGIS for Microsoft Fabric; ArcGIS Maps for Microsoft Fabric Quick Start Guide; Microsoft Fabric release notes | Supported |
+| OUT-004 | GeoAnalytics can explicitly write supported Spark DataFrame results to an ArcGIS Online or ArcGIS Enterprise feature service; authorization, service capabilities, and permissions apply. | SRC-GEO-004; SRC-GEO-005 | GeoAnalytics Data Sources; GeoAnalytics Feature Service | Supported |
 
 ---
 
@@ -47,7 +51,7 @@ This document records architecture statements and links them to authoritative so
 
 ## Last Review Date
 
-2026-10-06
+2026-10-07
 
 ## Owner
 

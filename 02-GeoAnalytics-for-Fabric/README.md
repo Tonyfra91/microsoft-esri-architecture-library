@@ -40,6 +40,8 @@ This component answers:
 
 Published Product Architecture
 
+Product-supported paths are backed by the [Evidence register](records/Evidence.md). Customer-specific identity, networking, access, and production deployment choices require validation.
+
 ## Related Components
 
 - Fabric Platform

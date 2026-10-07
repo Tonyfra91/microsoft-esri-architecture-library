@@ -27,6 +27,10 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-GEO-012 | Esri direct confirmation to Microsoft partner: GeoAnalytics outbound calls and network requirements (2026-10-06) | Esri | Direct Confirmation | No public URL | Active |
 | SRC-GEO-013 | Visualize results with st.plot() | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/tutorials/visualize/visualize-results-st-plot/ | Active |
 | SRC-GEO-014 | Esri at FABCON 2026: ArcGIS for Microsoft Fabric (GeoAnalytics generally available; ArcGIS Maps for Fabric public preview as of 2026-02-18) | Esri | Announcement | https://www.esri.com/arcgis-blog/products/arcgis/announcements/esri-at-fabcon-2026-arcgis-for-microsoft-fabric | Active (Maps for Fabric status superseded by SRC-MSFT-017) |
+| SRC-GEO-015 | ArcGIS for Microsoft Fabric | Esri | Product Documentation | https://www.esri.com/en-us/arcgis/products/arcgis-for-microsoft/arcgis-for-microsoft-fabric | Active |
+| SRC-GEO-016 | ArcGIS Maps for Microsoft Fabric Quick Start Guide | Esri | Implementation Guidance | https://www.esri.com/content/dam/esrisites/en-us/media/pdf/implementation-guides/maps-for-fabric-quick-start-guide.pdf | Active |
+| SRC-GEO-017 | Introduction to ArcGIS for Power BI | Esri | Product Documentation | https://doc.arcgis.com/en/power-bi/latest/get-started/introduction-to-arcgis-for-power-bi.htm | Active |
+| SRC-GEO-018 | Configure ArcGIS for Power BI | Esri | Implementation Guidance | https://doc.arcgis.com/en/power-bi/latest/get-started/configure-arcgis-for-power-bi.htm | Active |
 | SRC-MSFT-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Generally Available) | Microsoft | Product Documentation | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics | Active |
 | SRC-MSFT-005 | Options to Get Data into the Lakehouse | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse | Active |
 | SRC-MSFT-006 | Choose a Data Movement Strategy | Microsoft | Decision Guide | https://learn.microsoft.com/en-us/fabric/data-factory/decision-guide-data-movement | Active |
@@ -41,6 +45,7 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-MSFT-015 | Tenant Settings Index - Microsoft Fabric | Microsoft | Administration | https://learn.microsoft.com/en-us/fabric/admin/tenant-settings-index | Active |
 | SRC-MSFT-016 | Microsoft Fabric workloads - Azure Well-Architected Framework (architecture diagram and pillar guidance) | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview | Active |
 | SRC-MSFT-017 | What's new in Microsoft Fabric: ArcGIS Maps for Fabric (Generally Available), September 2026 | Microsoft | Release Notes | https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new | Active |
+| SRC-MSFT-018 | Create ArcGIS Maps for Power BI | Microsoft | Implementation Guidance | https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-arcgis | Active |
 
 ---
 
@@ -71,7 +76,7 @@ The following do not qualify as authoritative architecture sources:
 
 ## Last Review Date
 
-2026-10-06
+2026-10-07
 
 ## Component Owner
 

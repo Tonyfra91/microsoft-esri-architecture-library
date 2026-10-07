@@ -48,6 +48,8 @@ flowchart LR
 | [2. Spatial processing with GeoAnalytics](04-Stage-2-Spatial-Processing.md) | "Once it is in Fabric, how does spatial analysis work?" | A spatially enriched Spark DataFrame, persisted to an approved location |
 | [3. Use the results](05-Stage-3-Use-the-Results.md) | "What can we do with the output?" | A validated consumption experience for the business question |
 
+A consumption experience is validated when the documented path is configured, the intended audience can access it, the expected spatial output is present, and refresh or publication behavior has been tested against the proof-of-concept success criteria.
+
 **Example business question (replace per customer):** *Which assets are located within a defined distance of a risk area, and how does exposure vary by region?*
 
 ---

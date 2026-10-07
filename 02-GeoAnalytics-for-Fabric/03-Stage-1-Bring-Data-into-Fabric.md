@@ -78,6 +78,8 @@ The Microsoft reference architecture describes multiple ingestion patterns. Sele
 
 ![Stage 1 ArcGIS Data Path: Read in Place or Copy In](images/stage-1-arcgis-data-path.png)
 
+The diagram's reference to writing results back to ArcGIS means an explicit write to a supported ArcGIS Online or ArcGIS Enterprise feature service. [Stage 3](05-Stage-3-Use-the-Results.md) documents this optional output path (OUT-004); it does not imply automatic synchronization or support for every ArcGIS destination.
+
 Three documented paths make data available to GeoAnalytics:
 
 - **A · Read in place:** GeoAnalytics reads ArcGIS Online or ArcGIS Enterprise feature services directly into a Spark DataFrame, optionally persisting the result to a Delta table (ING-005).
