@@ -72,26 +72,19 @@ The Microsoft reference architecture describes multiple ingestion patterns. Sele
 
 ## Architecture
 
-**Microsoft reference:** [Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end) — use the ingestion and storage portions of this architecture as the foundation for Stage 1.
+**Microsoft reference:** the ingest and store portions of the [Fabric Foundation](01-Customer-Guidance.md#fabric-foundation) architecture from the Azure Well-Architected Framework.
 
-**Scenario view:**
+**ArcGIS data path (v0.1):**
 
-```mermaid
-flowchart LR
-    subgraph SRC["Customer sources"]
-        BD["Authoritative<br/>business data"]
-        GD["Authoritative<br/>geospatial data"]
-    end
-    subgraph FAB["Microsoft Fabric"]
-        ING["Fabric ingestion or<br/>supported connection"]
-        subgraph OL["OneLake"]
-            LH[("Lakehouse<br/>tables and files")]
-        end
-    end
-    BD --> ING
-    GD --> ING
-    ING --> LH
-```
+![Stage 1 ArcGIS Data Path: Read in Place or Copy In](images/stage-1-arcgis-data-path.png)
+
+Three documented paths make data available to GeoAnalytics:
+
+- **A · Read in place:** GeoAnalytics reads ArcGIS Online or ArcGIS Enterprise feature services directly into a Spark DataFrame, optionally persisting the result to a Delta table (ING-005).
+- **B · Copy spatial files:** shapefile, file geodatabase, GeoJSON, or GeoParquet files land in the lakehouse Files area (ING-001, ING-004).
+- **C · Business data:** Microsoft-documented Fabric ingestion into lakehouse tables (ING-001 to ING-003).
+
+ArcGIS and OneLake do not synchronize automatically, so a copy is a snapshot. Reading feature services is an outbound HTTPS call (SEC-009); GeoAnalytics licensing and usage calls occur on every path ([Stage 2](04-Stage-2-Spatial-Processing.md#architecture)). Mirroring or shortcuts pointed directly at an ArcGIS Enterprise geodatabase are not drawn because they are not yet validated.
 
 ## Guidance
 
