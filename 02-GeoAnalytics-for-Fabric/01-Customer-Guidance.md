@@ -24,32 +24,32 @@ These capabilities are related but not interchangeable. GeoAnalytics typically p
 
 ## Fabric Foundation
 
-GeoAnalytics runs only inside Microsoft Fabric, so every Esri integration in this library starts from a well-designed Fabric workload. Microsoft documents that foundation in the Azure Well-Architected Framework. This library links to that guidance rather than restating it.
+ArcGIS GeoAnalytics runs within Microsoft Fabric, so every Esri integration in this library starts from a well-designed Fabric workload. This library adopts Microsoft Fabric guidance rather than restating it. Customers should review the Microsoft Fabric Well-Architected Framework when planning a proof of concept or production deployment.
 
-![Typical architecture for workloads running on Microsoft Fabric](images/microsoft-fabric-well-architected-architecture.png)
+**Source:** Microsoft Learn, [Microsoft Fabric workloads, Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview) (SRC-MSFT-016). Microsoft also provides a [Visio version of the reference architecture](https://arch-center.azureedge.net/fabric-architecture.vsdx).
 
-**Source:** Microsoft Learn, [Microsoft Fabric workloads, Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview) (SRC-MSFT-016). Microsoft also provides a [Visio file of this architecture](https://arch-center.azureedge.net/fabric-architecture.vsdx).
+### Where Esri Fits
 
-**Where Esri fits in this architecture:**
+| Area | Esri Role |
+|-------|------------|
+| Data sources | ArcGIS Online and ArcGIS Enterprise data copied into OneLake or accessed in place ([Stage 1](03-Stage-1-Bring-Data-into-Fabric.md)) |
+| Spatial processing | ArcGIS GeoAnalytics runs in Fabric Spark and enriches data spatially ([Stage 2](04-Stage-2-Spatial-Processing.md)) |
+| Consumption | ArcGIS Maps for Microsoft Fabric and ArcGIS for Power BI ([Stage 3](05-Stage-3-Use-the-Results.md)) |
+| Outside Fabric | ArcGIS service communication over HTTPS (443) ([Stage 2 minimum deployable POC](04-Stage-2-Spatial-Processing.md#architecture)) |
 
-| Area of the diagram | Esri role |
-|---|---|
-| Data sources | ArcGIS Online and ArcGIS Enterprise, copied into OneLake or read in place ([Stage 1](03-Stage-1-Bring-Data-into-Fabric.md)) |
-| Process, enrich, store: Spark notebooks | ArcGIS GeoAnalytics runs here and enriches data spatially ([Stage 2](04-Stage-2-Spatial-Processing.md)) |
-| Serve | ArcGIS Maps for Microsoft Fabric and ArcGIS for Power BI ([Stage 3](05-Stage-3-Use-the-Results.md)) |
-| Outside Fabric (not shown) | ArcGIS service communication over HTTPS (443) ([Stage 2 minimum deployable POC](04-Stage-2-Spatial-Processing.md#architecture)) |
+### Microsoft Fabric Design Guidance
 
-**Fabric design guidance by pillar** (Microsoft Learn). Review these with the customer's platform team before the proof of concept:
+Review these Microsoft Fabric guidance areas with the customer's platform team before beginning a proof of concept:
 
-| Pillar | Why it matters for GeoAnalytics |
-|---|---|
+| Pillar | Why It Matters |
+|---------|----------------|
 | [Reliability](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/reliability) | Recovery and availability expectations for Spark jobs and their outputs |
-| [Security](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/security) | Workspace isolation, role-based access, identities, and secure networking |
-| [Cost Optimization](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/cost-optimization) | Capacity sizing; GeoAnalytics also meters Esri core-hours separately |
-| [Operational Excellence](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/operational-excellence) | Deployment pipelines, version control, and monitoring for notebooks and job definitions |
-| [Performance Efficiency](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/performance-efficiency) | Right-sizing capacity and isolating heavy Spark workloads |
+| [Security](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/security) | Workspace isolation, identity, access control, and networking |
+| [Cost Optimization](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/cost-optimization) | Capacity sizing and operational cost management |
+| [Operational Excellence](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/operational-excellence) | Deployment pipelines, monitoring, and lifecycle management |
+| [Performance Efficiency](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/performance-efficiency) | Capacity planning and workload isolation for Spark processing |
 
-One design consideration applies directly: Spark jobs, pipelines, queries, and refreshes draw on the same capacity, so heavy spatial processing can compete with interactive work. Microsoft recommends isolation, scheduling, and workload separation across capacities and workspaces ([Microsoft Learn](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview)).
+One design consideration applies directly to GeoAnalytics: Spark jobs, pipelines, queries, and refreshes share Fabric capacity. Spatial processing workloads can compete with interactive workloads, so Microsoft recommends appropriate scheduling, workload isolation, and capacity planning. ([Microsoft Learn](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview)).
 
 ---
 
