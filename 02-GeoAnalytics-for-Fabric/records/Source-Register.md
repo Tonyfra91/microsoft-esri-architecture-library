@@ -26,6 +26,7 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-GEO-011 | ArcGIS Architecture Center - Microsoft and ArcGIS Integrations | Esri | Architecture Guidance | https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html | Active |
 | SRC-GEO-012 | Esri direct confirmation to Microsoft partner: GeoAnalytics outbound calls and network requirements (2026-10-06) | Esri | Direct Confirmation | No public URL | Active |
 | SRC-GEO-013 | Visualize results with st.plot() | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/tutorials/visualize/visualize-results-st-plot/ | Active |
+| SRC-GEO-014 | Esri at FABCON 2026: ArcGIS for Microsoft Fabric (GeoAnalytics generally available; ArcGIS Maps for Fabric public preview as of 2026-02-18) | Esri | Announcement | https://www.esri.com/arcgis-blog/products/arcgis/announcements/esri-at-fabcon-2026-arcgis-for-microsoft-fabric | Active (Maps for Fabric status superseded by SRC-MSFT-017) |
 | SRC-MSFT-004 | ArcGIS GeoAnalytics for Microsoft Fabric (Generally Available) | Microsoft | Product Documentation | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics | Active |
 | SRC-MSFT-005 | Options to Get Data into the Lakehouse | Microsoft | Ingestion Guidance | https://learn.microsoft.com/en-us/fabric/data-engineering/load-data-lakehouse | Active |
 | SRC-MSFT-006 | Choose a Data Movement Strategy | Microsoft | Decision Guide | https://learn.microsoft.com/en-us/fabric/data-factory/decision-guide-data-movement | Active |
@@ -39,6 +40,7 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-MSFT-014 | Implement Medallion Lakehouse Architecture in Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture | Active |
 | SRC-MSFT-015 | Tenant Settings Index - Microsoft Fabric | Microsoft | Administration | https://learn.microsoft.com/en-us/fabric/admin/tenant-settings-index | Active |
 | SRC-MSFT-016 | Microsoft Fabric workloads - Azure Well-Architected Framework (architecture diagram and pillar guidance) | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview | Active |
+| SRC-MSFT-017 | What's new in Microsoft Fabric: ArcGIS Maps for Fabric (Generally Available), September 2026 | Microsoft | Release Notes | https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new | Active |
 
 ---
 
