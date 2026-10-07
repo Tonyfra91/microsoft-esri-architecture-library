@@ -72,7 +72,6 @@ The [Stage 2 minimum deployable POC diagram](04-Stage-2-Spatial-Processing.md#ar
 **Platform references:**
 
 - **Fabric foundation:** [Fabric Foundation](#fabric-foundation) above, from the Azure Well-Architected Framework.
-- **Fabric platform architecture:** [Analytics end-to-end with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end) (Microsoft Learn) shows how Fabric ingests, governs, stores, processes, and serves data.
 - **GeoAnalytics component architecture:** [Architecture.md](Architecture.md) shows how GeoAnalytics sits within Fabric (Fabric, Fabric Runtime, Apache Spark, GeoAnalytics) and its dependencies.
 
 ---

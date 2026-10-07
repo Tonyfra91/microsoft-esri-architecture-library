@@ -15,7 +15,7 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-GEO-003 | ArcGIS GeoAnalytics for Microsoft Fabric - Get Started | Esri | Product Documentation | https://developers.arcgis.com/geoanalytics-fabric/get-started/ | Active |
 | SRC-MSFT-001 | Apache Spark Runtime in Fabric | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/runtime | Active |
 | SRC-MSFT-002 | Apache Spark Compute for Data Engineering and Data Science | Microsoft | Platform Architecture | https://learn.microsoft.com/en-us/fabric/data-engineering/spark-compute | Active |
-| SRC-MSFT-003 | Analytics End-to-End with Microsoft Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end | Active |
+| SRC-MSFT-003 | Analytics End-to-End with Microsoft Fabric | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end | Superseded by SRC-MSFT-016 |
 | SRC-GEO-004 | ArcGIS GeoAnalytics for Microsoft Fabric - Data Sources | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/ | Active |
 | SRC-GEO-005 | ArcGIS GeoAnalytics for Microsoft Fabric - Feature Service | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/feature-service/ | Active |
 | SRC-GEO-006 | ArcGIS GeoAnalytics for Microsoft Fabric - Coordinate Systems | Esri | Technical Documentation | https://developers.arcgis.com/geoanalytics-fabric/core-concepts/coordinate-systems/ | Active |
