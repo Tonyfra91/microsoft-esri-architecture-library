@@ -34,7 +34,7 @@ This appendix explains the visual elements in the two diagrams on the [Microsoft
 | Purple arrows | Outcomes reaching personas, and decisions and edits flowing back. |
 | Dashed Esri licensing service* | The only call GeoAnalytics makes on its own: license authorization and usage reporting over HTTPS to arcgis.com. It is not a data source. Feature-service reads and writes and basemap tiles happen only when the customer's code requests them ([Evidence SEC-007 to SEC-009](../02-GeoAnalytics-for-Fabric/records/Evidence.md)). |
 | Esri user type chips | Each persona is matched to the Esri user type it typically needs (illustrative). User types license people; GeoAnalytics is licensed separately, by compute. |
-| Crawl, Walk, Run band | The adoption path: **Crawl** (unify the data), **Walk** (ground it with IQ), **Run** (act with agents and human approval). |
+| Foundation, Intelligence, Operations band | The adoption path, in order: **Foundation** (unify Esri and business data in Fabric and enrich it spatially), **Intelligence** (ground it with Microsoft IQ), **Operations** (act through agents with human approval, served to every persona). Each builds on the one before. |
 
 **What happens in each column**
 
