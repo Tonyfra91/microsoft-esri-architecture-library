@@ -31,7 +31,7 @@ As noted in the Customer Guidance, these experiences are related but **not inter
 
 ## Architecture
 
-**Microsoft reference:** the serving portion of [Analytics End-to-End with Microsoft Fabric](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end).
+**Microsoft reference:** the serve portion of the [Fabric Foundation](01-Customer-Guidance.md#fabric-foundation) architecture from the Azure Well-Architected Framework.
 
 **Scenario view:**
 
