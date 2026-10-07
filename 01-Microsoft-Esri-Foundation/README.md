@@ -1,6 +1,6 @@
 # Microsoft + Esri Foundation
 
-> **Status:** In progress. The five-step diagram (v0.5) and the detailed view (v0.11) are drafts; the integration landscape is current.
+> **Status:** In progress. The five-step diagram (v0.6) and the detailed view (v0.11) are drafts; the integration landscape is current.
 
 ## Purpose
 

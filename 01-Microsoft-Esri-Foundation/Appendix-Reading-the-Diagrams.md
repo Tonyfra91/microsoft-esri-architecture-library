@@ -17,6 +17,7 @@ This appendix explains the visual elements in the two diagrams on the [Microsoft
 | Esri user types chip | Each persona is matched to the Esri user type it typically needs (illustrative). |
 | Gray arrows | Data and context moving forward from one step to the next. |
 | Purple loop | Decisions and edits flowing back to Esri and business systems. |
+| Foundation, Intelligence, Operations band | The adoption path: **Foundation** spans steps 1 and 2, **Intelligence** step 3, and **Operations** steps 4 and 5. It matches the band on the detailed view. |
 | Footnote | Data is processed inside Fabric. GeoAnalytics contacts Esri only for licensing and usage, and ArcGIS services only when the customer's code requests them ([Evidence SEC-007 to SEC-009](../02-GeoAnalytics-for-Fabric/records/Evidence.md)). |
 
 ---
