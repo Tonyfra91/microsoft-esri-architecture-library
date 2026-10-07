@@ -67,6 +67,19 @@ GeoAnalytics is not a standalone service. It runs only inside Microsoft Fabric, 
 | 6 | **GeoAnalytics license** | Bring your own license: an active GeoAnalytics for Microsoft Fabric subscription, authorized with a username and password or an Esri-provided API key. Usage is metered in compute unit-hours (core-hours). | [Microsoft Learn](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics); [Esri authorization](https://developers.arcgis.com/geoanalytics-fabric/authorization/) |
 | 7 | **Outbound HTTPS to Esri** | Outbound HTTPS on port 443 to arcgis.com for authorization and usage reporting. Not supported when Outbound Access Protection is enabled. | [Evidence SEC-004, SEC-007](records/Evidence.md) |
 
+### Foundational Reference Architecture
+
+Reference Architecture · Draft v0.1. The minimum Microsoft + Esri architecture for a GeoAnalytics proof of concept, built on the [Fabric Foundation](#fabric-foundation) above.
+
+![ArcGIS GeoAnalytics for Microsoft Fabric foundational reference architecture, minimal POC](images/geoanalytics-fabric-foundational-reference-architecture.png)
+
+How to read it:
+
+- **Inside the POC scope:** data sources flow through Fabric ingestion, the Lakehouse, and Spark with GeoAnalytics, then to the semantic model, Power BI, ArcGIS for Power BI, and ArcGIS Maps for Fabric.
+- **Deployment requirements:** the four tags along the bottom of the Fabric box correspond to requirements 1, 2, and 6 in the table above. The "Supported Fabric Runtime" label refers to requirement 3, Fabric Runtime 1.3.
+- **Crossing the boundary:** the solid HTTPS (443) line to the Esri licensing service always occurs (requirement 7). The dashed "read in place" line to ArcGIS feature services occurs only when code requests it.
+- **Assumed platform and future expansion:** Microsoft Entra ID and Microsoft Purview are standard Fabric platform services, not GeoAnalytics requirements. Items in the Future expansion row are outside the POC.
+
 The [Stage 2 minimum deployable POC diagram](04-Stage-2-Spatial-Processing.md#architecture) shows these requirements in one view, with the calls that cross the Fabric boundary.
 
 **Platform references:**
