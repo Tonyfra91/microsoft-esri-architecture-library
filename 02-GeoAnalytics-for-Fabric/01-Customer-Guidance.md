@@ -6,7 +6,7 @@ ArcGIS GeoAnalytics for Microsoft Fabric runs distributed spatial analysis insid
 
 ---
 
-ArcGIS GeoAnalytics in the Microsoft Fabric Ecosystem
+## ArcGIS GeoAnalytics in the Microsoft Fabric Ecosystem
 
 The Microsoft + Esri landscape is anchored by five integrations. Three run in Microsoft Fabric and Power BI: **ArcGIS GeoAnalytics for Microsoft Fabric**, **ArcGIS Maps for Microsoft Fabric**, and **ArcGIS for Power BI**. Two extend the story: **ArcGIS for Microsoft 365** and **ArcGIS on Microsoft Azure**. The full landscape is described in [01 · Microsoft + Esri Foundation](../01-Microsoft-Esri-Foundation/README.md#microsoft--esri-fabric-integration-landscape).
 
