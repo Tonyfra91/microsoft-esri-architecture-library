@@ -71,7 +71,9 @@ GeoAnalytics is not a standalone service. It runs only inside Microsoft Fabric, 
 
 Reference Architecture · Draft v0.1. The minimum Microsoft + Esri architecture for a GeoAnalytics proof of concept, built on the [Fabric Foundation](#fabric-foundation) above.
 
-![ArcGIS GeoAnalytics for Microsoft Fabric foundational reference architecture, minimal POC](images/geoanalytics-fabric-foundational-reference-architecture.png)
+[![ArcGIS GeoAnalytics for Microsoft Fabric foundational reference architecture, minimal POC](images/geoanalytics-fabric-foundational-reference-architecture.png)](images/geoanalytics-fabric-foundational-reference-architecture.png)
+
+[Open the full-size diagram](images/geoanalytics-fabric-foundational-reference-architecture.png)
 
 How to read it:
 

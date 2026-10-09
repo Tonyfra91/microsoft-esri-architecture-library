@@ -76,7 +76,9 @@ The Microsoft reference architecture describes multiple ingestion patterns. Sele
 
 **ArcGIS data path (v0.1):**
 
-![Stage 1 ArcGIS Data Path: Read in Place or Copy In](images/stage-1-arcgis-data-path.png)
+[![Stage 1 ArcGIS Data Path: Read in Place or Copy In](images/stage-1-arcgis-data-path.png)](images/stage-1-arcgis-data-path.png)
+
+[Open the full-size diagram](images/stage-1-arcgis-data-path.png)
 
 The diagram's reference to writing results back to ArcGIS means an explicit write to a supported ArcGIS Online or ArcGIS Enterprise feature service. [Stage 3](05-Stage-3-Use-the-Results.md) documents this optional output path (OUT-004); it does not imply automatic synchronization or support for every ArcGIS destination.
 

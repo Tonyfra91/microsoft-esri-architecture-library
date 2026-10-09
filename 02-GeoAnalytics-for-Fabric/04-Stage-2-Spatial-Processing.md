@@ -38,7 +38,9 @@ Microsoft Fabric
 
 **Minimum deployable POC and trust boundary (v0.1):**
 
-![Minimum Deployable POC: ArcGIS GeoAnalytics for Microsoft Fabric](images/minimum-deployable-poc-trust-boundary.png)
+[![Minimum Deployable POC: ArcGIS GeoAnalytics for Microsoft Fabric](images/minimum-deployable-poc-trust-boundary.png)](images/minimum-deployable-poc-trust-boundary.png)
+
+[Open the full-size diagram](images/minimum-deployable-poc-trust-boundary.png)
 
 Numbers 1 to 7 match [What You Need to Run GeoAnalytics](01-Customer-Guidance.md#what-you-need-to-run-geoanalytics). Solid arrows always occur; dashed arrows occur only when the customer's code requests them. Network configuration, including Private Link and managed virtual networks, is validated during deployment and is not drawn (GAP-003).
 

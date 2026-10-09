@@ -6,7 +6,9 @@ This appendix explains the visual elements in the two diagrams on the [Microsoft
 
 ## The Five-Step Diagram
 
-![Microsoft + Esri in Five Steps](images/microsoft-esri-five-steps.png)
+[![Microsoft + Esri in Five Steps](images/microsoft-esri-five-steps.png)](images/microsoft-esri-five-steps.png)
+
+[Open the full-size diagram](images/microsoft-esri-five-steps.png)
 
 | Element | Meaning |
 |---|---|
@@ -24,7 +26,9 @@ This appendix explains the visual elements in the two diagrams on the [Microsoft
 
 ## The Detailed View
 
-![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
+[![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)](images/microsoft-esri-elevator-pitch.png)
+
+[Open the full-size diagram](images/microsoft-esri-elevator-pitch.png)
 
 | Element | Meaning |
 |---|---|

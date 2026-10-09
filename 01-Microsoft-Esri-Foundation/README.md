@@ -14,7 +14,9 @@ Each component folder that follows (GeoAnalytics, Maps for Fabric, Power BI) goe
 
 **Microsoft + Esri turn location data into location-aware agents, with a person in the loop.**
 
-![Microsoft + Esri in Five Steps](images/microsoft-esri-five-steps.png)
+[![Microsoft + Esri in Five Steps](images/microsoft-esri-five-steps.png)](images/microsoft-esri-five-steps.png)
+
+[Open the full-size diagram](images/microsoft-esri-five-steps.png)
 
 > **The 30-second version:** Bring Esri and business data into Fabric. Enrich it spatially with GeoAnalytics. Ground it with Microsoft IQ. Let agents act, with a person approving, and deliver the outcome to every role.
 
@@ -48,7 +50,9 @@ Bubbles 1 to 5 follow the five steps above. The detailed view adds one more:
 
 - **6. Microsoft 365: meet people where they work.** Work IQ draws context from SharePoint, Teams, and people, and returns answers there.
 
-![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)
+[![Microsoft + Esri: From Location Data to Location-Aware Agents](images/microsoft-esri-elevator-pitch.png)](images/microsoft-esri-elevator-pitch.png)
+
+[Open the full-size diagram](images/microsoft-esri-elevator-pitch.png)
 
 [How to read this diagram](Appendix-Reading-the-Diagrams.md#the-detailed-view)
 
@@ -78,7 +82,9 @@ The current Microsoft + Esri landscape is anchored by five integrations. Three r
 
 Together, these integrations let customers run ArcGIS where they choose, bring Esri and business data into Microsoft Fabric for geospatial analysis, and deliver location-aware insights through Power BI, Fabric, and the Microsoft 365 apps people already use.
 
-![Microsoft + Esri Fabric Integration Landscape](images/fabric-esri-landscape-v2.png)
+[![Microsoft + Esri Fabric Integration Landscape](images/fabric-esri-landscape-v2.png)](images/fabric-esri-landscape-v2.png)
+
+[Open the full-size diagram](images/fabric-esri-landscape-v2.png)
 
 > The landscape diagram shows the Fabric and Power BI integrations. ArcGIS for Microsoft 365 and ArcGIS on Microsoft Azure will be added in the next version of the diagram.
 
