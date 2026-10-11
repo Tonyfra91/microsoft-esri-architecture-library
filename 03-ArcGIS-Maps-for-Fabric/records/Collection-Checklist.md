@@ -9,6 +9,7 @@ This checklist identifies artifacts needed to validate the component. Items are 
 - [x] Official Esri product documentation
 - [x] Official Microsoft Fabric product-status reference
 - [x] Public general-availability announcement and interface GIF images
+- [x] ArcGIS for Power BI product-selection comparison sources
 - [x] Workload enablement guidance
 - [x] Workspace and tenant prerequisites
 - [ ] Product availability by region

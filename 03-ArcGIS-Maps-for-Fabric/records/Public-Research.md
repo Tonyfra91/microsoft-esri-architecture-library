@@ -27,6 +27,8 @@ Claims from one product must not be transferred to another without product-speci
 - Esri's *ArcGIS for Microsoft* overview
 - Esri Architecture Center's *Microsoft and ArcGIS integrations*
 - Microsoft Learn release notes for Microsoft Fabric
+- Microsoft Learn author and consumer guidance for ArcGIS for Power BI
+- Esri account and sign-in documentation for ArcGIS for Power BI
 
 ### Tier 2: Vendor blogs and community resources
 
@@ -36,6 +38,26 @@ Claims from one product must not be transferred to another without product-speci
 - Esri Community announcements and category hub
 
 Tier 2 sources can establish chronology, product messaging, and implementation observations. Technical architecture claims require Tier 1 support or explicit engineering confirmation.
+
+## Product Selection Findings
+
+ArcGIS Maps for Fabric and ArcGIS for Power BI are not interchangeable
+authoring surfaces:
+
+- Maps for Fabric produces a dedicated item in a Fabric workspace.
+- ArcGIS for Power BI produces a map visual within a Power BI report.
+- Maps for Fabric documents lakehouse selection through the OneLake catalog.
+- ArcGIS for Power BI uses data fields supplied by the Power BI report.
+- Maps for Fabric documents an ArcGIS Online organizational-account
+  requirement.
+- ArcGIS for Power BI supports limited guest use and organizational sign-in to
+  ArcGIS Online or supported connected ArcGIS Enterprise deployments.
+- Power BI report distribution and interaction behavior must not be assigned
+  to a Maps for Fabric item without product-specific evidence.
+
+The customer should select the intended consumption experience before starting
+the Maps for Fabric POC. A solution may use both products for different
+audiences, but direct artifact portability is not documented.
 
 ## General-Availability Announcement Findings
 

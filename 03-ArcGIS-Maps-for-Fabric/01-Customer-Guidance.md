@@ -14,6 +14,36 @@ Data → Spatial Processing → Spatial Experience
 
 This component should not be positioned as a replacement for GeoAnalytics, ArcGIS for Power BI, or operational ArcGIS applications.
 
+## Choose the Right Spatial Experience
+
+ArcGIS Maps for Microsoft Fabric and ArcGIS for Power BI both provide Esri
+mapping capabilities in Microsoft analytics experiences, but they produce
+different artifacts and serve different workflows.
+
+| Decision area | ArcGIS Maps for Microsoft Fabric | ArcGIS for Power BI | Evidence |
+|---|---|---|---|
+| Product form | Fabric workload item saved in a Fabric workspace | Visualization placed on a Power BI report page | MAP-001; MAP-004; MAP-011 |
+| Primary experience | Map-centric authoring, exploration, and spatial storytelling | Report-centric analysis with a map alongside charts, tables, KPIs, and slicers | MAP-001; MAP-011 |
+| Author entry point | Fabric workspace → **+ New item** → **ArcGIS Maps for Fabric** | Power BI Desktop or Power BI service → report canvas → **ArcGIS for Power BI** visual | MAP-004; MAP-011 |
+| Microsoft data context | Supported lakehouse data selected through the OneLake catalog | Data fields supplied by the Power BI report | MAP-005; MAP-011 |
+| ArcGIS data context | ArcGIS Online organizational content and ArcGIS Living Atlas | Public or secured ArcGIS layers and Living Atlas content, based on account and privileges | MAP-005; MAP-012 |
+| ArcGIS access | ArcGIS Online organizational account required; Public accounts unsupported | Guest mode is available with limitations; an ArcGIS organizational account enables additional capabilities; Public accounts unsupported | MAP-003; MAP-012 |
+| ArcGIS Enterprise | Not documented as supported in the primary Maps for Fabric guide | ArcGIS Enterprise 10.8.1 and later is supported in connected environments, subject to configuration and licensing | MAP-003; MAP-012 |
+| Saved object | ArcGIS Maps for Fabric map item | ArcGIS map visual stored as part of the Power BI report | MAP-004; MAP-011 |
+| Consumer context | User opens the saved map item from Fabric | User opens the Power BI report in a supported Power BI experience | MAP-007; MAP-011 |
+| Report interaction | Dedicated map experience; Power BI report interactions are not documented for the item | Participates in the Power BI report experience, including report filters and map selections | MAP-007; MAP-011 |
+| Sharing model | Save and open are documented; complete sharing and publishing behavior remains a validation gap | Uses Power BI report sharing and embedding; secured ArcGIS content can require viewer sign-in | MAP-007; GAP-005; MAP-011; MAP-012 |
+| Best fit | The map is the primary product and OneLake or ArcGIS layers are central | The map supports a broader BI report and must work with report measures and interactions | MAP-013 |
+
+Use ArcGIS Maps for Fabric when the map is the main analytical experience and
+the customer needs a dedicated spatial item in a Fabric workspace. Use ArcGIS
+for Power BI when the map belongs on a report page and must participate in the
+Power BI report experience.
+
+Both products may be appropriate for different audiences in the same solution.
+Do not assume that their saved artifacts, configurations, identity behavior, or
+sharing models are interchangeable. Validate each experience independently.
+
 ## Foundational Requirements
 
 | Area | Requirement | Evidence |

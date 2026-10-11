@@ -4,6 +4,13 @@
 
 The [Customer Guidance](01-Customer-Guidance.md) explains where ArcGIS Maps for Microsoft Fabric fits and what a customer must have in place. This walkthrough shows how a proof of concept moves from administrative enablement to a saved and validated map.
 
+> [!IMPORTANT]
+> This walkthrough assumes that a dedicated map item is the intended customer
+> experience. If the map must be embedded in a Power BI report and interact
+> with report visuals, evaluate
+> [ArcGIS Maps for Fabric versus ArcGIS for Power BI](01-Customer-Guidance.md#choose-the-right-spatial-experience)
+> before starting the POC.
+
 ```text
 Tenant and identity readiness
     → Supported Fabric and ArcGIS data

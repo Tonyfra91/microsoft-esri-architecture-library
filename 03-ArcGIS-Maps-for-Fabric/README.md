@@ -27,7 +27,10 @@ ArcGIS Maps for Microsoft Fabric is also called **ArcGIS Maps for Fabric** in th
 - ArcGIS for Power BI, the Power BI visual
 - ArcGIS for Microsoft Fabric, Esri's umbrella offering
 
-See [Public Research](records/Public-Research.md#product-naming) for the evidence boundary.
+Use the [product-selection matrix](01-Customer-Guidance.md#choose-the-right-spatial-experience)
+to compare ArcGIS Maps for Fabric with ArcGIS for Power BI. See
+[Public Research](records/Public-Research.md#product-naming) for the evidence
+boundary.
 
 ## Start Here
 
