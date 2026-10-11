@@ -4,11 +4,9 @@
 
 ## Executive Summary
 
-ArcGIS Maps for Microsoft Fabric provides mapping, visualization, exploration, and location-aware experiences within Microsoft Fabric. This component establishes the collection and validation framework needed to document the product architecture without inferring unsupported integrations or dependencies.
+ArcGIS Maps for Microsoft Fabric is an Esri mapping workload for creating interactive, multiscale maps within Microsoft Fabric. A map author works from a Fabric workspace, signs in with an ArcGIS Online organizational account, and adds supported lakehouse, ArcGIS Online, or ArcGIS Living Atlas data.
 
-> **VALIDATION REQUIRED**
->
-> Product capabilities, supported inputs, setup requirements, identity behavior, data movement, limitations, and deployment boundaries must be traced to current Microsoft and Esri documentation before this component is presented as a validated architecture.
+This component provides an evidence-backed proof-of-concept path from tenant enablement through map validation. Production network, telemetry, data-residency, refresh, and sharing details still require customer-specific validation.
 
 ## Where ArcGIS Maps for Microsoft Fabric Fits
 
@@ -20,37 +18,53 @@ Data → Spatial Processing → Spatial Experience
 
 GeoAnalytics and Maps for Fabric are related but not interchangeable. GeoAnalytics provides distributed spatial processing in Fabric Spark. Maps for Fabric provides an experience for mapping and exploring supported data in Fabric.
 
+## Product Naming
+
+ArcGIS Maps for Microsoft Fabric is also called **ArcGIS Maps for Fabric** in the product workflow. It must not be confused with:
+
+- ArcGIS GeoAnalytics for Microsoft Fabric, the Spark spatial-processing library
+- Fabric Maps or the Map item in Real-Time Intelligence, a Microsoft mapping experience based on Azure Maps
+- ArcGIS for Power BI, the Power BI visual
+- ArcGIS for Microsoft Fabric, Esri's umbrella offering
+
+See [Public Research](records/Public-Research.md#product-naming) for the evidence boundary.
+
+## Start Here
+
+Read the documents in this order:
+
+| Step | Document | What it covers |
+|---|---|---|
+| 1 | [Customer Guidance](01-Customer-Guidance.md) | Product fit, foundational requirements, discovery, and POC framework |
+| 2 | [End-to-End Scenario](02-End-to-End-Scenario.md) | Four-stage implementation path |
+| 3 | [Stage 1: Enable and Authorize](03-Stage-1-Enable-and-Authorize.md) | Tenant setting, permissions, workspace, accounts, and roles |
+| 4 | [Stage 2: Prepare and Connect Data](04-Stage-2-Prepare-and-Connect-Data.md) | Supported lakehouse and ArcGIS source paths |
+| 5 | [Stage 3: Build and Style the Map](05-Stage-3-Build-and-Style-the-Map.md) | Item creation, sign-in, layers, and map configuration |
+| 6 | [Stage 4: Validate and Operationalize](06-Stage-4-Validate-and-Operationalize.md) | Save/open validation, role testing, gaps, and POC exit criteria |
+
 ## Architecture
 
-See [Architecture](Architecture.md) for the architecture boundary, candidate questions, and validation status.
+The documented product behavior establishes a logical architecture with:
 
-> **VALIDATION REQUIRED**
->
-> Collect authoritative evidence for the product boundary, Fabric workload components, ArcGIS services, administrative controls, and any external service communication before drawing a deployment architecture.
+- A Fabric tenant setting and workspace
+- An ArcGIS Maps for Fabric item
+- Microsoft Fabric and ArcGIS Online identities
+- Lakehouse, ArcGIS Online, and Living Atlas data-source categories
+- Dual authorization requirements for viewing and saving
 
-## Data Flow
+See [Architecture](Architecture.md) for the evidence-backed logical view and unresolved deployment questions.
 
-No end-to-end data flow is asserted yet.
+## Foundational Requirements
 
-> **VALIDATION REQUIRED**
->
-> Confirm supported data sources, whether data is copied or queried, how OneLake data is accessed, refresh behavior, output behavior, and any network boundary crossings.
-
-## Identity / Authentication
-
-No identity or authentication flow is asserted yet.
-
-> **VALIDATION REQUIRED**
->
-> Confirm Fabric identity requirements, ArcGIS identity requirements, anonymous or signed-in behavior, licensing, token handling, tenant controls, and authorization boundaries.
-
-## Dependencies
-
-The dependency list remains open until current product documentation is reviewed.
-
-> **VALIDATION REQUIRED**
->
-> Confirm required Fabric capacity, workspace, workload installation or enablement, tenant settings, ArcGIS organization requirements, browser requirements, and supported regions.
+| Requirement | Minimum documented condition |
+|---|---|
+| Fabric tenant | Tenant administrator enables ArcGIS Maps for Microsoft Fabric |
+| Capacity | Workspace capacity sufficient to save workload items; minimum SKU is not published |
+| Workspace | Map item is created in a Fabric workspace and location |
+| ArcGIS account | ArcGIS Online organizational account; Public accounts are unsupported |
+| Author roles | ArcGIS Creator or higher and Fabric Contributor or higher |
+| Viewer roles | ArcGIS Viewer or higher and Fabric Viewer or higher |
+| API permissions | Azure Storage, Microsoft Graph, and Power BI Service permissions listed in Stage 1 |
 
 ## Scope and Boundaries
 
@@ -62,39 +76,21 @@ This area covers current, documented ArcGIS Maps for Microsoft Fabric behavior. 
 - Data moves between Fabric and ArcGIS without an explicit documented path.
 - ArcGIS for Power BI and ArcGIS Maps for Microsoft Fabric are interchangeable.
 - Identity, networking, or governance behavior matches another ArcGIS integration.
-
-## Customer Scenario
-
-A customer scenario will be added after the supported data path and product prerequisites are validated.
-
-> **VALIDATION REQUIRED**
->
-> Select one bounded scenario with a measurable business question, supported Fabric data, a documented map workflow, an identified audience, and explicit success criteria.
-
-## Minimum POC Pattern
-
-A minimum proof-of-concept pattern will be documented only after the required components and supported flow are evidenced.
-
-Initial discovery should identify:
-
-1. The business question that requires a map.
-2. The authoritative Fabric data item.
-3. The location fields or geometry available.
-4. The supported ArcGIS Maps for Fabric workflow.
-5. The intended audience and access model.
-6. The measurable validation outcome.
+- Maps for Fabric provides GeoAnalytics processing functions.
+- A vendor-published deployment or network architecture exists for this workload.
 
 ## Supporting Technical Records
 
 | Document | Purpose |
 |---|---|
 | [Customer Guidance](01-Customer-Guidance.md) | Discovery questions, proof-of-concept framing, and validation boundaries |
-| [Architecture](Architecture.md) | Candidate component architecture and open architecture questions |
-| [Architecture Mapping](Architecture-Mapping.md) | Required architecture views and their evidence gates |
-| [Evidence register](records/Evidence.md) | Candidate claims awaiting validation and supported claims once established |
+| [Architecture](Architecture.md) | Logical product architecture, dependencies, and open deployment questions |
+| [Architecture Mapping](Architecture-Mapping.md) | Architecture views and evidence status |
+| [Evidence register](records/Evidence.md) | Supported claims and open evidence gaps |
 | [Source register](records/Source-Register.md) | Authoritative sources reviewed for this component |
-| [Collection checklist](records/Collection-Checklist.md) | Artifacts and evidence still required |
+| [Collection checklist](records/Collection-Checklist.md) | Collected artifacts and evidence still required |
+| [Public research](records/Public-Research.md) | Authority tiers, naming, findings, and documentation gaps |
 
 ## Architecture Status
 
-Validation Framework
+Published Product Guidance with Open Production Gaps

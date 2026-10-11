@@ -2,63 +2,94 @@
 
 ## Purpose
 
-This architecture record defines what must be validated before publishing a component or deployment architecture for ArcGIS Maps for Microsoft Fabric.
+This document describes the evidence-backed logical architecture of ArcGIS Maps for Microsoft Fabric and separates documented behavior from open deployment questions.
 
 ## Architectural Position
 
-ArcGIS Maps for Microsoft Fabric is positioned in this library as the spatial experience that follows data preparation and spatial processing:
+ArcGIS Maps for Microsoft Fabric is an Esri mapping workload created as an item in a Microsoft Fabric workspace. It is positioned in this library as the spatial experience that follows data preparation and, when required, spatial processing:
 
 ```text
 Supported Fabric data → Mapping and exploration experience → Customer insight
 ```
 
-This sequence is a library narrative, not a technical data-flow claim.
+GeoAnalytics is not a prerequisite for every map. Use it when the source needs spatial processing before visualization.
 
-## Candidate Component Boundary
+## Logical Component View
 
-The following elements require validation before they are connected in an architecture diagram:
+```mermaid
+flowchart LR
+    USER["User browser"]
+    FABRIC["Microsoft Fabric tenant<br/>Workspace and capacity"]
+    ITEM["ArcGIS Maps for Fabric item"]
+    LAKE[("OneLake lakehouse<br/>GeoJSON, Parquet or GeoParquet, CSV")]
+    AGO["ArcGIS Online organization<br/>Identity and content"]
+    ATLAS["ArcGIS Living Atlas"]
 
-| Candidate element | Validation needed |
-|---|---|
-| Microsoft Fabric workspace | Capacity, workspace, region, and permission requirements |
-| ArcGIS Maps for Microsoft Fabric workload | Installation, enablement, lifecycle, and runtime boundary |
-| Supported Fabric data | Supported item types, formats, geometry, location fields, and query behavior |
-| ArcGIS services | Required services, optional services, endpoints, and data exchange |
-| User identity | Fabric identity, ArcGIS identity, licensing, roles, and sign-in behavior |
-| Map output | Save, share, refresh, export, and downstream consumption behavior |
+    USER -->|"Microsoft sign-in"| FABRIC
+    FABRIC --> ITEM
+    USER -->|"ArcGIS organizational sign-in"| AGO
+    LAKE -->|"Add data from Lakehouse"| ITEM
+    AGO -->|"Add data from ArcGIS Online"| ITEM
+    ATLAS -->|"Add data from Living Atlas"| ITEM
+```
 
-> **VALIDATION REQUIRED**
+> **Scenario view**
 >
-> Do not draw arrows between these elements until the corresponding data flow and boundary crossing are supported by authoritative evidence.
+> This diagram represents documented user and data-selection workflows. It does not define workload hosting, network paths, caching, data movement, service-to-service communication, or data residency.
 
-## Architecture Questions
+## Documented Boundaries
 
-1. Where does the Maps for Fabric workload execute?
-2. Which Fabric capacities, workspaces, and regions support it?
-3. Which Fabric data items and location representations are supported?
-4. Does the product copy, cache, query, or otherwise transmit customer data?
-5. Which ArcGIS services are contacted, under what conditions, and for what purpose?
-6. Which Microsoft and Esri identities, licenses, and roles are required?
-7. How are maps saved, shared, refreshed, and governed?
-8. Which tenant, capacity, or workspace controls apply?
-9. What limitations affect production deployment?
+### Administrative boundary
 
-## Candidate Architecture Views
+A Fabric tenant administrator enables the workload. The map item is created in a Fabric workspace on capacity sufficient to save items.
 
-| View | Status | Evidence gate |
+### Identity and authorization boundary
+
+The user first accesses Fabric with a Microsoft identity and then signs in to an ArcGIS Online organizational account from the map item.
+
+| Action | ArcGIS requirement | Fabric requirement |
 |---|---|---|
-| Product component view | VALIDATION REQUIRED | Product boundary and required components |
-| Data-flow view | VALIDATION REQUIRED | Supported inputs, query/copy behavior, and outputs |
-| Identity and authorization view | VALIDATION REQUIRED | Microsoft and Esri identity documentation |
-| Network and trust-boundary view | VALIDATION REQUIRED | Endpoints, protocols, and data handling |
-| Minimum POC view | VALIDATION REQUIRED | Confirmed prerequisites and bounded customer scenario |
+| View and interact without saving | Viewer or higher | Viewer or higher |
+| Create or save a map | Creator or higher | Contributor or higher |
 
-## Dependencies
+### Data-source boundary
 
-> **SOURCE REQUIRED**
->
-> Required and optional dependencies have not been promoted into this architecture. Collect current product, administration, licensing, and deployment documentation first.
+Documented source categories are:
+
+- Fabric lakehouse data through the OneLake catalog
+- ArcGIS Online content available to the signed-in user
+- ArcGIS Living Atlas content
+
+### Saved-item boundary
+
+The guide documents Save, Save as, and Open behavior. It does not fully document sharing, publishing, refresh, caching, or source-update behavior.
+
+## Required Platform Components
+
+- Microsoft Fabric tenant
+- Enabled ArcGIS Maps for Microsoft Fabric workload
+- Fabric capacity sufficient to save items
+- Fabric workspace
+- ArcGIS Online organizational account
+- Required Azure Storage, Microsoft Graph, and Power BI Service permissions
+- Supported source data
+
+## Architecture Questions Still Open
+
+1. Where is each workload component hosted and executed?
+2. Which endpoints, protocols, and browser origins are required?
+3. Does the product copy, cache, query, or transmit data for each source type?
+4. What refresh behavior applies after a source changes?
+5. Which telemetry and audit events are emitted?
+6. Which regional and data-residency controls apply?
+7. What is the minimum Fabric capacity SKU?
+8. What supported sharing or publishing process applies beyond save and open?
+9. Which known limitations affect production deployment?
+
+## Architecture Diagram Guidance
+
+No product-specific vendor deployment diagram was found. A future repository diagram may show the documented logical boundaries above, but it must label network, hosting, data movement, telemetry, and residency as unresolved until authoritative evidence is available.
 
 ## Validation Status
 
-Architecture Validation Required
+Logical Product Architecture Supported; Deployment Architecture Validation Required

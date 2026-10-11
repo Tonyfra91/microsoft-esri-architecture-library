@@ -10,7 +10,7 @@ This map shows every component in the Microsoft + Esri Architecture Library, whe
 |---|---|---|---|---|---|
 | 01 | Foundation | Microsoft + Esri Foundation | Story in one view and landscape introduction | [01-Microsoft-Esri-Foundation](01-Microsoft-Esri-Foundation/) | In progress |
 | 02 | Current | ArcGIS GeoAnalytics for Microsoft Fabric | Spatial processing and enrichment in Fabric Spark | [02-GeoAnalytics-for-Fabric](02-GeoAnalytics-for-Fabric/) | In progress |
-| 03 | Current | ArcGIS Maps for Microsoft Fabric | Mapping, visualization, exploration, and location-aware experiences in Fabric | [03-ArcGIS-Maps-for-Fabric](03-ArcGIS-Maps-for-Fabric/) | Validation framework |
+| 03 | Current | ArcGIS Maps for Microsoft Fabric | Mapping, visualization, exploration, and location-aware experiences in Fabric | [03-ArcGIS-Maps-for-Fabric](03-ArcGIS-Maps-for-Fabric/) | Published guidance with open production gaps |
 | 04 | Exploration | Fabric IQ + Spatial Intelligence | Business context, ontology, semantic models, graph, data agents, and spatial grounding | [04-Fabric-IQ-Spatial-Intelligence](04-Fabric-IQ-Spatial-Intelligence/) | Validation required |
 | 05 | Conceptual | Microsoft + Esri Agentic Reference Pattern | Foundry, Fabric IQ, agents, ArcGIS MCP, tools, and Ground Truth | [05-Microsoft-Esri-Agentic-Reference-Pattern](05-Microsoft-Esri-Agentic-Reference-Pattern/) | Conceptual pattern |
 

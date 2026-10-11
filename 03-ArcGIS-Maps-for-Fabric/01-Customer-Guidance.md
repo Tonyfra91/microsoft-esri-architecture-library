@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-ArcGIS Maps for Microsoft Fabric should be introduced through a bounded customer question and a documented product path. This guide captures discovery questions and proof-of-concept criteria while the product architecture is validated.
+ArcGIS Maps for Microsoft Fabric provides a map-authoring experience inside Microsoft Fabric. A successful proof of concept requires administrative enablement, qualifying roles in both Fabric and ArcGIS Online, supported source data, a bounded map question, and explicit validation of production gaps.
 
 ## Where the Component Fits
 
@@ -13,6 +13,20 @@ Data → Spatial Processing → Spatial Experience
 ```
 
 This component should not be positioned as a replacement for GeoAnalytics, ArcGIS for Power BI, or operational ArcGIS applications.
+
+## Foundational Requirements
+
+| Area | Requirement | Evidence |
+|---|---|---|
+| Fabric tenant | Tenant administrator enables the workload | MAP-002 |
+| Capacity | Workspace capacity is sufficient to save workload items; minimum SKU is not published | MAP-002; GAP-001 |
+| Workspace | A Fabric workspace and item location are selected | MAP-004 |
+| ArcGIS account | Organizational account required; Public accounts are unsupported | MAP-003 |
+| Map author | ArcGIS Creator or higher and Fabric Contributor or higher | MAP-003 |
+| Map viewer | ArcGIS Viewer or higher and Fabric Viewer or higher | MAP-003 |
+| Data | Supported lakehouse, ArcGIS Online, or Living Atlas source | MAP-005 |
+
+See [Stage 1](03-Stage-1-Enable-and-Authorize.md) for required API permissions and the implementation sequence.
 
 ## Customer Discovery
 
@@ -44,9 +58,13 @@ This component should not be positioned as a replacement for GeoAnalytics, ArcGI
 - [ ] Are private networking or outbound restrictions in scope?
 - [ ] How are saved maps, shared content, and derived outputs governed?
 
-> **VALIDATION REQUIRED**
->
-> The questions above identify information to collect. They do not imply a particular identity, network, or data-flow implementation.
+### Production readiness
+
+- [ ] Does the customer require a documented network allow list?
+- [ ] What refresh and caching behavior must be validated?
+- [ ] Which audit and telemetry records are required?
+- [ ] Which geography and data-residency requirements apply?
+- [ ] What sharing behavior must be supported beyond saving and opening the item?
 
 ## Proof-of-Concept Framework
 
@@ -60,31 +78,44 @@ A bounded proof of concept should identify:
 6. A documented save or sharing outcome, if required.
 7. Measurable success criteria.
 
+## Recommended POC Stages
+
+| Stage | Owner focus | Outcome |
+|---|---|---|
+| 1. Enable and authorize | Tenant, Fabric, and ArcGIS administrators | Enabled workload and valid pilot roles |
+| 2. Prepare and connect data | Data owner and map author | Supported, approved map layers |
+| 3. Build and style the map | Map author and business reviewer | Usable map item |
+| 4. Validate and operationalize | Platform, security, and business owners | Validated outcome and production gap list |
+
+Follow the [End-to-End Scenario](02-End-to-End-Scenario.md) for implementation detail.
+
 ## Minimum POC Exit Criteria
 
-- [ ] Product prerequisites are supported by authoritative sources.
-- [ ] The selected data item and location representation are supported.
-- [ ] Required identities, licenses, and roles are documented.
-- [ ] The intended audience can access the map.
-- [ ] Refresh and sharing behavior are tested.
-- [ ] Network and data-handling assumptions are recorded.
-- [ ] Open limitations are accepted by the customer.
+- [ ] The workload is enabled through an approved administrative process.
+- [ ] The selected data belongs to a documented supported category.
+- [ ] Required Microsoft and ArcGIS identities and roles are validated.
+- [ ] The author can create, save, and reopen the map.
+- [ ] The intended viewer can access and interact with the map.
+- [ ] The map answers a measurable business question.
+- [ ] Network, refresh, telemetry, residency, capacity, and sharing gaps have owners.
 
 ## Scope and Boundaries
 
-Until the evidence register is populated, this guide does not prescribe:
+This guide does not prescribe:
 
 - A production deployment architecture.
-- A specific authentication flow.
-- A supported list of data sources or formats.
 - A network allow list.
 - A data residency or telemetry statement.
 - An integration with Fabric IQ or agentic systems.
+- A minimum Fabric capacity SKU.
+- A complete publishing or sharing mechanism beyond documented save and open behavior.
 
 ## Supporting Technical Records
 
 - [Architecture](Architecture.md)
 - [Architecture mapping](Architecture-Mapping.md)
+- [End-to-end scenario](02-End-to-End-Scenario.md)
 - [Evidence register](records/Evidence.md)
 - [Source register](records/Source-Register.md)
 - [Collection checklist](records/Collection-Checklist.md)
+- [Public research](records/Public-Research.md)
