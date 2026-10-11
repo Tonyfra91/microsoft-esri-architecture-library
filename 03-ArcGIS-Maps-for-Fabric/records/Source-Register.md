@@ -24,6 +24,8 @@ This register tracks authoritative sources reviewed for the Maps for Fabric comp
 | SRC-MAP-MSFT-003 | Unlocking Geospatial Intelligence in Microsoft Fabric with Esri | Microsoft Fabric Community | Product Blog | https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/unlocking-geospatial-intelligence-in-microsoft-fabric-with-esri%E2%80%99s-arcgis-maps-wo/5172470 | Secondary source; direct automated retrieval blocked |
 | SRC-MAP-MSFT-004 | Create an ArcGIS Map in Power BI | Microsoft Learn | Product Documentation | https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-arcgis | Active; report-authoring and visual behavior |
 | SRC-MAP-MSFT-005 | Interact with an ArcGIS Map in Power BI | Microsoft Learn | Product Documentation | https://learn.microsoft.com/en-us/power-bi/explore-reports/end-user-arcgis | Active; report-consumer and interaction behavior |
+| SRC-MAP-MSFT-006 | Overview for Microsoft Fabric Maps | Microsoft Learn | Product Documentation | https://learn.microsoft.com/en-us/fabric/real-time-intelligence/map/about-fabric-maps | Active; product form, data sources, real-time behavior, Azure Maps boundary, scenarios, and capacity consumption |
+| SRC-MAP-MSFT-007 | Create a Map | Microsoft Learn | Implementation Guidance | https://learn.microsoft.com/en-us/fabric/real-time-intelligence/map/create-map | Active; workspace prerequisites, tenant settings, item creation, and layer categories |
 
 ## Source Validation Rules
 
@@ -38,7 +40,7 @@ Announcements, marketing pages, conference material, and AI-generated content ca
 
 ## Last Review Date
 
-2026-10-10
+2026-10-11
 
 ## Component Owner
 

@@ -27,6 +27,7 @@ Claims from one product must not be transferred to another without product-speci
 - Esri's *ArcGIS for Microsoft* overview
 - Esri Architecture Center's *Microsoft and ArcGIS integrations*
 - Microsoft Learn release notes for Microsoft Fabric
+- Microsoft Learn overview and creation guidance for Microsoft Fabric Maps
 - Microsoft Learn author and consumer guidance for ArcGIS for Power BI
 - Esri account and sign-in documentation for ArcGIS for Power BI
 
@@ -41,22 +42,31 @@ Tier 2 sources can establish chronology, product messaging, and implementation o
 
 ## Product Selection Findings
 
-ArcGIS Maps for Fabric and ArcGIS for Power BI are not interchangeable
-authoring surfaces:
+ArcGIS Maps for Fabric, Microsoft Fabric Maps, and ArcGIS for Power BI are not
+interchangeable authoring surfaces:
 
 - Maps for Fabric produces a dedicated item in a Fabric workspace.
+- Microsoft Fabric Maps produces a native Map item in a Fabric workspace.
 - ArcGIS for Power BI produces a map visual within a Power BI report.
 - Maps for Fabric documents lakehouse selection through the OneLake catalog.
+- Microsoft Fabric Maps documents Eventhouse or KQL, lakehouse, Ontology,
+  external feature service, and external imagery layers.
 - ArcGIS for Power BI uses data fields supplied by the Power BI report.
 - Maps for Fabric documents an ArcGIS Online organizational-account
   requirement.
+- Microsoft Fabric Maps uses Fabric identity and workspace permissions; an
+  ArcGIS identity is not required for native sources.
 - ArcGIS for Power BI supports limited guest use and organizational sign-in to
   ArcGIS Online or supported connected ArcGIS Enterprise deployments.
+- Maps for Fabric supports ArcGIS Online Stream Layers, but Microsoft Fabric
+  Maps provides the native Eventhouse refresh model for operational monitoring.
+- Microsoft Fabric Maps can consume Esri Feature Service endpoints, but this
+  interoperability does not make it an Esri-authored experience.
 - Power BI report distribution and interaction behavior must not be assigned
   to a Maps for Fabric item without product-specific evidence.
 
 The customer should select the intended consumption experience before starting
-the Maps for Fabric POC. A solution may use both products for different
+the Maps for Fabric POC. A solution may use more than one product for different
 audiences, but direct artifact portability is not documented.
 
 ## General-Availability Announcement Findings
@@ -122,4 +132,4 @@ This model separates administrative, data, authoring, and production-readiness r
 
 ## Last Review Date
 
-2026-10-10
+2026-10-11

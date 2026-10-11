@@ -167,6 +167,20 @@ These five integrations carry the story from where ArcGIS runs, through Fabric, 
 
 > **Status note:** Microsoft lists ArcGIS Maps for Microsoft Fabric as generally available as of September 2026 ([What's new in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new)). Earlier Esri and Microsoft Marketplace pages describe it as public preview and predate that release.
 
+### Related Microsoft-Native Spatial Capability
+
+[Microsoft Fabric Maps](https://learn.microsoft.com/en-us/fabric/real-time-intelligence/map/about-fabric-maps)
+is a first-class Fabric item for visualizing real-time and historical location
+data, particularly in Eventhouse and Real-Time Intelligence solutions. It
+complements the integrations above but is not part of the Microsoft and Esri
+integration portfolio. Fabric Maps can consume Esri Feature Service endpoints;
+that interoperability does not make it an Esri-authored experience.
+
+Use the
+[ArcGIS Maps for Fabric spatial-experience comparison](../03-ArcGIS-Maps-for-Fabric/01-Customer-Guidance.md#choose-the-right-spatial-experience)
+to choose among the native Fabric Map item, the ArcGIS Maps for Fabric workload
+item, and ArcGIS for Power BI.
+
 Related patterns, not separate components: ArcGIS connectors for Power Automate support scheduled data loads, event triggers, and webhooks ([Esri Architecture Center](https://architecture.arcgis.com/en/framework/architecture-pillars/integration/providers/microsoft.html)), and Microsoft Entra ID provides sign-in across all five.
 
 ---
