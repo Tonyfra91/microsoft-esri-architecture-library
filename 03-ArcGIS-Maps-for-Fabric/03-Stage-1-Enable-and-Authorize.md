@@ -50,6 +50,30 @@ Record how these permissions are granted and reviewed in the customer tenant. Th
 
 Both requirements apply. A qualifying role in one system does not replace the requirement in the other.
 
+```mermaid
+flowchart LR
+    AUTHOR["Map author<br/>Browser"]
+
+    subgraph MICROSOFT["Microsoft identity and Fabric authorization"]
+        ENTRA["Microsoft Entra sign-in"]
+        WORKSPACE["Fabric workspace role<br/>Viewer+ to interact<br/>Contributor+ to create or save"]
+    end
+
+    subgraph ESRI["ArcGIS identity and content authorization"]
+        AGOSIGNIN["ArcGIS organizational sign-in"]
+        AGOROLE["ArcGIS role<br/>Viewer+ to interact<br/>Creator+ to create or save"]
+    end
+
+    ITEM["ArcGIS Maps for Fabric item"]
+
+    AUTHOR --> ENTRA --> WORKSPACE --> ITEM
+    AUTHOR --> AGOSIGNIN --> AGOROLE --> ITEM
+```
+
+Both authorization paths converge on the map item. The diagram represents
+documented user access requirements, not service-to-service authentication or
+workload hosting.
+
 ## Flow
 
 1. Confirm the customer has a Microsoft Fabric tenant and a workspace on sufficient capacity.

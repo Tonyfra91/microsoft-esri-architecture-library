@@ -71,6 +71,24 @@ The documented settings include:
 | How is a count distributed within polygons? | Dot density |
 | How can dense points be summarized visually? | Clustering or binning |
 
+```mermaid
+flowchart LR
+    QUESTION{"What relationship must the map reveal?"}
+    DENSITY["Dense point concentrations<br/>Heat map"]
+    MAGNITUDE["Numeric variation<br/>Color or size"]
+    CATEGORY["Feature categories<br/>Unique symbols"]
+    COMPARE["Two numeric fields<br/>Compare A to B"]
+    DISTRIBUTION["Counts within polygons<br/>Dot density"]
+    SUMMARY["Dense point summary<br/>Clustering or binning"]
+
+    QUESTION --> DENSITY
+    QUESTION --> MAGNITUDE
+    QUESTION --> CATEGORY
+    QUESTION --> COMPARE
+    QUESTION --> DISTRIBUTION
+    QUESTION --> SUMMARY
+```
+
 Style availability depends on geometry and field type. Select a method that answers the business question rather than demonstrating every option.
 
 Esri recommends limiting a map to three or fewer layers for interpretability. Treat this as design guidance, not a hard technical limit.
@@ -88,6 +106,34 @@ label positioning, and sketching behavior.
 
 Use these images as interface examples. The Quick Start Guide remains the
 primary implementation source for supported authoring behavior.
+
+## Representative Outcome Map
+
+The final walkthrough should include one completed map that demonstrates the
+business result, not only the authoring interface. The image remains a planned
+asset until a public or explicitly approved dataset is selected.
+
+```mermaid
+flowchart TB
+    PLACEHOLDER["Planned representative POC outcome map<br/><br/>One approved Lakehouse business layer<br/>One approved ArcGIS contextual layer<br/>A meaningful style and concise legend<br/>A caption that states the business question"]
+```
+
+Use the following generation brief for a future screenshot or illustrative
+graphic:
+
+```text
+Generate a clean 16:9 enterprise location-intelligence map for a fictional
+operations scenario. Show one business layer sourced from a Microsoft Fabric
+lakehouse and one contextual ArcGIS layer. Use a restrained blue and teal
+palette, a clear legend, readable labels, and no customer names or proprietary
+data. The map should answer one visible business question and look like a
+finished analytical outcome rather than a product marketing image.
+```
+
+Save the approved asset as
+`images/arcgis-maps-representative-outcome.png`, add source and data attribution,
+and replace this placeholder only after validating the visual against the POC
+question.
 
 ## POC Authoring Checklist
 

@@ -57,6 +57,30 @@ The role requirement is documented. The exact failure message and support experi
 - Minimum Fabric capacity SKU
 - Dedicated known-issues and limitations guidance
 
+```mermaid
+flowchart TB
+    DECISION{"Production decision"}
+    SHARE["Sharing and publishing"]
+    REFRESH["Refresh and source updates"]
+    NETWORK["Network and endpoints"]
+    RESIDENCY["Residency and regional processing"]
+    AUDIT["Telemetry and audit"]
+    CAPACITY["Capacity and pricing"]
+    SUPPORT["Support and known limitations"]
+
+    SHARE --> DECISION
+    REFRESH --> DECISION
+    NETWORK --> DECISION
+    RESIDENCY --> DECISION
+    AUDIT --> DECISION
+    CAPACITY --> DECISION
+    SUPPORT --> DECISION
+```
+
+For each validation gate, record one status: **validated**, **open**, or
+**not applicable**. An open gate requires an owner and next action before a
+production decision.
+
 For each concern, record:
 
 1. The customer requirement.

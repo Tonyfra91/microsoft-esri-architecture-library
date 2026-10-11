@@ -14,7 +14,16 @@ Supported Fabric data → Mapping and exploration experience → Customer insigh
 
 GeoAnalytics is not a prerequisite for every map. Use it when the source needs spatial processing before visualization.
 
-## Logical Component View
+## Evidence-Backed Logical Reference Architecture
+
+This logical reference architecture identifies documented components,
+identities, sources, and artifacts. It is not a physical deployment or network
+architecture.
+
+[![ArcGIS Maps for Microsoft Fabric evidence-backed logical reference architecture](images/arcgis-maps-logical-reference-architecture.png)](images/arcgis-maps-logical-reference-architecture.png)
+
+[Open the full-size logical reference architecture](images/arcgis-maps-logical-reference-architecture.png) |
+[Edit the draw.io source](images/arcgis-maps-logical-reference-architecture.drawio)
 
 ```mermaid
 flowchart LR
@@ -33,9 +42,13 @@ flowchart LR
     ATLAS -->|"Add data from Living Atlas"| ITEM
 ```
 
-> **Scenario view**
->
-> This diagram represents documented user and data-selection workflows. It does not define workload hosting, network paths, caching, data movement, service-to-service communication, or data residency.
+> [!IMPORTANT]
+> This logical scenario view represents documented user and data-selection
+> workflows. It does not define workload hosting, network paths, caching, data
+> movement, service-to-service communication, telemetry, or data residency.
+
+The Mermaid view is retained as the accessible text-equivalent fallback for
+the rendered draw.io architecture.
 
 ## Documented Boundaries
 

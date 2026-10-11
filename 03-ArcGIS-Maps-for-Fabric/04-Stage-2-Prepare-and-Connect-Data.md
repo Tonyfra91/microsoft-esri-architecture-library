@@ -18,6 +18,30 @@ Prepare a bounded set of supported Fabric and ArcGIS data for the pilot map.
 | ArcGIS Online | **Add data from ArcGIS Online** and browse available content | [MAP-005](records/Evidence.md#map-005) |
 | ArcGIS Living Atlas | **Add data from ArcGIS Living Atlas** and browse curated content | [MAP-005](records/Evidence.md#map-005) |
 
+```mermaid
+flowchart LR
+    subgraph FABRIC["Microsoft Fabric sources"]
+        LAKE["OneLake lakehouse<br/>GeoJSON<br/>Parquet or GeoParquet<br/>CSV coordinates"]
+    end
+
+    subgraph ARCGIS["Esri ArcGIS sources"]
+        AGO["ArcGIS Online<br/>Organizational content"]
+        ATLAS["ArcGIS Living Atlas<br/>Curated context"]
+        STREAM["ArcGIS Online Stream Layer<br/>Secondary announcement evidence"]
+    end
+
+    ITEM["ArcGIS Maps for Fabric item"]
+
+    LAKE -->|"Add data from Lakehouse"| ITEM
+    AGO -->|"Add data from ArcGIS Online"| ITEM
+    ATLAS -->|"Add data from Living Atlas"| ITEM
+    STREAM -.->|"Validate in the POC"| ITEM
+```
+
+Solid paths are documented in the primary Quick Start Guide. The dashed Stream
+Layer path is documented in the general-availability announcement and requires
+POC validation for scale, refresh, and operational behavior.
+
 ## Supported Lakehouse Formats
 
 The Esri Quick Start Guide documents:

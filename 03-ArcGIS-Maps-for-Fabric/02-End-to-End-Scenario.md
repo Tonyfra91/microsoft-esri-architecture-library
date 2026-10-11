@@ -52,12 +52,13 @@ workspace. The diagram shows the documented user experience and source
 selection paths. The Fabric box is a user-experience boundary, not a
 deployment, hosting, or network trust boundary.
 
-[![ArcGIS Maps for Microsoft Fabric map-authoring user experience](images/arcgis-maps-fabric-ux.png)](images/arcgis-maps-fabric-ux.png)
+[![ArcGIS Maps for Microsoft Fabric map-authoring scenario flow](images/arcgis-maps-fabric-scenario-flow.png)](images/arcgis-maps-fabric-scenario-flow.png)
 
-[Open the full-size map-authoring user-experience diagram](images/arcgis-maps-fabric-ux.png)
+[Open the full-size map-authoring scenario-flow diagram](images/arcgis-maps-fabric-scenario-flow.png)
 
 > [!IMPORTANT]
-> The diagram does not define where Esri workload components execute, how
+> Treat this image as a scenario flow, not a deployment or network reference
+> architecture. The diagram does not define where Esri workload components execute, how
 > traffic is routed, whether data is copied or cached, or where telemetry is
 > stored. Those questions remain production validation gaps. The direct-share
 > and organizational-app paths shown in steps 9 and 10 are scenario outcomes;
@@ -110,9 +111,12 @@ and current product labels as the implementation reference.
 
 ```mermaid
 flowchart LR
-    A["Stage 1<br/>Enable and authorize"] --> B["Stage 2<br/>Prepare and connect data"]
-    B --> C["Stage 3<br/>Build and style the map"]
-    C --> D["Stage 4<br/>Validate and operationalize"]
+    A["Stage 1<br/>Enable and authorize<br/><br/>Owners: Fabric and ArcGIS administrators<br/>Output: enabled pilot and named users"]
+    B["Stage 2<br/>Prepare and connect data<br/><br/>Owners: data owner and map author<br/>Output: approved source inventory"]
+    C["Stage 3<br/>Build and style the map<br/><br/>Owners: map author and business reviewer<br/>Output: usable saved map"]
+    D["Stage 4<br/>Validate and operationalize<br/><br/>Owners: platform, security, and business teams<br/>Output: POC decision and gap register"]
+
+    A --> B --> C --> D
 ```
 
 | Stage | Customer question | Stage output |

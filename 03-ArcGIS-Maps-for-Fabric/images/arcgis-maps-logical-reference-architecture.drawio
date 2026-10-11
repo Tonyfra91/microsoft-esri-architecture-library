@@ -1,0 +1,118 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="arcgis-maps-logical" name="Logical reference architecture">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="ArcGIS Maps for Microsoft Fabric - Evidence-Backed Logical Reference Architecture" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F1F1F;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="1100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Logical scenario view, not a deployment or network architecture" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="20" y="52" width="800" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="12" width="400" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg-t" value="Legend (ownership)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="14" width="150" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg-ms" value="Microsoft" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#0B4F9C;strokeWidth=2;fontSize=12;fontColor=#0B2A4F;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="38" width="110" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg-esri" value="Esri" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DFF3E4;strokeColor=#16692F;strokeWidth=2;fontSize=12;fontColor=#0B3A19;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="38" width="110" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg-cu" value="Customer-owned" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D1;strokeColor=#8A4B00;strokeWidth=2;dashed=1;fontSize=12;fontColor=#4D2900;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="38" width="140" height="38" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="z1" value="Customer and identity" style="swimlane;startSize=30;horizontal=1;align=left;spacingLeft=10;fillColor=#F7F7F7;strokeColor=#666666;fontSize=15;fontStyle=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="120" width="310" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="z2" value="Microsoft Fabric" style="swimlane;startSize=30;horizontal=1;align=left;spacingLeft=10;fillColor=#F3F8FD;strokeColor=#0B4F9C;fontSize=15;fontStyle=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="120" width="510" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="z3" value="Esri ArcGIS" style="swimlane;startSize=30;horizontal=1;align=left;spacingLeft=10;fillColor=#F3FAF5;strokeColor=#16692F;fontSize=15;fontStyle=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="310" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="z4" value="Consumption and validation" style="swimlane;startSize=30;horizontal=1;align=left;spacingLeft=10;fillColor=#FFF9EE;strokeColor=#8A4B00;fontSize=15;fontStyle=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="120" width="370" height="520" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="entra" value="&lt;b&gt;Microsoft Entra identity&lt;/b&gt;&lt;br&gt;Microsoft sign-in" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#0B4F9C;strokeWidth=2;fontSize=13;fontColor=#0B2A4F;" vertex="1" parent="1">
+          <mxGeometry x="70" y="180" width="210" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="author" value="&lt;b&gt;Map author / browser&lt;/b&gt;&lt;br&gt;Creator (ArcGIS), Contributor+ (Fabric) to save" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D1;strokeColor=#8A4B00;strokeWidth=2;dashed=1;fontSize=13;fontColor=#4D2900;" vertex="1" parent="1">
+          <mxGeometry x="70" y="440" width="210" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="tenant" value="&lt;b&gt;Fabric tenant / admin / workspace / capacity&lt;/b&gt;&lt;br&gt;Admin enables workload; capacity must allow saving items" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#0B4F9C;strokeWidth=2;fontSize=13;fontColor=#0B2A4F;" vertex="1" parent="1">
+          <mxGeometry x="380" y="170" width="230" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="item" value="&lt;b&gt;ArcGIS Maps for Fabric item&lt;/b&gt;&lt;br&gt;Map authoring and exploration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DFF3E4;strokeColor=#16692F;strokeWidth=3;fontSize=13;fontColor=#0B3A19;" vertex="1" parent="1">
+          <mxGeometry x="630" y="320" width="210" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="lake" value="&lt;b&gt;OneLake lakehouse&lt;/b&gt;&lt;br&gt;GeoJSON, Parquet/GeoParquet, CSV" style="shape=cylinder3;boundedLbl=1;whiteSpace=wrap;html=1;size=12;fillColor=#FFF0D1;strokeColor=#8A4B00;strokeWidth=2;dashed=1;fontSize=13;fontColor=#4D2900;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="230" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="ago" value="&lt;b&gt;ArcGIS Online organization / identity / content&lt;/b&gt;&lt;br&gt;Organizational sign-in; content available to user" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DFF3E4;strokeColor=#16692F;strokeWidth=2;fontSize=13;fontColor=#0B3A19;" vertex="1" parent="1">
+          <mxGeometry x="910" y="450" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="atlas" value="&lt;b&gt;ArcGIS Living Atlas&lt;/b&gt;&lt;br&gt;Curated geographic content" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DFF3E4;strokeColor=#16692F;strokeWidth=2;fontSize=13;fontColor=#0B3A19;" vertex="1" parent="1">
+          <mxGeometry x="910" y="170" width="250" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="saved" value="&lt;b&gt;Saved map artifact&lt;/b&gt;&lt;br&gt;Save / Save as / Open" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D1;strokeColor=#8A4B00;strokeWidth=2;dashed=1;fontSize=13;fontColor=#4D2900;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="320" width="290" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="consumer" value="&lt;b&gt;Map consumer&lt;/b&gt;&lt;br&gt;Viewer or higher; view and interact" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D1;strokeColor=#8A4B00;strokeWidth=2;dashed=1;fontSize=13;fontColor=#4D2900;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="460" width="290" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" value="1 Microsoft sign-in" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#0B4F9C;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="author" target="entra">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="2 Fabric access" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#0B4F9C;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="entra" target="tenant">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="3 Create item" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#0B4F9C;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tenant" target="item">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="660" y="220"/><mxPoint x="660" y="320"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="4 ArcGIS organizational sign-in" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#16692F;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="author" target="ago">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="175" y="600"/><mxPoint x="1035" y="600"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="5 Add data from Lakehouse" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#0B4F9C;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="lake" target="item">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="660" y="510"/><mxPoint x="660" y="410"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="6 Add data from ArcGIS Online" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#16692F;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="ago" target="item">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1035" y="440"/><mxPoint x="810" y="440"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="7 Add data from Living Atlas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#16692F;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="atlas" target="item">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1035" y="290"/><mxPoint x="810" y="290"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="8 Save map" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#8A4B00;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="item" target="saved">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="9 Open" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#8A4B00;strokeWidth=2;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="consumer" target="saved">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="val" value="&lt;b&gt;VALIDATION REQUIRED - not documented; no flows or claims shown&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;table style=&quot;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;td&gt;&amp;#9888; Hosting / network&lt;br&gt;Execution location, endpoints, protocols, browser origins&lt;/td&gt;&lt;td&gt;&amp;#9888; Caching / data movement&lt;br&gt;Copy, cache, query or transmit by source type&lt;/td&gt;&lt;td&gt;&amp;#9888; Refresh&lt;br&gt;Behavior after a source changes&lt;/td&gt;&lt;td&gt;&amp;#9888; Telemetry / residency&lt;br&gt;Audit events, regional controls&lt;/td&gt;&lt;td&gt;&amp;#9888; Publishing&lt;br&gt;Sharing beyond save and open&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#B00020;strokeWidth=3;dashed=1;dashPattern=8 4;fontSize=14;fontColor=#1F1F1F;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="680" width="1560" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="Flows shown are documented user and data-selection steps only. Numbers indicate sequence; arrows are not service-to-service communication." style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="20" y="858" width="1400" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

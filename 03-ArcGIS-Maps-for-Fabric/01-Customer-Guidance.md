@@ -21,6 +21,26 @@ BI can all present location data, but they produce different artifacts and
 serve different workflows. Microsoft Fabric Maps is a native Fabric
 capability, not a Microsoft and Esri integration.
 
+```mermaid
+flowchart TD
+    START{"What is the primary deliverable?"}
+    REPORT["Power BI report with<br/>map interactions"]
+    LIVE["Native, continuously refreshed<br/>Eventhouse or KQL map"]
+    DEDICATED["Dedicated map using OneLake,<br/>ArcGIS context, cartography,<br/>or ArcGIS Online Stream Layers"]
+    PBI["ArcGIS for Power BI"]
+    FABRIC["Microsoft Fabric Maps"]
+    ARCGIS["ArcGIS Maps for Microsoft Fabric"]
+
+    START --> REPORT --> PBI
+    START --> LIVE --> FABRIC
+    START --> DEDICATED --> ARCGIS
+```
+
+These branches describe the primary fit for common scenarios, not mutually
+exclusive product boundaries. Other supported data paths may be appropriate
+after the required source, refresh, identity, and governance behavior is
+validated.
+
 Start with the customer question in the first column, then compare how each
 experience answers it.
 
