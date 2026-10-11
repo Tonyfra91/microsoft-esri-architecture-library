@@ -15,8 +15,8 @@ Within that landscape, GeoAnalytics provides the **spatial processing** step:
 | Capability | Role in the landscape | Covered in |
 |---|---|---|
 | **ArcGIS GeoAnalytics for Microsoft Fabric** | Distributed spatial analysis and enrichment in Fabric Spark | This guide |
-| ArcGIS Maps for Microsoft Fabric | Mapping and spatial visualization within Fabric | Planned component 03 |
-| ArcGIS for Power BI | Location-aware reporting for business users | Planned component 04 |
+| ArcGIS Maps for Microsoft Fabric | Mapping and spatial visualization within Fabric | [03 · ArcGIS Maps for Microsoft Fabric](../03-ArcGIS-Maps-for-Fabric/) |
+| ArcGIS for Power BI | Location-aware reporting for business users | [Stage 3: Use the Results](05-Stage-3-Use-the-Results.md) |
 
 These capabilities are related but not interchangeable. GeoAnalytics typically produces the spatially enriched data that the mapping and reporting experiences consume.
 
