@@ -49,7 +49,7 @@ flowchart LR
 
 ## Guidance
 
-- Use [Create ArcGIS Maps for Power BI](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-arcgis) and Esri's [ArcGIS for Power BI introduction](https://doc.arcgis.com/en/power-bi/get-started/introduction.htm) for Power BI reports.
+- Use [Create ArcGIS Maps for Power BI](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-arcgis) and Esri's [ArcGIS for Power BI introduction](https://doc.arcgis.com/en/power-bi/latest/get-started/introduction-to-arcgis-for-power-bi.htm) for Power BI reports.
 - Use the [ArcGIS for Microsoft Fabric product documentation](https://www.esri.com/en-us/arcgis/products/arcgis-for-microsoft/arcgis-for-microsoft-fabric) and [ArcGIS Maps for Microsoft Fabric quick start guide](https://www.esri.com/content/dam/esrisites/en-us/media/pdf/implementation-guides/maps-for-fabric-quick-start-guide.pdf) for map-based exploration in Fabric.
 - Use the GeoAnalytics [feature service data source](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/feature-service/) guidance to explicitly write supported results to ArcGIS Online or ArcGIS Enterprise.
 

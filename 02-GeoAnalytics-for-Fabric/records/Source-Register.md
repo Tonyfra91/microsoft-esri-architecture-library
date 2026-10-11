@@ -45,7 +45,7 @@ This register tracks authoritative sources used to support architecture, capabil
 | SRC-MSFT-015 | Tenant Settings Index - Microsoft Fabric | Microsoft | Administration | https://learn.microsoft.com/en-us/fabric/admin/tenant-settings-index | Active |
 | SRC-MSFT-016 | Microsoft Fabric workloads - Azure Well-Architected Framework (architecture diagram and pillar guidance) | Microsoft | Reference Architecture | https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview | Active |
 | SRC-MSFT-017 | What's new in Microsoft Fabric: ArcGIS Maps for Fabric (Generally Available), September 2026 | Microsoft | Release Notes | https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new | Active |
-| SRC-MSFT-018 | Create ArcGIS Maps for Power BI | Microsoft | Implementation Guidance | https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-arcgis | Active |
+| SRC-MSFT-018 | Create ArcGIS Maps for Power BI | Microsoft | Implementation Guidance | https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-arcgis | Active |
 
 ---
 
