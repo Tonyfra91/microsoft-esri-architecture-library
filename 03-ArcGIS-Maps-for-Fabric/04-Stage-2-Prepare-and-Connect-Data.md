@@ -28,6 +28,23 @@ The Esri Quick Start Guide documents:
 
 Local source files can first be uploaded to the lakehouse through Lakehouse Explorer before the map author connects to them.
 
+### Parquet from OneLake
+
+The public general-availability announcement demonstrates adding Parquet data
+from OneLake to a map.
+
+[![Adding OneLake Parquet data to ArcGIS Maps for Fabric](images/arcgis-maps-onelake-parquet.gif)](images/arcgis-maps-onelake-parquet.gif)
+
+[Open the full-size OneLake Parquet image](images/arcgis-maps-onelake-parquet.gif)
+
+*Source: [ArcGIS Maps for Microsoft Fabric Is Now Generally Available](https://community.fabric.microsoft.com/blog/fbc_comm_blog/arcgis-maps-for-microsoft-fabric-is-now-generally-available/5373400), Microsoft Fabric Community.*
+
+> [!NOTE]
+> The announcement states that Parquet data can be used directly from OneLake
+> without data movement or duplication. Treat that statement as secondary
+> product evidence until Microsoft or Esri publishes the corresponding
+> technical data-flow documentation.
+
 ## Discovery Questions
 
 ### Data authority
@@ -69,6 +86,22 @@ Local source files can first be uploaded to the lakehouse through Lakehouse Expl
 2. Identify any ArcGIS Living Atlas layer needed for context.
 3. Confirm the pilot user's ArcGIS role and content access.
 4. Record item identifiers, owners, sharing scope, and intended map role.
+
+### ArcGIS Online Stream Layers
+
+The general-availability announcement demonstrates adding and configuring an
+ArcGIS Online Stream Layer.
+
+[![Adding an ArcGIS Online Stream Layer to ArcGIS Maps for Fabric](images/arcgis-maps-stream-layer.gif)](images/arcgis-maps-stream-layer.gif)
+
+[Open the full-size Stream Layer image](images/arcgis-maps-stream-layer.gif)
+
+*Source: [ArcGIS Maps for Microsoft Fabric Is Now Generally Available](https://community.fabric.microsoft.com/blog/fbc_comm_blog/arcgis-maps-for-microsoft-fabric-is-now-generally-available/5373400), Microsoft Fabric Community.*
+
+> [!NOTE]
+> Stream Layer support is documented in the public announcement but not in the
+> primary Quick Start Guide reviewed for this component. Validate supported
+> ArcGIS item types, scale, refresh, and operational behavior in the POC.
 
 ## Data Readiness Checklist
 

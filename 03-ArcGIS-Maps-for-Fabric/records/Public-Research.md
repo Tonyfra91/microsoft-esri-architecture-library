@@ -37,6 +37,24 @@ Claims from one product must not be transferred to another without product-speci
 
 Tier 2 sources can establish chronology, product messaging, and implementation observations. Technical architecture claims require Tier 1 support or explicit engineering confirmation.
 
+## General-Availability Announcement Findings
+
+The public Microsoft Fabric Community announcement includes demonstrations of:
+
+- General map authoring in the Fabric workload
+- Adding and configuring ArcGIS Online Stream Layers
+- Visualizing Parquet data from OneLake
+- Symbol animation, label positioning, and sketching enhancements
+
+The article states that Parquet data can be used from OneLake without data
+movement or duplication. This is a Tier 2 claim. It does not close the
+data-movement, caching, refresh, residency, or network architecture gaps
+without corresponding technical documentation.
+
+The repository includes the four public GIF images from the announcement as
+interface examples. The public platform delivers each file as a single-frame
+GIF. Only assets delivered through the public article are included.
+
 ## Authoritative Findings
 
 The September 2026 Quick Start Guide supports:

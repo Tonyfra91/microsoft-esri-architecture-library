@@ -19,6 +19,82 @@ Tenant and identity readiness
 >
 > Every definitive statement in this walkthrough maps to the [Evidence register](records/Evidence.md). Open questions remain labeled as validation work.
 
+## Where ArcGIS Maps Appears in Fabric
+
+ArcGIS Maps for Fabric is created and saved as an item in a Fabric
+workspace. The diagram shows the documented user experience and source
+selection paths. The Fabric box is a user-experience boundary, not a
+deployment, hosting, or network trust boundary.
+
+```mermaid
+flowchart LR
+    USER["Map author<br/>Browser"]
+    AGO["ArcGIS Online<br/>Identity and organizational content"]
+    ATLAS["ArcGIS Living Atlas"]
+
+    subgraph FABRIC["Microsoft Fabric user experience"]
+        ADMIN["Admin portal<br/>Tenant settings"]
+        WORKSPACE["Fabric workspace<br/>+ New item"]
+        MAP["ArcGIS Maps for Fabric item<br/>Map authoring experience"]
+        ONELAKE[("OneLake catalog<br/>Lakehouse data")]
+
+        ADMIN -->|"Enable workload"| WORKSPACE
+        WORKSPACE -->|"Create item"| MAP
+        ONELAKE -->|"Add data from Lakehouse"| MAP
+    end
+
+    USER -->|"Microsoft sign-in"| WORKSPACE
+    USER -->|"ArcGIS organizational sign-in"| AGO
+    AGO -->|"Add data from ArcGIS Online"| MAP
+    ATLAS -->|"Add data from Living Atlas"| MAP
+```
+
+> [!IMPORTANT]
+> The diagram does not define where Esri workload components execute, how
+> traffic is routed, whether data is copied or cached, or where telemetry is
+> stored. Those questions remain production validation gaps.
+
+## Where Users Go
+
+The documented navigation paths are:
+
+```text
+Administrator
+Microsoft Fabric
+  -> Settings
+  -> Admin portal
+  -> Tenant settings
+  -> ArcGIS Maps for Microsoft Fabric
+  -> Enable
+
+Map author
+Microsoft Fabric
+  -> Target workspace
+  -> + New item
+  -> Search for ArcGIS Maps for Fabric
+  -> New ArcGIS Web Map
+  -> Enter name and location
+  -> Create
+  -> Sign in to ArcGIS
+
+Add data
+ArcGIS Maps item
+  -> Contents toolbar
+  -> + Add data
+      -> Add data from Lakehouse
+      -> Add data from ArcGIS Online
+      -> Add data from ArcGIS Living Atlas
+```
+
+[![ArcGIS Maps for Fabric map-authoring interface](images/arcgis-maps-general-authoring.gif)](images/arcgis-maps-general-authoring.gif)
+
+[Open the full-size map-authoring image](images/arcgis-maps-general-authoring.gif)
+
+*Source: [ArcGIS Maps for Microsoft Fabric Is Now Generally Available](https://community.fabric.microsoft.com/blog/fbc_comm_blog/arcgis-maps-for-microsoft-fabric-is-now-generally-available/5373400), Microsoft Fabric Community.*
+
+The interface can change after publication. Use the written navigation path
+and current product labels as the implementation reference.
+
 ## The Scenario at a Glance
 
 ```mermaid
@@ -59,7 +135,7 @@ Combining these steps hides the product's dual Microsoft and ArcGIS authorizatio
 | Lakehouse-only map | Stage 2 uses supported GeoJSON, Parquet or GeoParquet, or CSV data | Documented |
 | ArcGIS Online context | Stage 2 adds approved organizational or public ArcGIS Online content | Documented |
 | Living Atlas context | Stage 2 adds selected ArcGIS Living Atlas content | Documented |
-| Streaming layers | Stage 2 uses ArcGIS Online stream-layer behavior | VALIDATION REQUIRED |
+| Streaming layers | Stage 2 uses ArcGIS Online Stream Layer behavior | Public GA announcement; POC validation required |
 | Production sharing | Stage 4 defines a supported audience and sharing process | VALIDATION REQUIRED |
 | Restricted network | Stage 4 validates required endpoints, data handling, and browser access | VALIDATION REQUIRED |
 

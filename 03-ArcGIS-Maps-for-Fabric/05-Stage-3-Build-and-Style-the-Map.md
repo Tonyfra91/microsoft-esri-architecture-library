@@ -23,6 +23,12 @@ Create an ArcGIS Maps for Microsoft Fabric item, connect the prepared layers, an
 
 The ArcGIS sign-in occurs after the user enters Fabric and opens the map item. Keep the Microsoft and ArcGIS identities explicit in support documentation.
 
+[![Creating and authoring a map in ArcGIS Maps for Fabric](images/arcgis-maps-general-authoring.gif)](images/arcgis-maps-general-authoring.gif)
+
+[Open the full-size map-authoring image](images/arcgis-maps-general-authoring.gif)
+
+*Source: [ArcGIS Maps for Microsoft Fabric Is Now Generally Available](https://community.fabric.microsoft.com/blog/fbc_comm_blog/arcgis-maps-for-microsoft-fabric-is-now-generally-available/5373400), Microsoft Fabric Community.*
+
 ## Add Lakehouse Data
 
 1. From the Contents toolbar, select **+ Add data**.
@@ -68,6 +74,20 @@ The documented settings include:
 Style availability depends on geometry and field type. Select a method that answers the business question rather than demonstrating every option.
 
 Esri recommends limiting a map to three or fewer layers for interpretability. Treat this as design guidance, not a hard technical limit.
+
+## GA Styling Examples
+
+The general-availability announcement demonstrates enhanced symbol animation,
+label positioning, and sketching behavior.
+
+[![Configuring symbols, labels, and sketches in ArcGIS Maps for Fabric](images/arcgis-maps-symbol-label-sketch.gif)](images/arcgis-maps-symbol-label-sketch.gif)
+
+[Open the full-size symbol, label, and sketch image](images/arcgis-maps-symbol-label-sketch.gif)
+
+*Source: [ArcGIS Maps for Microsoft Fabric Is Now Generally Available](https://community.fabric.microsoft.com/blog/fbc_comm_blog/arcgis-maps-for-microsoft-fabric-is-now-generally-available/5373400), Microsoft Fabric Community.*
+
+Use these images as interface examples. The Quick Start Guide remains the
+primary implementation source for supported authoring behavior.
 
 ## POC Authoring Checklist
 

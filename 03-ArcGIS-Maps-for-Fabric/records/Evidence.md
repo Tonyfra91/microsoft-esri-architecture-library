@@ -17,6 +17,7 @@ This register maps product and implementation claims to authoritative Microsoft 
 | MAP-007 | The product documents Save, Save as, and open-map workflows; saving requires ArcGIS Creator or higher and Fabric Contributor or higher. | SRC-MAP-ESRI-002 | Quick Start Guide pp. 9, 12, 18–19 | Supported |
 | MAP-008 | Esri recommends limiting maps to three or fewer layers for interpretability. | SRC-MAP-ESRI-002 | Quick Start Guide p. 20 | Supported as design guidance |
 | MAP-009 | ArcGIS Maps for Microsoft Fabric is listed as generally available in September 2026. | SRC-MAP-MSFT-001; SRC-MAP-MSFT-002 | Microsoft Fabric release notes; GA announcement | Supported for product status; blog content is secondary |
+| MAP-010 | The GA announcement describes ArcGIS Online Stream Layer support, direct Parquet use from OneLake, and symbol, label, and sketch enhancements. | SRC-MAP-MSFT-002 | Microsoft Fabric Community GA announcement | Secondary product evidence; technical architecture implications require Tier 1 documentation |
 
 ## Open Evidence Gaps
 
