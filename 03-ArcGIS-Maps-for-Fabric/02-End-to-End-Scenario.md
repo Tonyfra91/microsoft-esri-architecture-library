@@ -109,6 +109,12 @@ and current product labels as the implementation reference.
 
 ## The Scenario at a Glance
 
+### Example POC Question
+
+*Can an operations analyst combine an authoritative lakehouse dataset with approved ArcGIS Online or Living Atlas context, create a clear map in Fabric, save it, and make it accessible to the intended pilot audience?*
+
+Replace this with a customer-specific business decision and measurable success criteria.
+
 ```mermaid
 flowchart LR
     A["Stage 1<br/>Enable and authorize<br/><br/>Owners: Fabric and ArcGIS administrators<br/>Output: enabled pilot and named users"]
@@ -125,12 +131,6 @@ flowchart LR
 | [2. Prepare and connect data](04-Stage-2-Prepare-and-Connect-Data.md) | "Which supported Fabric and ArcGIS data will the map use?" | A documented set of supported map layers |
 | [3. Build and style the map](05-Stage-3-Build-and-Style-the-Map.md) | "Can the user create a useful map in Fabric?" | A styled ArcGIS Maps for Fabric item |
 | [4. Validate and operationalize](06-Stage-4-Validate-and-Operationalize.md) | "Can the intended audience reopen and use the saved map under the expected controls?" | A validated POC outcome and a list of production gaps |
-
-## Example POC Question
-
-*Can an operations analyst combine an authoritative lakehouse dataset with approved ArcGIS Online or Living Atlas context, create a clear map in Fabric, save it, and make it accessible to the intended pilot audience?*
-
-Replace this with a customer-specific business decision and measurable success criteria.
 
 ## Why Four Stages
 
