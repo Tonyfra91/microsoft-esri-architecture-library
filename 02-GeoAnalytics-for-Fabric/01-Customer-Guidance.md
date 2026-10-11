@@ -26,7 +26,7 @@ These capabilities are related but not interchangeable. GeoAnalytics typically p
 
 ArcGIS GeoAnalytics runs within Microsoft Fabric, so every Esri integration in this library starts from a well-designed Fabric workload. This library adopts Microsoft Fabric guidance rather than restating it. Customers should review the Microsoft Fabric Well-Architected Framework when planning a proof of concept or production deployment.
 
-**Source:** Microsoft Learn, [Microsoft Fabric workloads, Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview) (SRC-MSFT-016). Microsoft also provides a [Visio version of the reference architecture](https://arch-center.azureedge.net/fabric-architecture.vsdx).
+**Source:** Microsoft Learn, [Microsoft Fabric workloads, Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/microsoft-fabric/overview) ([SRC-MSFT-016](records/Source-Register.md#src-msft-016)). Microsoft also provides a [Visio version of the reference architecture](https://arch-center.azureedge.net/fabric-architecture.vsdx).
 
 ### Where Esri Fits
 
@@ -150,8 +150,8 @@ Confirm the customer's network posture early. GeoAnalytics calls Esri services o
 
 - [ ] Is Outbound Access Protection enabled, or planned, for the target Fabric workspace?
 - [ ] Is outbound internet access from Fabric Spark restricted by customer firewall or proxy policy?
-- [ ] Does the customer require endpoint or hostname allow-listing for outbound connections? If so, allow outbound HTTPS on port 443 to arcgis.com. *(SEC-007)*
-- [ ] Does the target workspace use managed virtual networks or Private Link? *(Open: GeoAnalytics behavior not yet documented, GAP-003)*
+- [ ] Does the customer require endpoint or hostname allow-listing for outbound connections? If so, allow outbound HTTPS on port 443 to arcgis.com. *([SEC-007](records/Evidence.md#sec-007))*
+- [ ] Does the target workspace use managed virtual networks or Private Link? *(Open: GeoAnalytics behavior not yet documented, [GAP-003](records/Evidence.md#gap-003))*
 - [ ] Has the customer's network or security team been engaged to review these requirements before the proof of concept?
 
 If any answer indicates restricted outbound access, raise it as a proof-of-concept risk and escalate to Esri and Microsoft for confirmation before committing to a design.

@@ -62,7 +62,7 @@ deployment, hosting, or network trust boundary.
 > stored. Those questions remain production validation gaps. The direct-share
 > and organizational-app paths shown in steps 9 and 10 are scenario outcomes;
 > their supported implementation and governance remain validation work under
-> GAP-005. The Power BI path is a separate report-authoring experience, not a
+> [GAP-005](records/Evidence.md#gap-005). The Power BI path is a separate report-authoring experience, not a
 > direct export of the Fabric map item.
 
 ## Where Users Go

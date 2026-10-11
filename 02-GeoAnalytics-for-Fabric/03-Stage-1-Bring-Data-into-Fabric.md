@@ -30,22 +30,22 @@ Ask these before selecting an ingestion path. Each answer narrows the options in
 **Source type and location**
 
 - [ ] Is each source a file, an operational database, existing cloud storage, a stream, or an ArcGIS feature service?
-- [ ] For databases: is the source supported by Fabric Mirroring? *(ING-003)*
-- [ ] For cloud storage: can the data stay in place and be referenced through a OneLake shortcut, or must it be copied? *(ING-002)*
+- [ ] For databases: is the source supported by Fabric Mirroring? *([ING-003](records/Evidence.md#ing-003))*
+- [ ] For cloud storage: can the data stay in place and be referenced through a OneLake shortcut, or must it be copied? *([ING-002](records/Evidence.md#ing-002))*
 - [ ] For streaming data: is real-time processing required, or is batch acceptable for the proof of concept? *(Streaming is a separate scenario variant)*
 
 **Spatial formats and location fields**
 
-- [ ] In what format is the geospatial data delivered (shapefile, file geodatabase, GeoJSON, GeoParquet, CSV, Parquet)? Is each format readable by GeoAnalytics? *(ING-004)*
-- [ ] Will results need to be written back in the same format? File geodatabase is read-only in GeoAnalytics. *(ING-004)*
+- [ ] In what format is the geospatial data delivered (shapefile, file geodatabase, GeoJSON, GeoParquet, CSV, Parquet)? Is each format readable by GeoAnalytics? *([ING-004](records/Evidence.md#ing-004))*
+- [ ] Will results need to be written back in the same format? File geodatabase is read-only in GeoAnalytics. *([ING-004](records/Evidence.md#ing-004))*
 - [ ] Does each dataset contain coordinates, addresses, or geometry? Which fields hold location?
-- [ ] What coordinate system was each dataset collected in, and is it documented? *(ING-007)*
+- [ ] What coordinate system was each dataset collected in, and is it documented? *([ING-007](records/Evidence.md#ing-007))*
 - [ ] Are there join keys between the business and geospatial data, or will the relationship be spatial?
 
 **ArcGIS-hosted data**
 
-- [ ] Is any data hosted in ArcGIS Online or ArcGIS Enterprise feature services? *(ING-005)*
-- [ ] Are those services public or secured? If secured, will access use a registered GIS or a token? *(ING-005)*
+- [ ] Is any data hosted in ArcGIS Online or ArcGIS Enterprise feature services? *([ING-005](records/Evidence.md#ing-005))*
+- [ ] Are those services public or secured? If secured, will access use a registered GIS or a token? *([ING-005](records/Evidence.md#ing-005))*
 - [ ] Should feature-service data be read directly in Stage 2, or persisted to the lakehouse first?
 
 **Volume and frequency**
@@ -55,7 +55,7 @@ Ask these before selecting an ingestion path. Each answer narrows the options in
 
 **Network and security**
 
-- [ ] Has the [Network Readiness Discovery](01-Customer-Guidance.md#network-readiness-discovery) checklist been completed? Outbound restrictions affect both GeoAnalytics authorization and feature-service access. *(SEC-004, GAP-003)*
+- [ ] Has the [Network Readiness Discovery](01-Customer-Guidance.md#network-readiness-discovery) checklist been completed? Outbound restrictions affect both GeoAnalytics authorization and feature-service access. *([SEC-004](records/Evidence.md#sec-004), [GAP-003](records/Evidence.md#gap-003))*
 
 ## Selecting an Ingestion Path
 
@@ -80,15 +80,15 @@ The Microsoft reference architecture describes multiple ingestion patterns. Sele
 
 [Open the full-size diagram](images/stage-1-arcgis-data-path.png)
 
-The diagram's reference to writing results back to ArcGIS means an explicit write to a supported ArcGIS Online or ArcGIS Enterprise feature service. [Stage 3](05-Stage-3-Use-the-Results.md) documents this optional output path (OUT-004); it does not imply automatic synchronization or support for every ArcGIS destination.
+The diagram's reference to writing results back to ArcGIS means an explicit write to a supported ArcGIS Online or ArcGIS Enterprise feature service. [Stage 3](05-Stage-3-Use-the-Results.md) documents this optional output path ([OUT-004](records/Evidence.md#out-004)); it does not imply automatic synchronization or support for every ArcGIS destination.
 
 Three documented paths make data available to GeoAnalytics:
 
-- **A · Read in place:** GeoAnalytics reads ArcGIS Online or ArcGIS Enterprise feature services directly into a Spark DataFrame, optionally persisting the result to a Delta table (ING-005).
-- **B · Copy spatial files:** shapefile, file geodatabase, GeoJSON, or GeoParquet files land in the lakehouse Files area (ING-001, ING-004).
-- **C · Business data:** Microsoft-documented Fabric ingestion into lakehouse tables (ING-001 to ING-003).
+- **A · Read in place:** GeoAnalytics reads ArcGIS Online or ArcGIS Enterprise feature services directly into a Spark DataFrame, optionally persisting the result to a Delta table ([ING-005](records/Evidence.md#ing-005)).
+- **B · Copy spatial files:** shapefile, file geodatabase, GeoJSON, or GeoParquet files land in the lakehouse Files area ([ING-001](records/Evidence.md#ing-001), [ING-004](records/Evidence.md#ing-004)).
+- **C · Business data:** Microsoft-documented Fabric ingestion into lakehouse tables ([ING-001](records/Evidence.md#ing-001) to [ING-003](records/Evidence.md#ing-003)).
 
-ArcGIS and OneLake do not synchronize automatically, so a copy is a snapshot. Reading feature services is an outbound HTTPS call (SEC-009); GeoAnalytics licensing and usage calls occur on every path ([Stage 2](04-Stage-2-Spatial-Processing.md#architecture)). Mirroring or shortcuts pointed directly at an ArcGIS Enterprise geodatabase are not drawn because they are not yet validated.
+ArcGIS and OneLake do not synchronize automatically, so a copy is a snapshot. Reading feature services is an outbound HTTPS call ([SEC-009](records/Evidence.md#sec-009)); GeoAnalytics licensing and usage calls occur on every path ([Stage 2](04-Stage-2-Spatial-Processing.md#architecture)). Mirroring or shortcuts pointed directly at an ArcGIS Enterprise geodatabase are not drawn because they are not yet validated.
 
 ## Guidance
 

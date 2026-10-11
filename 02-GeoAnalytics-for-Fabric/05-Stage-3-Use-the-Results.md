@@ -24,10 +24,10 @@ As noted in the Customer Guidance, these experiences are related but **not inter
 
 | Audience and need | Experience | Supported path | Evidence |
 |---|---|---|---|
-| Business users who need location-aware reporting | **ArcGIS for Power BI** | Expose the Fabric output through a Power BI semantic model or report, then add the ArcGIS visual | OUT-002 |
-| Fabric users who need map-based exploration | **ArcGIS Maps for Microsoft Fabric** | Load the supported Fabric or OneLake output through the documented Maps for Fabric workflow | OUT-003 |
-| GIS users and operational applications | **ArcGIS Online or ArcGIS Enterprise application** | Explicitly write the supported DataFrame to a feature service, then consume that service in the approved ArcGIS application | OUT-004 |
-| Data teams building further analytics | **Approved Fabric data product** | Persist the output to a supported Fabric data item for downstream workloads | OUT-001 |
+| Business users who need location-aware reporting | **ArcGIS for Power BI** | Expose the Fabric output through a Power BI semantic model or report, then add the ArcGIS visual | [OUT-002](records/Evidence.md#out-002) |
+| Fabric users who need map-based exploration | **ArcGIS Maps for Microsoft Fabric** | Load the supported Fabric or OneLake output through the documented Maps for Fabric workflow | [OUT-003](records/Evidence.md#out-003) |
+| GIS users and operational applications | **ArcGIS Online or ArcGIS Enterprise application** | Explicitly write the supported DataFrame to a feature service, then consume that service in the approved ArcGIS application | [OUT-004](records/Evidence.md#out-004) |
+| Data teams building further analytics | **Approved Fabric data product** | Persist the output to a supported Fabric data item for downstream workloads | [OUT-001](records/Evidence.md#out-001) |
 | AI or agent scenarios | **Separately validated reference pattern** | Validate separately; this path is outside the current GeoAnalytics architecture | [Scope and Boundaries](01-Customer-Guidance.md#scope-and-boundaries) |
 
 ## Architecture
@@ -39,10 +39,10 @@ As noted in the Customer Guidance, these experiences are related but **not inter
 ```mermaid
 flowchart LR
     OUT["Spatially enriched<br/>Spark DataFrame"]
-    OUT -->|"Persist (OUT-001)"| FABRIC[("Fabric data item<br/>Lakehouse or Delta table")]
-    OUT -->|"Explicit write (OUT-004)"| FS["ArcGIS Online or Enterprise<br/>feature service"]
-    FABRIC --> PBI["ArcGIS for Power BI<br/>(OUT-002)"]
-    FABRIC --> MAPS["ArcGIS Maps for<br/>Microsoft Fabric (OUT-003)"]
+    OUT -->|"Persist ([OUT-001](records/Evidence.md#out-001))"| FABRIC[("Fabric data item<br/>Lakehouse or Delta table")]
+    OUT -->|"Explicit write ([OUT-004](records/Evidence.md#out-004))"| FS["ArcGIS Online or Enterprise<br/>feature service"]
+    FABRIC --> PBI["ArcGIS for Power BI<br/>([OUT-002](records/Evidence.md#out-002))"]
+    FABRIC --> MAPS["ArcGIS Maps for<br/>Microsoft Fabric ([OUT-003](records/Evidence.md#out-003))"]
     FABRIC --> DP["Approved Fabric<br/>data product"]
     FS --> APP["Approved ArcGIS<br/>application"]
 ```
@@ -53,7 +53,7 @@ flowchart LR
 - Use the [ArcGIS for Microsoft Fabric product documentation](https://www.esri.com/en-us/arcgis/products/arcgis-for-microsoft/arcgis-for-microsoft-fabric) and [ArcGIS Maps for Microsoft Fabric quick start guide](https://www.esri.com/content/dam/esrisites/en-us/media/pdf/implementation-guides/maps-for-fabric-quick-start-guide.pdf) for map-based exploration in Fabric.
 - Use the GeoAnalytics [feature service data source](https://developers.arcgis.com/geoanalytics-fabric/data/data-sources/feature-service/) guidance to explicitly write supported results to ArcGIS Online or ArcGIS Enterprise.
 
-Writing to a feature service is an explicit outbound operation initiated by customer code. It is not automatic synchronization between ArcGIS and OneLake. Validate ArcGIS authorization, service capabilities, create or update permissions, and customer network policy before selecting this path (OUT-004, SEC-005, SEC-009).
+Writing to a feature service is an explicit outbound operation initiated by customer code. It is not automatic synchronization between ArcGIS and OneLake. Validate ArcGIS authorization, service capabilities, create or update permissions, and customer network policy before selecting this path ([OUT-004](records/Evidence.md#out-004), [SEC-005](records/Evidence.md#sec-005), [SEC-009](records/Evidence.md#sec-009)).
 
 ### Validation Checklist
 

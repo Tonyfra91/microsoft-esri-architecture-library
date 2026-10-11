@@ -14,9 +14,9 @@ Prepare a bounded set of supported Fabric and ArcGIS data for the pilot map.
 
 | Source category | Documented path | Evidence |
 |---|---|---|
-| Fabric lakehouse | **Add data from Lakehouse** through the OneLake catalog browser | MAP-005 |
-| ArcGIS Online | **Add data from ArcGIS Online** and browse available content | MAP-005 |
-| ArcGIS Living Atlas | **Add data from ArcGIS Living Atlas** and browse curated content | MAP-005 |
+| Fabric lakehouse | **Add data from Lakehouse** through the OneLake catalog browser | [MAP-005](records/Evidence.md#map-005) |
+| ArcGIS Online | **Add data from ArcGIS Online** and browse available content | [MAP-005](records/Evidence.md#map-005) |
+| ArcGIS Living Atlas | **Add data from ArcGIS Living Atlas** and browse curated content | [MAP-005](records/Evidence.md#map-005) |
 
 ## Supported Lakehouse Formats
 

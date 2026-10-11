@@ -21,13 +21,13 @@ Enable the ArcGIS Maps for Microsoft Fabric workload and confirm that pilot user
 
 | Requirement | Documented behavior | Evidence |
 |---|---|---|
-| Microsoft Fabric tenant | Users access the workload through Microsoft Fabric in a browser | MAP-002 |
-| Tenant setting | A tenant administrator enables the ArcGIS Maps for Microsoft Fabric workload | MAP-002 |
-| Fabric capacity | The workspace capacity must be sufficient to save workload items; no minimum SKU is published in the primary source | MAP-002; GAP-001 |
-| Fabric workspace | The map is created and saved as an item in a selected workspace and location | MAP-004; MAP-007 |
-| ArcGIS Online organizational account | ArcGIS Public accounts are not supported | MAP-003 |
-| Dual role assignment | Viewing and saving require qualifying roles in both systems | MAP-003 |
-| Required API permissions | Azure Storage, Microsoft Graph, and Power BI Service permissions are listed in the Esri Quick Start Guide | MAP-002 |
+| Microsoft Fabric tenant | Users access the workload through Microsoft Fabric in a browser | [MAP-002](records/Evidence.md#map-002) |
+| Tenant setting | A tenant administrator enables the ArcGIS Maps for Microsoft Fabric workload | [MAP-002](records/Evidence.md#map-002) |
+| Fabric capacity | The workspace capacity must be sufficient to save workload items; no minimum SKU is published in the primary source | [MAP-002](records/Evidence.md#map-002); [GAP-001](records/Evidence.md#gap-001) |
+| Fabric workspace | The map is created and saved as an item in a selected workspace and location | [MAP-004](records/Evidence.md#map-004); [MAP-007](records/Evidence.md#map-007) |
+| ArcGIS Online organizational account | ArcGIS Public accounts are not supported | [MAP-003](records/Evidence.md#map-003) |
+| Dual role assignment | Viewing and saving require qualifying roles in both systems | [MAP-003](records/Evidence.md#map-003) |
+| Required API permissions | Azure Storage, Microsoft Graph, and Power BI Service permissions are listed in the Esri Quick Start Guide | [MAP-002](records/Evidence.md#map-002) |
 
 ## Required API Permissions
 

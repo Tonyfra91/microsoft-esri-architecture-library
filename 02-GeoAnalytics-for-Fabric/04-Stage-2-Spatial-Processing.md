@@ -25,7 +25,7 @@ Apply the spatial operation required to answer the business question, using ArcG
 
 ## Architecture
 
-**References:** [ArcGIS GeoAnalytics for Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics) on Microsoft Learn (SRC-MSFT-004) and Esri's [Get started](https://developers.arcgis.com/geoanalytics-fabric/get-started/) guide (SRC-GEO-003).
+**References:** [ArcGIS GeoAnalytics for Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-arcgis-geoanalytics) on Microsoft Learn ([SRC-MSFT-004](records/Source-Register.md#src-msft-004)) and Esri's [Get started](https://developers.arcgis.com/geoanalytics-fabric/get-started/) guide ([SRC-GEO-003](records/Source-Register.md#src-geo-003)).
 
 **Component relationship** (see [Architecture.md](Architecture.md)):
 
@@ -42,17 +42,17 @@ Microsoft Fabric
 
 [Open the full-size diagram](images/minimum-deployable-poc-trust-boundary.png)
 
-Numbers 1 to 7 match [What You Need to Run GeoAnalytics](01-Customer-Guidance.md#what-you-need-to-run-geoanalytics). Solid arrows always occur; dashed arrows occur only when the customer's code requests them. Network configuration, including Private Link and managed virtual networks, is validated during deployment and is not drawn (GAP-003).
+Numbers 1 to 7 match [What You Need to Run GeoAnalytics](01-Customer-Guidance.md#what-you-need-to-run-geoanalytics). Solid arrows always occur; dashed arrows occur only when the customer's code requests them. Network configuration, including Private Link and managed virtual networks, is validated during deployment and is not drawn ([GAP-003](records/Evidence.md#gap-003)).
 
 > **Validated external calls (see [Evidence register](records/Evidence.md)):**
 >
-> - GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently **not supported when Outbound Access Protection is enabled** (SEC-004).
-> - Processed data stays in the Fabric environment unless the user explicitly writes to an external destination, such as an Esri-hosted feature service (SEC-005).
-> - Store credentials in Azure Key Vault and retrieve them with `notebookutils.credentials.getSecret` (SEC-003).
+> - GeoAnalytics calls Esri services outside Fabric for authentication and usage tracking, and is currently **not supported when Outbound Access Protection is enabled** ([SEC-004](records/Evidence.md#sec-004)).
+> - Processed data stays in the Fabric environment unless the user explicitly writes to an external destination, such as an Esri-hosted feature service ([SEC-005](records/Evidence.md#sec-005)).
+> - Store credentials in Azure Key Vault and retrieve them with `notebookutils.credentials.getSecret` ([SEC-003](records/Evidence.md#sec-003)).
 >
-> - Outbound calls use HTTPS on port 443 to arcgis.com under `/sharing/rest` for authorization and periodic usage reporting; `st.plot()` with a basemap also retrieves tiles (SEC-007, SEC-008).
+> - Outbound calls use HTTPS on port 443 to arcgis.com under `/sharing/rest` for authorization and periodic usage reporting; `st.plot()` with a basemap also retrieves tiles ([SEC-007](records/Evidence.md#sec-007), [SEC-008](records/Evidence.md#sec-008)).
 >
-> **Still open:** behavior with managed virtual networks or Private Link (GAP-003). Draw only the connections recorded in the Evidence register.
+> **Still open:** behavior with managed virtual networks or Private Link ([GAP-003](records/Evidence.md#gap-003)). Draw only the connections recorded in the Evidence register.
 
 ## Guidance
 

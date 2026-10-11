@@ -55,13 +55,13 @@ each experience independently.
 
 | Area | Requirement | Evidence |
 |---|---|---|
-| Fabric tenant | Tenant administrator enables the workload | MAP-002 |
-| Capacity | Workspace capacity is sufficient to save workload items; minimum SKU is not published | MAP-002; GAP-001 |
-| Workspace | A Fabric workspace and item location are selected | MAP-004 |
-| ArcGIS account | Organizational account required; Public accounts are unsupported | MAP-003 |
-| Map author | ArcGIS Creator or higher and Fabric Contributor or higher | MAP-003 |
-| Map viewer | ArcGIS Viewer or higher and Fabric Viewer or higher | MAP-003 |
-| Data | Supported lakehouse, ArcGIS Online, or Living Atlas source | MAP-005 |
+| Fabric tenant | Tenant administrator enables the workload | [MAP-002](records/Evidence.md#map-002) |
+| Capacity | Workspace capacity is sufficient to save workload items; minimum SKU is not published | [MAP-002](records/Evidence.md#map-002); [GAP-001](records/Evidence.md#gap-001) |
+| Workspace | A Fabric workspace and item location are selected | [MAP-004](records/Evidence.md#map-004) |
+| ArcGIS account | Organizational account required; Public accounts are unsupported | [MAP-003](records/Evidence.md#map-003) |
+| Map author | ArcGIS Creator or higher and Fabric Contributor or higher | [MAP-003](records/Evidence.md#map-003) |
+| Map viewer | ArcGIS Viewer or higher and Fabric Viewer or higher | [MAP-003](records/Evidence.md#map-003) |
+| Data | Supported lakehouse, ArcGIS Online, or Living Atlas source | [MAP-005](records/Evidence.md#map-005) |
 
 See [Stage 1](03-Stage-1-Enable-and-Authorize.md) for required API permissions and the implementation sequence.
 
