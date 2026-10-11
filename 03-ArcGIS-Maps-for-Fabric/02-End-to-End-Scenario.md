@@ -33,33 +33,18 @@ workspace. The diagram shows the documented user experience and source
 selection paths. The Fabric box is a user-experience boundary, not a
 deployment, hosting, or network trust boundary.
 
-```mermaid
-flowchart LR
-    USER["Map author<br/>Browser"]
-    AGO["ArcGIS Online<br/>Identity and organizational content"]
-    ATLAS["ArcGIS Living Atlas"]
+[![ArcGIS Maps for Microsoft Fabric map-authoring user experience](images/arcgis-maps-fabric-ux.png)](images/arcgis-maps-fabric-ux.png)
 
-    subgraph FABRIC["Microsoft Fabric user experience"]
-        ADMIN["Admin portal<br/>Tenant settings"]
-        WORKSPACE["Fabric workspace<br/>+ New item"]
-        MAP["ArcGIS Maps for Fabric item<br/>Map authoring experience"]
-        ONELAKE[("OneLake catalog<br/>Lakehouse data")]
-
-        ADMIN -->|"Enable workload"| WORKSPACE
-        WORKSPACE -->|"Create item"| MAP
-        ONELAKE -->|"Add data from Lakehouse"| MAP
-    end
-
-    USER -->|"Microsoft sign-in"| WORKSPACE
-    USER -->|"ArcGIS organizational sign-in"| AGO
-    AGO -->|"Add data from ArcGIS Online"| MAP
-    ATLAS -->|"Add data from Living Atlas"| MAP
-```
+[Open the full-size map-authoring user-experience diagram](images/arcgis-maps-fabric-ux.png)
 
 > [!IMPORTANT]
 > The diagram does not define where Esri workload components execute, how
 > traffic is routed, whether data is copied or cached, or where telemetry is
-> stored. Those questions remain production validation gaps.
+> stored. Those questions remain production validation gaps. The direct-share
+> and organizational-app paths shown in steps 9 and 10 are scenario outcomes;
+> their supported implementation and governance remain validation work under
+> GAP-005. The Power BI path is a separate report-authoring experience, not a
+> direct export of the Fabric map item.
 
 ## Where Users Go
 
