@@ -2,40 +2,65 @@
 
 ## Purpose
 
-This checklist identifies research artifacts and engineering confirmations. It does not contain evidence claims.
+Track source collection, architecture validation, and proof-of-concept evidence for the Fabric IQ spatial-intelligence pattern.
 
-## Microsoft Sources
+## Microsoft Source Collection
 
-- [ ] Microsoft IQ documentation
-- [ ] Fabric IQ documentation
-- [ ] Ontology documentation
-- [ ] Semantic Model documentation
-- [ ] Graph documentation
-- [ ] Data Agent documentation
-- [ ] Identity, governance, lineage, and lifecycle documentation
-- [ ] Supported APIs and machine-readable formats
+- [x] Microsoft IQ overview
+- [x] Fabric IQ overview
+- [x] Fabric IQ getting-started guidance
+- [x] Ontology overview and creation paths
+- [x] Ontology tenant settings
+- [x] Ontology tutorial
+- [x] Ontology agent guidance
+- [x] Ontology graph materialization guidance
+- [x] Microsoft Fabric Graph overview
+- [x] Power BI semantic-model reference
+- [x] Fabric Data Agent overview
+- [x] Foundry consumption through the Fabric IQ tool
 
-## Esri Sources
+## Esri Source Collection
 
-- [ ] Esri Utility Network information model
-- [ ] Utility Network schema and rule artifacts
-- [ ] Esri Knowledge Graph model information
-- [ ] Esri formal ontology availability
-- [ ] Supported machine-readable formats
-- [ ] Entity, property, relationship, rule, and hierarchy definitions
-- [ ] Geographic and spatial relationship definitions
-- [ ] Licensing and reuse constraints
+- [ ] Utility Network information-model source
+- [ ] Utility Network schema and rules
+- [ ] ArcGIS Knowledge Graph model information
+- [ ] Formal Esri ontology availability
+- [ ] Supported RDF, OWL, JSON-LD, or equivalent artifacts
+- [ ] Direct Esri-to-Fabric-IQ integration evidence
 
-## Engineering Validation
+## POC Design Evidence
 
-- [ ] Microsoft engineering review of Fabric IQ constructs
-- [ ] Esri engineering validation of authoritative domain artifacts
-- [ ] Confirmation of normative versus illustrative models
-- [ ] Confirmation of supported exchange mechanisms
-- [ ] Semantic equivalence review before any mapping
-- [ ] Governance and lifecycle review
-- [ ] Bounded proof-of-concept approval
+- [ ] Approved customer question
+- [ ] Entity and relationship contracts
+- [ ] Stable entity keys
+- [ ] Spatial derivation methods
+- [ ] Source lineage and refresh requirements
+- [ ] Expected-answer test set
+- [ ] Business and data owners
+- [ ] Preview approval
 
-## Collection Status
+## POC Execution Evidence
 
-VALIDATION REQUIRED
+- [ ] Governed OneLake entity tables
+- [ ] Governed OneLake relationship tables
+- [ ] Spatial sample validation
+- [ ] Bound ontology
+- [ ] Binding and unmatched-key report
+- [ ] Ontology-agent answer review
+- [ ] Optional graph review
+- [ ] Optional ArcGIS Maps validation view
+- [ ] Production-gap assessment
+- [ ] Continue, revise, or stop decision
+
+## Open Engineering Questions
+
+- [ ] Confirm native ontology geometry and spatial-predicate support.
+- [ ] Validate refresh and schema-evolution behavior.
+- [ ] Validate relationship and graph scale.
+- [ ] Confirm lineage, monitoring, and audit outputs.
+- [ ] Confirm region, capacity, licensing, and support constraints.
+- [ ] Determine whether an Esri domain-model mapping preserves source semantics.
+
+## Last Review Date
+
+2026-10-11

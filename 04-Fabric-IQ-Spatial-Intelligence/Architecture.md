@@ -2,72 +2,104 @@
 
 ## Purpose
 
-This document defines the architecture exploration boundary for bringing spatial and Esri domain context into Fabric IQ discussions.
+This document defines the evidence-backed logical architecture for a bounded spatial-intelligence ontology proof of concept.
 
 ## Architectural Position
 
-The library narrative places this area after spatial processing and spatial experience:
-
 ```text
-Data → Spatial Processing → Spatial Experience → Context
+Data → Spatial Processing → Spatial Experience → Business Context
 ```
 
-The word *context* describes the investigation goal. It does not assert an implemented integration.
+The components remain independently governed:
 
-## Candidate Context Layers
+- GeoAnalytics computes spatial relationships.
+- OneLake stores governed entities and derived relationships.
+- Fabric IQ ontology represents business meaning.
+- ArcGIS Maps provides a separate map experience over supported data.
 
-| Layer | Candidate role | Status |
-|---|---|---|
-| Fabric data | Authoritative business and analytical data | SOURCE REQUIRED |
-| Semantic models | Measures, dimensions, and analytical meaning | SOURCE REQUIRED |
-| Fabric IQ ontology | Business entities and relationships | VALIDATION REQUIRED |
-| Graph | Traversable relationships among grounded entities | VALIDATION REQUIRED |
-| Data Agents | Conversational access to supported grounded data | VALIDATION REQUIRED |
-| Esri domain context | Domain entities, properties, rules, and hierarchies | ENGINEERING QUESTION |
-| Spatial context | Geometry and geographic relationships | ENGINEERING QUESTION |
+## Logical Reference Architecture
 
-## Architecture Boundary
+```mermaid
+flowchart LR
+    SOURCES["Authoritative business and ArcGIS data"]
+    GEO["ArcGIS GeoAnalytics for Fabric<br/>Compute required spatial relationships"]
+    LAKE[("OneLake lakehouse<br/>Entity and relationship tables")]
+    SEMANTIC["Power BI semantic model<br/>Optional trusted measures"]
+    ONTOLOGY["Fabric IQ ontology (preview)<br/>Entities, properties, relationships,<br/>rules, metrics, and bindings"]
+    GRAPH["Optional ontology graph (preview)<br/>Relationship exploration"]
+    AGENT["Ontology agent (preview)<br/>Natural-language questions and proposals"]
+    MAPS["ArcGIS Maps for Fabric<br/>Separate visualization path"]
+    HUMAN["Business and data owners<br/>Review meaning and results"]
 
-No connection between an Esri artifact and Fabric IQ is treated as supported until:
+    SOURCES --> GEO --> LAKE
+    SOURCES --> LAKE
+    LAKE --> ONTOLOGY
+    SEMANTIC --> ONTOLOGY
+    ONTOLOGY --> GRAPH
+    ONTOLOGY --> AGENT
+    LAKE --> MAPS
+    GRAPH --> HUMAN
+    AGENT --> HUMAN
+    MAPS --> HUMAN
+```
 
-1. The Esri source model is identified and authoritative.
-2. The Fabric IQ target construct is documented.
-3. Machine-readable exchange or integration is technically possible.
-4. Identity, security, governance, and lifecycle behavior are understood.
-5. Microsoft and Esri engineering validate the interpretation.
+> [!IMPORTANT]
+> The arrows describe a repository scenario assembled from independently documented capabilities. They do not assert a native Esri-to-Fabric-IQ integration or direct interoperability between ArcGIS Maps and ontology items.
 
-## Architecture Questions
+## Minimum Data Contract
 
-1. What does Fabric IQ treat as an entity, property, relationship, rule, and hierarchy?
-2. How do semantic models and ontology artifacts relate?
-3. Which graph capabilities are available and how are they governed?
-4. What grounding does a Data Agent consume?
-5. Where are Esri domain definitions encoded and versioned?
-6. Which spatial relationships must remain computed rather than modeled?
-7. How would updates, lineage, ownership, and semantic conflicts be managed?
-8. Which identity and authorization context applies at query time?
+Each entity table should provide:
 
-## Prohibited Assumptions
+- Stable business key
+- Human-readable name
+- Source system and owner
+- Validity or update timestamp
+- Required business attributes
+- Geometry reference or ArcGIS item identifier when relevant
 
-This architecture must not assume:
+Each relationship table should provide:
 
-- Esri provides a Fabric IQ ontology.
-- Utility Network is a formal ontology.
-- ArcGIS Knowledge Graph and Fabric IQ graph concepts are equivalent.
-- A geodatabase schema captures all domain semantics.
-- Spatial relationships should be materialized as static graph edges.
-- Data Agents can invoke ArcGIS or spatial tools without a supported integration.
+- Source entity key
+- Target entity key
+- Relationship type
+- Derivation method
+- Processing timestamp
+- Source-data version or lineage reference
+- Quality or confidence indicator when applicable
 
-## Planned Architecture Views
+## Spatial Relationship Boundary
 
-| View | Status | Evidence gate |
-|---|---|---|
-| Fabric IQ context model | SOURCE REQUIRED | Current Microsoft architecture documentation |
-| Esri domain model inventory | ENGINEERING QUESTION | Utility Network artifact collection |
-| Candidate semantic alignment | NOT STARTED | Both source and target models validated |
-| Identity and governance | VALIDATION REQUIRED | Microsoft and Esri security documentation |
-| Bounded proof of concept | NOT STARTED | Approved candidate mapping and scenario |
+The MVP materializes only the spatial relationships needed for the customer question. Examples include:
+
+- Asset within service area
+- Asset within risk area
+- Incident nearest asset
+- Asset intersects operational boundary
+
+Dynamic routing, network topology, proximity at arbitrary thresholds, and other query-time spatial behavior remain outside the ontology unless supported Fabric IQ capabilities are documented.
+
+## Identity and Governance
+
+Validate:
+
+1. Fabric tenant and workspace access.
+2. Ontology item creation permissions.
+3. Source-data permissions for every bound table or model.
+4. GeoAnalytics authorization for spatial processing.
+5. ArcGIS content access for any map experience.
+6. Owners for entity definitions, relationships, measures, and refresh.
+7. Preview-feature approval and support expectations.
+
+## Architecture Questions Still Open
+
+1. Which ontology spatial capabilities are native and supported?
+2. How do bindings respond to schema and key changes?
+3. How are relationship-table refreshes reflected in ontology and graph experiences?
+4. Which lineage and audit records are emitted?
+5. Which limits apply to entity, relationship, and graph scale?
+6. What production support and regional constraints apply during preview?
+7. Can authoritative Esri domain models be mapped without losing product semantics?
 
 ## Validation Status
 
-Exploration Only
+Logical Preview Architecture Supported; Direct Esri Integration and Production Architecture Validation Required

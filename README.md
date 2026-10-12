@@ -13,7 +13,7 @@ This library walks customers and partners through how Microsoft Fabric and Esri 
 | 01 | [Microsoft + Esri Foundation](01-Microsoft-Esri-Foundation/) | The story in one view: what Microsoft Fabric and Esri do together |
 | 02 | [ArcGIS GeoAnalytics for Microsoft Fabric](02-GeoAnalytics-for-Fabric/) | Spatial processing in Fabric Spark: guidance, end-to-end scenario, evidence |
 | 03 | [ArcGIS Maps for Microsoft Fabric](03-ArcGIS-Maps-for-Fabric/) | Mapping, visualization, exploration, and location-aware experiences in Fabric |
-| 04 | [Fabric IQ + Spatial Intelligence](04-Fabric-IQ-Spatial-Intelligence/) | Validation of business, semantic, graph, domain, and spatial context |
+| 04 | [Fabric IQ + Spatial Intelligence](04-Fabric-IQ-Spatial-Intelligence/) | Preview ontology pattern over governed entities and precomputed spatial relationships |
 | 05 | [Microsoft + Esri Agentic Reference Pattern](05-Microsoft-Esri-Agentic-Reference-Pattern/) | Conceptual agentic reasoning grounded in Microsoft and Esri context |
 
 See the **[Architecture Map](Architecture-Mapping.md)** for the full library, including near-term and future horizons and how components connect.

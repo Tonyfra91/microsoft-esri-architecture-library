@@ -4,107 +4,65 @@
 
 ## Executive Summary
 
-This area explores how spatial and Esri domain context could participate in Microsoft IQ and Fabric IQ. It is a validation workspace, not a published product integration architecture.
+This component provides a bounded preview pattern for representing business entities and precomputed spatial relationships in Fabric IQ ontology. It builds on governed OneLake data, spatial processing from ArcGIS GeoAnalytics for Microsoft Fabric, and the same supported data that may be visualized in ArcGIS Maps for Microsoft Fabric.
 
-> **VALIDATION REQUIRED**
->
-> This library does not claim that Esri currently provides Fabric IQ ontologies, that Esri domain models have been mapped into Fabric IQ, or that a supported product integration exists.
+The minimum pattern does not claim a native Esri-to-Fabric-IQ integration. GeoAnalytics computes required spatial relationships, Fabric data engineering persists them, ontology binds the resulting entities and relationships, and ArcGIS Maps can visualize the same governed data through its independently supported source path.
 
-## Microsoft IQ
+> [!IMPORTANT]
+> Ontology and several related capabilities are in preview. Use this pattern for a bounded proof of concept and validate current tenant settings, availability, lifecycle, limits, and support before production use.
 
-Microsoft IQ provides the broader context for grounding analytics and agent experiences across organizational data and knowledge.
+## Minimum Scenario
 
-> **SOURCE REQUIRED**
->
-> Collect authoritative Microsoft documentation that defines Microsoft IQ, its layers, product boundaries, and the relationship among Fabric IQ, Foundry IQ, Work IQ, and other named experiences.
+The reference question is:
 
-## Fabric IQ
+> Which operational assets are located within high-risk service areas, have open work orders, and are associated with recent incidents?
 
-Fabric IQ is the focus of this exploration because it introduces business context that may include entities, relationships, semantic meaning, and data-driven experiences.
+The MVP uses five entity types:
 
-> **VALIDATION REQUIRED**
->
-> Confirm the current Fabric IQ architecture, supported artifacts, lifecycle, APIs, governance model, and supported agent integrations.
+- Asset
+- Work order
+- Incident
+- Service area
+- Risk area
 
-## Ontology
+GeoAnalytics prepares spatial relationships such as **Asset within Service Area** and **Asset within Risk Area** before the ontology binds them.
 
-The working question is whether validated Esri domain concepts and spatial relationships could be represented in, referenced by, or aligned with Fabric IQ ontology capabilities.
+## End-to-End Pattern
 
-No ontology mapping is proposed in this version.
+```text
+Authoritative business and ArcGIS data
+    → GeoAnalytics computes required spatial relationships
+    → Governed entity and relationship tables are saved in OneLake
+    → Fabric IQ ontology binds business meaning to the data
+    → People explore relationships and validate ontology-agent answers
+    → ArcGIS Maps may visualize the same governed source data
+```
 
-## Semantic Models
+## Start Here
 
-Semantic models may provide business measures and analytical context relevant to spatial scenarios.
+| Need | Page |
+|---|---|
+| Understand fit, requirements, and scope | [Customer Guidance](01-Customer-Guidance.md) |
+| Follow the complete MVP | [End-to-End Scenario](02-End-to-End-Scenario.md) |
+| Establish tenant and workspace readiness | [Stage 1: Establish the Foundation](03-Stage-1-Establish-the-Foundation.md) |
+| Prepare entities and spatial relationships | [Stage 2: Prepare Entities and Relationships](04-Stage-2-Prepare-Entities-and-Relationships.md) |
+| Create and bind the ontology | [Stage 3: Build and Bind the Ontology](05-Stage-3-Build-and-Bind-the-Ontology.md) |
+| Explore, validate, and decide | [Stage 4: Explore and Validate](06-Stage-4-Explore-and-Validate.md) |
+| Review architecture boundaries | [Architecture](Architecture.md) |
 
-> **SOURCE REQUIRED**
->
-> Confirm the supported relationship between Fabric IQ ontology artifacts, Power BI semantic models, and other Fabric data items before drawing connections.
+## Advanced Research Track
 
-## Graph
+[Esri Domain Model Validation](Esri-Domain-Model-Validation.md) remains an advanced research track for Utility Network and other Esri domain models. It is not a prerequisite for the MVP.
 
-Graph structures may be relevant where domain entities and spatial or network relationships must be traversed.
-
-> **VALIDATION REQUIRED**
->
-> Identify the graph capabilities intended by current Fabric IQ documentation and distinguish them from ArcGIS Knowledge, network datasets, and Utility Network topology.
-
-## Data Agents
-
-Data Agents may provide a conversational path to grounded enterprise data.
-
-> **VALIDATION REQUIRED**
->
-> Confirm supported data sources, semantic grounding, identity propagation, tool boundaries, and whether any spatial context can be represented or invoked.
-
-## Esri Spatial Context
-
-Candidate spatial context includes location, geometry, containment, adjacency, proximity, routing, network connectivity, service territory, and other geographic relationships.
-
-These examples are discovery categories, not Fabric IQ integration claims.
-
-## Domain Grounding
-
-Domain grounding requires authoritative definitions of entities, properties, relationships, rules, hierarchies, and spatial meaning.
-
-The first candidate domain is Esri Utility Network. See [Esri Domain Model Validation](Esri-Domain-Model-Validation.md).
-
-## Open Engineering Questions
-
-The central engineering question is:
-
-> **ENGINEERING QUESTION**
->
-> For Utility Network and other Esri domains, where is the authoritative domain model encoded today? Does Esri have information models, schemas, knowledge graph models, formal ontologies, or some combination, and are those definitions and relationships available in a machine-readable form?
-
-Additional questions:
-
-1. Which definitions are product behavior, implementation templates, industry models, or customer configuration?
-2. Which artifacts are authoritative and versioned?
-3. Which relationships are semantic, topological, spatial, operational, or inferred?
-4. Which artifacts may be exported, queried, or consumed programmatically?
-5. Which concepts could be candidates for Fabric IQ mapping without losing Esri semantics?
-
-## Validation Plan
-
-1. Collect authoritative Microsoft IQ and Fabric IQ documentation.
-2. Collect Esri Utility Network domain artifacts.
-3. Classify the Esri artifacts by model type and authority.
-4. Confirm machine-readable availability and licensing constraints.
-5. Review findings with Microsoft and Esri engineering.
-6. Define candidate mappings only after both source models are understood.
-7. Test mappings in a bounded scenario before publishing architecture.
-
-## Sources and Evidence
+## Supporting Technical Records
 
 | Document | Purpose |
 |---|---|
-| [Architecture](Architecture.md) | Exploration boundary and candidate architecture questions |
-| [Architecture Mapping](Architecture-Mapping.md) | Validation gates for each proposed architecture layer |
-| [Esri Domain Model Validation](Esri-Domain-Model-Validation.md) | Utility Network-first engineering discovery framework |
-| [Evidence register](records/Evidence.md) | Candidate claims awaiting authoritative support |
-| [Source register](records/Source-Register.md) | Microsoft and Esri sources to collect and review |
-| [Collection checklist](records/Collection-Checklist.md) | Required artifacts and engineering confirmations |
+| [Architecture Mapping](Architecture-Mapping.md) | Architecture views and evidence status |
+| [Evidence register](records/Evidence.md) | Claims mapped to authoritative sources and open gaps |
+| [Source register](records/Source-Register.md) | Microsoft sources and unresolved Esri sources |
+| [Collection checklist](records/Collection-Checklist.md) | Remaining collection and engineering work |
 
 ## Architecture Status
 
-Exploration and Validation
+Evidence-Backed Preview Pattern with Open Esri Integration Questions
