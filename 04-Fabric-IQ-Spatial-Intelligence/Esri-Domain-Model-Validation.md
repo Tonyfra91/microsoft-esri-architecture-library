@@ -13,11 +13,17 @@ This engineering discovery document identifies where authoritative Esri domain s
 | Field | Initial value |
 |---|---|
 | Domain | Utility Network |
-| Product or solution boundary | VALIDATION REQUIRED |
-| Authoritative model owner | ENGINEERING QUESTION |
-| Version or release | SOURCE REQUIRED |
-| Machine-readable artifact | ENGINEERING QUESTION |
-| Mapping status | Not started |
+| Product or solution boundary | Utility Network Package Asset Package only; the complete Utility Network information model remains unverified |
+| Authoritative model owner | Esri |
+| Version or release | Current public ArcGIS Solutions documentation; package schema version remains artifact-specific |
+| Machine-readable artifact | Asset Package file geodatabase |
+| Mapping status | Partial artifact discovery; candidate mappings are not validated |
+
+## Discovery Status
+
+Esri's [Utility Network Package Asset Package Reference](https://doc.arcgis.com/en/arcgis-solutions/latest/tool-reference/utility-network-package/pdf/Utility%20Network%20Package_Asset%20Package%20Reference.pdf) establishes a technical schema and package artifact. An Asset Package is a file geodatabase that models one utility network's schema, properties, related layers, related tables, and data. Its documented concepts include domain and structure networks, asset groups and asset types, attributes and domains, terminals, categories, network attributes, rules, tiers and subnetworks, associations, controllers, trace configurations, and diagram templates.
+
+This discovery does not establish that the Asset Package is a formal ontology or the complete authoritative Utility Network information model. It provides bounded design-time semantic grounding for candidate Fabric IQ mappings. It does not provide runtime operational data integration, change propagation, or synchronization between ArcGIS and Fabric IQ.
 
 ## 1. Information Models
 
@@ -31,8 +37,8 @@ Determine whether Esri publishes an authoritative Utility Network information mo
 
 Inventory geodatabase, service, API, configuration, and exchange schemas that encode Utility Network structure.
 
-- [ ] Identify authoritative schema definitions.
-- [ ] Determine which schema elements are configurable.
+- [x] Identify an authoritative Asset Package schema reference.
+- [x] Determine documented configurable Asset Package elements.
 - [ ] Record versioning and compatibility rules.
 
 ## 3. Knowledge Graph Models
@@ -59,7 +65,7 @@ Identify supported formats for consuming definitions and relationships programma
 - [ ] XML or XML Schema
 - [ ] OpenAPI or service metadata
 - [ ] RDF, OWL, SHACL, or SKOS
-- [ ] Geodatabase schema exports
+- [x] Geodatabase schema exports
 - [ ] ArcGIS item or service definitions
 - [ ] Other documented formats
 
@@ -68,8 +74,8 @@ Identify supported formats for consuming definitions and relationships programma
 Identify authoritative entity concepts such as networks, subnetworks, devices, lines, junctions, structures, associations, and domain-specific assets.
 
 - [ ] Record stable identifiers and labels.
-- [ ] Identify abstract and concrete entity types.
-- [ ] Distinguish product entities from customer-configured asset types.
+- [x] Identify represented product concepts in the Asset Package.
+- [x] Distinguish fixed feature-class roles from customer-configured asset groups and asset types.
 
 ## 7. Properties
 
@@ -92,7 +98,7 @@ Identify connectivity, containment, structural attachment, association, ownershi
 Identify network rules, attribute rules, validation rules, and other constraints.
 
 - [ ] Record rule ownership and execution context.
-- [ ] Identify machine-readable representations.
+- [x] Identify the Asset Package table representation for rules.
 - [ ] Distinguish normative product rules from customer configuration.
 
 ## 10. Hierarchies
@@ -113,20 +119,31 @@ Identify geometry, topology, spatial reference, containment, adjacency, proximit
 
 ## 12. Candidate Fabric IQ Mappings
 
-Do not perform mappings in this phase.
-
-For future evaluation, record only potential mapping categories:
+The discovered schema supports bounded candidate mappings for future evaluation. These mappings are hypotheses, not validated semantic equivalence:
 
 | Esri category | Candidate Fabric IQ construct | Status |
 |---|---|---|
-| Entity definition | Entity type | NOT MAPPED |
-| Property | Property | NOT MAPPED |
-| Domain relationship | Relationship | NOT MAPPED |
-| Hierarchy | Hierarchy or relationship pattern | NOT MAPPED |
-| Rule | Constraint or external validation | NOT MAPPED |
-| Spatial relationship | Stored relation or spatial tool result | NOT MAPPED |
+| Asset group or asset type | Entity type or classification | CANDIDATE ONLY |
+| Feature-class field, attribute, or coded domain | Property or controlled value | CANDIDATE ONLY |
+| `C_Associations` record | Relationship instance | CANDIDATE ONLY |
+| Domain network, tier, subnetwork, or category | Entity, classification, or relationship pattern | CANDIDATE ONLY |
+| `B_Rules` row | External constraint or validation metadata | CANDIDATE ONLY |
+| Geometry, topology, or trace result | Operational source data or persisted spatial result | CANDIDATE ONLY |
 
 Each candidate requires semantic equivalence analysis, lifecycle analysis, and engineering approval.
+
+The distinction between rules and associations is material. `B_Rules` describes allowed configurations by asset group, asset type, and terminal. `C_Associations` stores actual connectivity, containment, or structural attachment associations between features identified by Global IDs. Neither table alone establishes a Fabric IQ relationship model.
+
+## Application Behavior
+
+Esri's [Apply Asset Package](https://doc.arcgis.com/en/arcgis-solutions/latest/tool-reference/utility-network-package/apply-asset-package.htm) documentation provides implementation guidance:
+
+* Applying schema to an existing configured utility network is additive and does not remove or change existing properties.
+* Optional data loading appends feature-class and table data and imports associations and subnetwork controllers.
+* Configuration selections apply when `D_Configurations` is present.
+* Rename selections apply when `D_Rename` is present.
+
+These behaviors concern Utility Network creation and configuration. They do not establish runtime synchronization with Fabric IQ.
 
 ## 13. Unknowns Requiring Esri Engineering Validation
 
@@ -151,3 +168,7 @@ The discovery phase should produce:
 4. A list of authoritative and non-authoritative semantics.
 5. Engineering answers to the open questions.
 6. A recommendation on whether candidate mapping should proceed.
+
+## Last Review Date
+
+2026-10-12
