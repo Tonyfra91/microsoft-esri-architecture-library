@@ -190,10 +190,9 @@ Related patterns, not separate components: ArcGIS connectors for Power Automate 
 | # | Component | Role in the story | Status |
 |---|---|---|---|
 | 02 | [ArcGIS GeoAnalytics for Microsoft Fabric](../02-GeoAnalytics-for-Fabric/) | Spatial processing and enrichment in Fabric Spark | In progress |
-| 03 | ArcGIS Maps for Microsoft Fabric | Mapping and spatial visualization within Fabric | Planned |
-| 04 | ArcGIS for Power BI | Location-aware reporting for business users | Planned |
-| 05 | ArcGIS for Microsoft 365 | Maps and Copilot agent experiences in Teams, SharePoint, and Excel | Planned |
-| 06 | ArcGIS on Microsoft Azure | Hosting ArcGIS Enterprise on Azure infrastructure | Planned |
+| 03 | [ArcGIS Maps for Microsoft Fabric](../03-ArcGIS-Maps-for-Fabric/) | Mapping, visualization, exploration, and location-aware experiences in Fabric | Published guidance with open production gaps |
+| 04 | [Fabric IQ + Spatial Intelligence](../04-Fabric-IQ-Spatial-Intelligence/) | Business context, ontology, semantic models, optional graph exploration, and spatial grounding | Evidence-backed preview pattern with open production gaps |
+| 05 | [Microsoft + Esri Agentic Reference Pattern](../05-Microsoft-Esri-Agentic-Reference-Pattern/) | Foundry, Fabric IQ, agents, ArcGIS MCP, tools, and Ground Truth | Conceptual pattern |
 
 See the [Architecture Map](../Architecture-Mapping.md) for the full library, including near-term and future horizons.
 
