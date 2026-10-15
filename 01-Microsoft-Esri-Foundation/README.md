@@ -68,6 +68,41 @@ Microsoft Fabric provides the enterprise data and analytics foundation. Esri ext
 
 The opportunity is not simply to visualize data on a map. The opportunity is to help customers unify enterprise and geospatial data so that location becomes part of analytics, decision-making, and AI workflows. By combining organizational data with spatial relationships, proximity, movement, networks, and geographic context, customers can uncover insights that traditional business intelligence alone cannot provide.
 
+### If Your Industry Is, Here Is How GeoAnalytics Could Work for You
+
+The industry changes, but the repeatable story stays the same: bring Esri and
+business data together in Fabric, use GeoAnalytics to calculate spatial
+relationships at scale, and deliver the enriched result through maps,
+analytics, or a separately grounded AI experience.
+
+| If your industry is... | Start with this business question | Bring together in Fabric | Use GeoAnalytics to... | Turn the result into... |
+|---|---|---|---|---|
+| **Retail** | Where should we open, consolidate, or prioritize stores? | Store performance, customer demand, demographics, mobility, competitors, and trade areas | Measure proximity, create or compare catchments, identify demand hot spots, and spatially join customers to locations | Market and site prioritization, localized merchandising, and a map-led planning workflow |
+| **Manufacturing** | Which plants, suppliers, routes, or customers are exposed to disruption? | ERP and supply-chain records, plant and supplier locations, shipments, weather, hazards, and transportation networks | Link assets to nearby hazards, analyze movement and routes, and identify geographic concentrations or gaps | Supply-chain risk scoring, production contingency planning, and prioritized operational response |
+| **Financial services** | Where are customers, properties, branches, or insured assets underserved or exposed? | Customer and portfolio data, branches and ATMs, property or asset locations, demographics, hazards, and claims | Build service-area and proximity measures, aggregate exposure by geography, detect clusters, and enrich records with location context | Branch and service planning, portfolio exposure analysis, fraud or claims investigation, and location-aware customer outreach |
+| **Energy** | Which assets and communities need attention first? | Wells, rigs, pipelines, substations, field inspections, IoT observations, weather, vegetation, hazards, and service territories | Analyze asset proximity and intersections, reconstruct tracks, detect hot spots, and join operational events to geographic context | Risk-based maintenance, outage or incident response, field crew prioritization, and infrastructure investment planning |
+
+For sellers, these examples support three connected conversations:
+
+* Modernize and unify Esri, operational, and enterprise data in Azure and
+  OneLake
+* Differentiate the Fabric analytics story with spatial relationships that
+  conventional tables and dashboards do not reveal on their own
+* Create trusted, spatially enriched data that can support Copilot and agent
+  experiences after the required business context, permissions, and grounding
+  are designed
+
+> [!TIP]
+> Reuse the same demonstration journey across industries. Keep the architecture
+> and analytical stages, then replace the stores with plants, branches, insured
+> assets, rigs, or other industry entities. Lead with the customer's decision,
+> not the map.
+
+> [!NOTE]
+> GeoAnalytics produces spatially enriched data in Fabric. Making that data
+> available to Copilot or an agent requires the separate grounding and
+> integration patterns described later in this library.
+
 ### Current Microsoft + Esri Integration Portfolio
 
 The current Microsoft + Esri landscape is anchored by five integrations. Three run in Microsoft Fabric and Power BI; two extend the story to where people work and where ArcGIS runs. Details and sources are in [Top Five Microsoft + Esri Integrations](#top-five-microsoft--esri-integrations).
