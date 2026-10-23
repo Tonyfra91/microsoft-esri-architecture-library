@@ -59,6 +59,12 @@ One design consideration applies directly to GeoAnalytics: Spark jobs, pipelines
 
 ## What You Need to Run GeoAnalytics
 
+Complete the shared
+[Security and Governance Readiness](../01-Microsoft-Esri-Foundation/Security-and-Governance-Readiness.md)
+review before connecting data. Use the requirements below and
+[Network Readiness Discovery](#network-readiness-discovery) to validate this
+workload's authorization, credentials, and outbound-access constraints.
+
 GeoAnalytics is not a standalone service. It runs only inside Microsoft Fabric, so a Fabric foundation is the first requirement. The minimum, as published by Microsoft and Esri:
 
 | # | Requirement | What it means | Source |
@@ -84,7 +90,7 @@ How to read it:
 - **Inside the POC scope:** data sources flow through Fabric ingestion, the Lakehouse, and Spark with GeoAnalytics, then to the semantic model, Power BI, ArcGIS for Power BI, and ArcGIS Maps for Fabric.
 - **Deployment requirements:** the four tags along the bottom of the Fabric box correspond to requirements 1, 2, and 6 in the table above. The "Supported Fabric Runtime" label refers to requirement 3, Fabric Runtime 1.3.
 - **Crossing the boundary:** the solid HTTPS (443) line to the Esri licensing service always occurs (requirement 7). The dashed "read in place" line to ArcGIS feature services occurs only when code requests it.
-- **Assumed platform and future expansion:** Microsoft Entra ID and Microsoft Purview are standard Fabric platform services, not GeoAnalytics requirements. Items in the Future expansion row are outside the POC.
+- **Platform context and future expansion:** Microsoft Entra ID provides Fabric authentication. Microsoft Purview represents optional governance and protection integrations, subject to supported coverage and licensing; it is not a GeoAnalytics requirement. Items in the Future expansion row are outside the POC.
 
 The [Stage 2 minimum deployable POC diagram](04-Stage-2-Spatial-Processing.md#architecture) shows these requirements in one view, with the calls that cross the Fabric boundary.
 

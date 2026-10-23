@@ -1,3 +1,7 @@
+---
+description: Customer requirements, product selection, and readiness for ArcGIS Maps for Microsoft Fabric.
+---
+
 # ArcGIS Maps for Microsoft Fabric: Customer Guidance
 
 ## Executive Summary
@@ -72,6 +76,11 @@ behavior, refresh semantics, or sharing models are interchangeable. Validate
 each experience independently.
 
 ## Foundational Requirements
+
+Complete the shared
+[Security and Governance Readiness](../01-Microsoft-Esri-Foundation/Security-and-Governance-Readiness.md)
+review before connecting data. Validate Fabric and ArcGIS access, sharing,
+external connections, and required audit coverage for the selected map experience.
 
 | Area | Requirement | Evidence |
 |---|---|---|

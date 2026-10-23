@@ -1,3 +1,7 @@
+---
+description: Microsoft and Esri integration foundation, customer value, and security and governance readiness.
+---
+
 # Microsoft + Esri Foundation
 
 > **Status:** In progress. The five-step diagram (v0.6) and the detailed view (v0.11) are drafts; the integration landscape is current.
@@ -7,6 +11,19 @@
 This section introduces the Microsoft + Esri story before going into individual components. It answers one question: **what do Microsoft Fabric and Esri do together, and why does it matter to the customer?**
 
 Each component folder that follows (GeoAnalytics, Maps for Fabric, Power BI) goes deeper into one part of that story, with its own customer guidance, end-to-end scenario, and reference architecture.
+
+## Start with a Secure and Governed Foundation
+
+Before connecting business and geospatial data, agree on who can access it,
+how sensitive information is protected, which network connections are permitted,
+and how activity will be monitored. Review Microsoft and Esri controls together:
+securing Fabric alone does not establish a secured end-to-end experience.
+
+Use [Security and Governance Readiness](Security-and-Governance-Readiness.md)
+with the customer's platform, ArcGIS, data, and security owners. Start with
+required controls and evidence, then select applicable native capabilities,
+Microsoft Purview protections, and Microsoft Sentinel or the customer's existing
+SIEM. These products are not universal prerequisites for every POC.
 
 ---
 

@@ -44,6 +44,10 @@ sample data, a converter, or a prebuilt ontology.
 
 ## Before You Start
 
+- Review [Security and Governance Readiness](../01-Microsoft-Esri-Foundation/Security-and-Governance-Readiness.md)
+  with the customer owners. Scope controls to this sample-data exercise and
+  record approval before uploading data; Purview and Sentinel are not automatic
+  prerequisites.
 - Obtain an ArcGIS organizational account and appropriate ArcGIS Pro access.
   Esri lists the Professional user type for the Water Essentials information
   product; confirm current entitlement and deployment requirements.

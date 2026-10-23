@@ -1,3 +1,7 @@
+---
+description: Conceptual Microsoft and Esri agentic pattern with explicit source, identity, and governance validation gaps.
+---
+
 # Microsoft + Esri Agentic Reference Pattern
 
 > **Library:** [Microsoft + Esri Architecture Library](../README.md) · Previous: [04 · Fabric IQ + Spatial Intelligence](../04-Fabric-IQ-Spatial-Intelligence/)
@@ -79,6 +83,11 @@ Ground Truth is not an existing Microsoft or Esri product.
 The intended experience keeps people accountable for consequential decisions. Human review, approval, override, and escalation requirements must be designed per scenario.
 
 ## Identity, Security, and Governance Validation
+
+Start with the shared
+[Security and Governance Readiness](../01-Microsoft-Esri-Foundation/Security-and-Governance-Readiness.md)
+review. It does not close this conceptual pattern's identity, tool, logging,
+or authorization gaps.
 
 The pattern is incomplete until it documents:
 

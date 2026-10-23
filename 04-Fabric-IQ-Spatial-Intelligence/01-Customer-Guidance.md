@@ -1,3 +1,7 @@
+---
+description: Customer scope, prerequisites, and governance for the Fabric IQ spatial-intelligence preview pattern.
+---
+
 # Fabric IQ + Spatial Intelligence Customer Guidance
 
 ## Why This Pattern Exists
@@ -39,6 +43,11 @@ Build one bounded ontology proof of concept that answers:
 The deliverable is not an enterprise ontology. It is a validated, explainable model with five entity types, a small set of relationships, bound source data, and documented ownership.
 
 ## Minimum Foundational Requirements
+
+Complete the shared
+[Security and Governance Readiness](../01-Microsoft-Esri-Foundation/Security-and-Governance-Readiness.md)
+review before binding data. Validate source permissions, preview approval,
+and coverage for any ontology, graph, agent, or export experience selected.
 
 | Requirement | Why it matters | Evidence |
 |---|---|---|
