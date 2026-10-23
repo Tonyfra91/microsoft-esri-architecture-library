@@ -1,3 +1,7 @@
+---
+description: Authoritative sources for Fabric IQ patterns and Esri domain-model research.
+---
+
 # Fabric IQ + Spatial Intelligence Source Register
 
 ## Purpose
@@ -26,6 +30,10 @@ This register tracks authoritative sources for the Fabric IQ spatial-intelligenc
 | <a id="src-iq-esri-004"></a>SRC-IQ-ESRI-004 | Esri formal ontology availability | Esri | Engineering Confirmation | SOURCE REQUIRED | Open |
 | <a id="src-iq-esri-005"></a>SRC-IQ-ESRI-005 | Asset Package machine-readable format and schema coverage | Esri | Technical Schema and Package Reference | https://doc.arcgis.com/en/arcgis-solutions/latest/tool-reference/utility-network-package/pdf/Utility%20Network%20Package_Asset%20Package%20Reference.pdf | Active; bounded to Asset Package |
 | <a id="src-iq-esri-006"></a>SRC-IQ-ESRI-006 | Apply Asset Package | Esri | Implementation Guidance | https://doc.arcgis.com/en/arcgis-solutions/latest/tool-reference/utility-network-package/apply-asset-package.htm | Active |
+| <a id="src-iq-msft-013"></a>SRC-IQ-MSFT-013 | Ontology Tutorial Part 1: Create an Ontology | Microsoft | Implementation Guidance | https://learn.microsoft.com/en-us/fabric/iq/ontology/tutorial-1-create-ontology | Active; preview; checked 2026-10-23 |
+| <a id="src-iq-esri-007"></a>SRC-IQ-ESRI-007 | Introduction to Water Utility Network Foundation | Esri | Package Availability and Requirements | https://doc.arcgis.com/en/arcgis-solutions/latest/reference/introduction-to-water-distribution-utility-network-foundation.htm | Active; Essentials contents and data-dictionary link checked 2026-10-23; dictionary requires JavaScript and package fields remain to be inspected |
+| <a id="src-iq-esri-008"></a>SRC-IQ-ESRI-008 | Export Table | Esri | Implementation Guidance | https://doc.esri.com/en/arcgis-pro/latest/tool-reference/conversion/export-table.html | Active; CSV output and description-transfer guidance checked 2026-10-23 |
+| <a id="src-iq-esri-009"></a>SRC-IQ-ESRI-009 | Transfer Field Domain Descriptions | Esri | Implementation Guidance | https://doc.esri.com/en/arcgis-pro/latest/tool-reference/environment-settings/transfer-domain-descriptions.html | Active; code and description field behavior checked 2026-10-23 |
 
 ## Source Validation Rules
 
@@ -40,7 +48,7 @@ Preview documentation supports a bounded proof of concept, not an assumption of 
 
 ## Last Review Date
 
-2026-10-12
+2026-10-23 (quickstart sources added; existing unresolved sources remain open)
 
 ## Component Owner
 

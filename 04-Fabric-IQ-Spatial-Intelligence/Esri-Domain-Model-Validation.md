@@ -1,3 +1,7 @@
+---
+description: Evidence and open questions for mapping Esri domain models to Fabric IQ ontology.
+---
+
 # Esri Domain Model Validation
 
 ## Purpose
@@ -20,6 +24,12 @@ This engineering discovery document identifies where authoritative Esri domain s
 | Mapping status | Partial artifact discovery; candidate mappings are not validated |
 
 ## Discovery Status
+
+For a bounded customer exercise, use the
+[Water Essentials ontology quickstart](Quickstart-Utility-Network-Ontology.md).
+It proposes two entities and one classification relationship from a selected
+sample feature class. This does not close the semantic-equivalence, formal
+ontology, network-topology, or runtime-integration questions below.
 
 Esri's [Utility Network Package Asset Package Reference](https://doc.arcgis.com/en/arcgis-solutions/latest/tool-reference/utility-network-package/pdf/Utility%20Network%20Package_Asset%20Package%20Reference.pdf) establishes a technical schema and package artifact. An Asset Package is a file geodatabase that models one utility network's schema, properties, related layers, related tables, and data. Its documented concepts include domain and structure networks, asset groups and asset types, attributes and domains, terminals, categories, network attributes, rules, tiers and subnetworks, associations, controllers, trace configurations, and diagram templates.
 

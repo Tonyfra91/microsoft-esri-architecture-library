@@ -1,3 +1,7 @@
+---
+description: Fabric IQ spatial-intelligence patterns and a minimal Utility Network-grounded ontology quickstart.
+---
+
 # Fabric IQ + Spatial Intelligence
 
 > **Library:** [Microsoft + Esri Architecture Library](../README.md) · Previous: [03 · ArcGIS Maps for Microsoft Fabric](../03-ArcGIS-Maps-for-Fabric/) · Next: [05 · Microsoft + Esri Agentic Reference Pattern](../05-Microsoft-Esri-Agentic-Reference-Pattern/)
@@ -42,6 +46,7 @@ Authoritative business and ArcGIS data
 
 | Need | Page |
 |---|---|
+| Create a first Utility Network-grounded ontology with two entities and one relationship | [Water Essentials ontology quickstart](Quickstart-Utility-Network-Ontology.md) |
 | Understand fit, requirements, and scope | [Customer Guidance](01-Customer-Guidance.md) |
 | Follow the complete MVP | [End-to-End Scenario](02-End-to-End-Scenario.md) |
 | Establish tenant and workspace readiness | [Stage 1: Establish the Foundation](03-Stage-1-Establish-the-Foundation.md) |
@@ -52,7 +57,7 @@ Authoritative business and ArcGIS data
 
 ## Advanced Research Track
 
-[Esri Domain Model Validation](Esri-Domain-Model-Validation.md) remains an advanced research track for Utility Network and other Esri domain models. It is not a prerequisite for the MVP.
+[Esri Domain Model Validation](Esri-Domain-Model-Validation.md) remains an advanced research track for Utility Network and other Esri domain models. It is not a prerequisite for the MVP. The [Water Essentials quickstart](Quickstart-Utility-Network-Ontology.md) is a smaller classification-only exercise, not validation of the complete Utility Network model or a native Esri integration.
 
 ## Supporting Technical Records
 

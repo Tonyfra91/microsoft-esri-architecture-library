@@ -1,8 +1,17 @@
+---
+description: Create and bind the bounded Fabric IQ spatial-intelligence ontology.
+---
+
 # Stage 3: Build and Bind the Ontology
 
 ## Goal
 
 Represent the bounded business model in a Fabric IQ ontology and bind it to the validated entity and relationship data.
+
+For a smaller first exercise using Esri Water Essentials, follow the
+[Utility Network ontology quickstart](Quickstart-Utility-Network-Ontology.md).
+Its two-entity classification model is an alternative learning path, not an
+additional prerequisite for the five-entity MVP below.
 
 ## Choose a Creation Path
 

@@ -1,3 +1,7 @@
+---
+description: Three-stage GeoAnalytics customer journey from data ingestion to validated spatial results.
+---
+
 # ArcGIS GeoAnalytics for Microsoft Fabric: End-to-End Scenario
 
 ## Overview
@@ -51,6 +55,11 @@ flowchart LR
 A consumption experience is validated when the documented path is configured, the intended audience can access it, the expected spatial output is present, and refresh or publication behavior has been tested against the proof-of-concept success criteria.
 
 **Example business question (replace per customer):** *Which assets are located within a defined distance of a risk area, and how does exposure vary by region?*
+
+For a bounded industry starting point, choose one of the
+[Retail, Manufacturing, Financial Services, or Energy POC scopes](01-Customer-Guidance.md#industry-proof-of-concept-scopes).
+Each defines inputs, spatial processing, output fields, business review, and
+acceptance criteria using the same three stages.
 
 ---
 

@@ -1,3 +1,7 @@
+---
+description: Customer guidance and industry proof-of-concept scopes for ArcGIS GeoAnalytics for Microsoft Fabric.
+---
+
 # ArcGIS GeoAnalytics for Microsoft Fabric: Customer Guidance
 
 ## Executive Summary
@@ -143,6 +147,159 @@ A bounded GeoAnalytics proof of concept should identify:
 
 8. **Success criteria**  
    The measurable result that would demonstrate business value, architectural fit, and technical feasibility.
+
+### Industry Proof-of-Concept Scopes
+
+Use these four starting points to turn the
+[industry seller scenarios](../01-Microsoft-Esri-Foundation/README.md#if-your-industry-is-here-is-how-geoanalytics-could-work-for-you)
+into a bounded customer exercise. These are proposed batch-analysis scopes,
+not validated customer deployments, product benchmarks, or guaranteed business
+outcomes. Choose one decision, one region, and one data snapshot before expanding.
+
+Each scope follows [Stage 1](03-Stage-1-Bring-Data-into-Fabric.md),
+[Stage 2](04-Stage-2-Spatial-Processing.md), and
+[Stage 3](05-Stage-3-Use-the-Results.md). Confirm the
+[GeoAnalytics prerequisites](#what-you-need-to-run-geoanalytics) and
+[network readiness](#network-readiness-discovery) before committing to delivery.
+
+#### Retail: Prioritize Stores with Nearby Unserved Demand
+
+1. Agree on the decision: which existing stores in one market warrant a
+   merchandising or coverage review based on nearby demand?
+2. Land a dated store extract with stable store IDs, coordinates, and sales,
+   plus customer-approved demand points with demand weights. Use aggregated
+   or synthetic demand data where customer locations are sensitive.
+3. Agree on a straight-line distance threshold in meters. In Fabric Spark,
+   construct geometries with explicit spatial references, identify
+   store-to-demand pairs within that distance, and assign each matched demand
+   point to its nearest store. Break equal-distance ties by stable store ID.
+   Keep unmatched demand points for a separate coverage-gap view.
+4. Persist a store summary with store ID, assigned demand-point count, summed
+   demand weight, sales, and snapshot date. Retain point-to-store assignments
+   and unmatched demand separately so reviewers can reconcile the totals.
+5. Review demand and sales side by side in a Power BI report and, if needed,
+   an ArcGIS for Power BI map. Have the business owner nominate stores for
+   follow-up rather than treating proximity as a site-investment recommendation.
+6. Accept the POC when every demand point is assigned once or explicitly
+   unmatched, total demand weight reconciles to the accepted input within an
+   agreed numeric tolerance, and a business owner confirms the assignments
+   against the shared spatial validation sample below.
+
+Straight-line proximity is not a drive-time catchment or proof of customer
+behavior. Road-network routing, demographic enrichment, and new-site forecasting
+require separately validated data, capabilities, and assumptions.
+
+#### Manufacturing: Identify Suppliers Exposed to a Hazard
+
+1. Agree on the decision: which suppliers serving one plant need a continuity
+   review for one dated hazard footprint?
+2. Land supplier IDs and coordinates, supplier-to-plant relationships, and
+   customer-approved hazard polygons with stable hazard IDs and an effective
+   date. Resolve duplicate supplier master records before spatial processing.
+3. In Fabric Spark, test supplier-point intersections with the hazard polygons.
+   Explicitly decide whether points on polygon boundaries count as exposed.
+   Join the resulting supplier exposure flags to the plant's supplier list.
+4. Persist supplier-hazard matches and a supplier summary with supplier ID,
+   plant ID, exposure flag, hazard-match count, and snapshot date. Preserve
+   suppliers with no matches as unexposed; label invalid or missing locations
+   as unknown, not unexposed.
+5. Review the exposed and unknown supplier lists with the plant's supply-chain
+   owner in a Power BI report. Keep multiple hazard matches from multiplying
+   supplier counts in plant-level summaries.
+6. Accept the POC when every in-scope supplier is classified as exposed,
+   unexposed, or unknown, distinct supplier counts reconcile to the plant's
+   accepted supplier list, and the business owner approves the validation sample.
+
+The result identifies geographic exposure, not a predicted production outage.
+Transport-route analysis, disruption forecasting, and alternate-supplier
+recommendations are outside this initial scope.
+
+#### Financial Services: Aggregate Property Exposure by Hazard
+
+1. Agree on the decision: which property-backed portfolio segments in one
+   region need further hazard-exposure review?
+2. Land a customer-approved extract with pseudonymous exposure IDs, property
+   coordinates, exposure amounts, currency, and portfolio segments, plus one
+   dated hazard layer. Define the record grain so several financial exposures
+   on one property are not mistaken for duplicate input.
+3. In Fabric Spark, intersect property points with the hazard polygons.
+   Preserve detailed exposure-to-hazard matches, then reduce them to one
+   exposure flag per exposure ID before aggregating amounts by segment and
+   currency. Report missing or invalid locations separately.
+4. Persist an access-restricted exposure detail table and an approved segment
+   summary containing exposure counts, exposed amounts, unknown-location
+   amounts, currency, and snapshot date.
+5. Review the aggregate result with the portfolio owner in Power BI. Apply the
+   customer's disclosure rules to small groups and validate audience permissions
+   before sharing; pseudonymous IDs alone do not make location data anonymous.
+6. Accept the POC when counts and amounts reconcile to the accepted extract
+   for each currency, overlapping hazards do not double-count the portfolio
+   total, and authorized reviewers approve the spatial validation sample.
+
+Geographic exposure is not a credit, underwriting, fraud, or regulatory risk
+decision. Loss modeling and customer-level recommendations require separate
+validation and governance.
+
+#### Energy: Prioritize Assets for Hazard Review
+
+1. Agree on the decision: which assets in one service territory need inspection
+   review against one dated hazard footprint?
+2. Land stable asset IDs, point or line geometry, asset class, and the latest
+   inspection date, plus customer-approved hazard polygons. Define an analysis
+   date and an inspection-age threshold with the asset owner.
+3. In Fabric Spark, intersect asset geometries with the hazard polygons and
+   retain distinct asset-hazard pairs. Reduce these to one exposure flag per
+   asset, then join inspection records by asset ID. Classify exposed assets as
+   overdue, current, or inspection date unknown using the agreed threshold.
+4. Persist an asset summary with asset ID, asset class, exposure flag,
+   hazard-match count, inspection age, review category, and analysis date.
+   Keep invalid or missing geometry in an explicit unknown-location category.
+5. Review exposed overdue assets and unknown records with the asset owner in
+   a Power BI report or a supported ArcGIS Maps for Fabric workflow selected
+   through [Stage 3](05-Stage-3-Use-the-Results.md).
+6. Accept the POC when every in-scope asset appears once in the summary,
+   multiple hazard intersections do not inflate asset counts, threshold and
+   missing-date cases match expected categories, and the owner approves the
+   spatial validation sample.
+
+This is a review queue, not an automated dispatch or safety decision.
+Network tracing, outage prediction, crew routing, and live telemetry processing
+are outside this initial scope.
+
+#### Shared Acceptance and Handoff
+
+Agree on these gates before running the selected scenario. The numbers below
+are starting acceptance targets for the exercise, not product performance claims.
+
+- Record input owners, usage rights, snapshot dates, record grain, expected
+  volumes, spatial references, distance units, boundary rules, and null handling.
+  Report rejected records with reasons and reconcile them to the source count.
+- Verify the exact spatial functions or analysis tools and parameters against
+  the [Stage 2 references](04-Stage-2-Spatial-Processing.md#architecture).
+  Do not substitute a network-distance claim for a straight-line calculation.
+- Have a domain reviewer label at least 20 expected match and non-match cases,
+  or all records if fewer than 20 exist. Include boundary, overlap,
+  missing-location, and scenario-specific threshold cases. Require all expected
+  results to match; investigate discrepancies before accepting the result.
+- Set a maximum elapsed runtime and compute-usage budget with the customer
+  before execution. Record capacity, runtime version, input volume, elapsed
+  time, and metered usage, and compare the measured values with both limits.
+- Rerun against the same snapshot and parameters. Require identical business
+  keys, classifications, and counts, with numeric totals within the agreed
+  tolerance. Confirm the chosen replace, append, or update behavior does not
+  create duplicate published results.
+- Test with an approved reader and an unauthorized test identity. Confirm the
+  reader can see the intended result and the unauthorized identity cannot access
+  restricted detail. Validate refresh using the
+  [Stage 3 checklist](05-Stage-3-Use-the-Results.md#validation-checklist).
+- Hand off the notebook, input inventory, parameters, output schemas, validation
+  results, runtime and usage measurements, access decisions, and unresolved
+  issues. Obtain business-owner and platform-owner sign-off before proposing
+  production expansion.
+
+Keep Copilot and agent access outside these POCs unless a separately approved
+grounding and integration pattern is added. A persisted spatial result is not
+automatically available to an agent.
 
 ### Network Readiness Discovery
 
