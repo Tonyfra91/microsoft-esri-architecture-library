@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="fabric-ontology-walkthrough" name="Five-step customer journey">
+    <mxGraphModel dx="1600" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Fabric Ontology Experiment - From Capacity to V0 Evidence" style="text;html=1;align=left;verticalAlign=middle;fontSize=28;fontStyle=1;fontColor=#1F1F1F;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1500" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Customer setup journey: Fabric readiness, Azure provisioning, then back to Fabric" style="text;html=1;align=left;verticalAlign=middle;fontSize=19;fontColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="30" y="75" width="1500" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="n1" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0B4F9C;strokeColor=#0B4F9C;fontColor=#FFFFFF;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="90" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n2" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0B4F9C;strokeColor=#0B4F9C;fontColor=#FFFFFF;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="150" width="90" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n3" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0B4F9C;strokeColor=#0B4F9C;fontColor=#FFFFFF;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="150" width="90" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n4" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0B4F9C;strokeColor=#0B4F9C;fontColor=#FFFFFF;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="150" width="90" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n5" value="5" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#8A4B00;strokeColor=#8A4B00;fontColor=#FFFFFF;fontSize=30;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="150" width="90" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" style="endArrow=block;strokeColor=#555555;strokeWidth=2;html=1;" edge="1" parent="1" source="n1" target="n2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e23" style="endArrow=block;strokeColor=#555555;strokeWidth=2;html=1;" edge="1" parent="1" source="n2" target="n3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e34" style="endArrow=block;strokeColor=#555555;strokeWidth=2;html=1;" edge="1" parent="1" source="n3" target="n4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e45" style="endArrow=block;strokeColor=#555555;strokeWidth=2;html=1;" edge="1" parent="1" source="n4" target="n5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="s1" value="&lt;b&gt;Fabric readiness&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sign in to the right tenant&lt;br&gt;Approve preview + agent use&lt;br&gt;Confirm owners and budget" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#0B4F9C;strokeWidth=2;fontSize=19;fontColor=#0B2A4F;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="265" width="270" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="s2" value="&lt;b&gt;Azure capacity&lt;/b&gt;&lt;br&gt;&lt;br&gt;Create or reuse an F SKU&lt;br&gt;Choose region + size&lt;br&gt;Confirm active capacity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#0B4F9C;strokeWidth=2;fontSize=19;fontColor=#0B2A4F;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="265" width="270" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3" value="&lt;b&gt;Fabric workspace&lt;/b&gt;&lt;br&gt;&lt;br&gt;Create experiment workspace&lt;br&gt;Assign the Azure capacity&lt;br&gt;Confirm author access" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#0B4F9C;strokeWidth=2;fontSize=19;fontColor=#0B2A4F;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="265" width="270" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="s4" value="&lt;b&gt;Ontology proposal&lt;/b&gt;&lt;br&gt;&lt;br&gt;New ontology item&lt;br&gt;Start agent in Plan mode&lt;br&gt;Request conceptual V0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#0B4F9C;strokeWidth=2;fontSize=19;fontColor=#0B2A4F;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="960" y="265" width="270" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="s5" value="&lt;b&gt;Capture V0 evidence&lt;/b&gt;&lt;br&gt;&lt;br&gt;Save proposal + screenshot&lt;br&gt;Record assumptions / blockers&lt;br&gt;Stop before V1 grounding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D1;strokeColor=#8A4B00;strokeWidth=2;dashed=1;fontSize=19;fontColor=#4D2900;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="265" width="270" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="Experimental conceptual proposal only. No Asset Package supplied. No native ArcGIS Utility Network integration." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9EE;strokeColor=#8A4B00;fontSize=19;fontColor=#4D2900;" vertex="1" parent="1">
+          <mxGeometry x="30" y="475" width="1510" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="footer" value="Repository-authored walkthrough, not product architecture. Reuse approved capacity where possible; review costs after the session." style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="30" y="540" width="1510" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
